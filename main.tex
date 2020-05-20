@@ -1,0 +1,136 @@
+\documentclass[english,dsc,numbers]{coppe}
+% qualificacao - dscexam
+% tese - dsc
+
+\usepackage[english]{babel}
+
+\usepackage{natbib}
+
+\usepackage{amsmath,amssymb, amsthm}
+\usepackage{hyperref}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage[caption=false]{subfig}
+%\usepackage{ifthen}
+\usepackage{color}
+\usepackage{array}
+\usepackage{colortbl}
+\usepackage[algoruled,lined,boxed]{algorithm2e}
+\usepackage{lineno,setspace}
+\usepackage{eqparbox}
+\usepackage{indentfirst}
+\usepackage{braket}
+\usepackage{amsfonts}
+\usepackage{fancyhdr}
+\usepackage{comment}
+\usepackage{float}
+\usepackage{pdfpages}
+\usepackage{enumitem}
+\usepackage{lscape}
+\usepackage[export]{adjustbox}
+\usepackage{footnote} %para notas de rodape em tabelas
+%\usepackage{cite}
+%\usepackage{subfigure}
+
+%\usepackage{caption}    
+%\usepackage{subcaption} 
+
+\usepackage{makeidx} % sugestão... caso você queira fazer um índice
+
+\newtheorem{theorem}{Teorema}[chapter]
+\newtheorem{example}[theorem]{Exemplo}
+\newtheorem{conjecture}[theorem]{Conjectura}
+\newtheorem{observation}[theorem]{Observa\c{c}\~ao}
+\newtheorem{lemma}[theorem]{Lema}
+\newtheorem{proposition}[theorem]{Proposi\c{c}\~ao}
+\newtheorem{fac}[theorem]{Fato}
+\newtheorem{corollary}[theorem]{Corol\'ario}
+\newtheorem{lema}[theorem]{Lema}
+\newtheorem{definition}[theorem]{Defini\c{c}\~ao}
+%\newenvironment{proof}[1][Demonstra\c{c}\~ao]{\emph{#1.} }{\ \hfill$\square$}
+
+\newenvironment{proofidea}{\par\noindent\textit{Justificativa.}}{\hfill$\square$}
+
+
+\newcommand\floor[1]{\left\lfloor #1 \right\rfloor}
+\newcommand\toricclass[1]{#1_\circ^\circ}
+\newcommand{\toric}[1]{\left[#1\right]^\circ_\circ}
+\renewcommand\mod[1]{\!\!\!\!\!\pmod{#1}}
+
+%\usepackage{xparse}% http://ctan.org/pkg/xparse
+%\NewDocumentCommand{\ceil}{s O{} m}{%
+%  \IfBooleanTF{#1} % starred
+%    {\left\lceil#3\right\rceil} % \ceil*[..]{..}
+%    {#2\lceil#3#2\rceil} % \ceil[..]{..}
+%}%Para função matematica piso/teto
+
+\makelosymbols
+\makeloabbreviations
+
+\makeindex  % Se não tiver indice remissivo pode remover
+
+\begin{document}
+\title{Estudo de Grafos de Intersecção de Caminhos}
+  \foreigntitle{Some Remarks About Intersection Graphs of Paths}
+  \author{Tanilson Dias dos}{Santos}
+  \advisor{Prof.}{Jayme Luiz}{Szwarcfiter}{Ph.D.}  
+  \advisor{Prof.}{Uéverton dos Santos}{Souza}{D.Sc.}
+\advisor{Prof.}{Claudson Ferreira}{Bornstein}{Ph.D.}
+
+ \examiner{Prof.}{Jayme Luiz Szwarcfiter, Ph.D.}{Ph.D.}
+    \examiner{Prof.}{Uéverton dos Santos Souza, D.Sc.}{D.Sc.}
+ \examiner{Prof.}{Claudson Ferreira Bornstein, Ph.D.}{Ph.D.}
+ \examiner{Profª.}{Liliana Alcón, D.Sc.}{D.Sc.}
+ \examiner{Profª.}{María Pía Mazzoleni, D.Sc.}{D.Sc.}
+ \examiner{Profª.}{Márcia Rosana Cerioli, D.Sc.}{D.Sc.}
+  
+  %\examiner{Prof.}{Nome do Quinto Examinador Sobrenome}{Ph.D.}
+  \department{PESC}
+  \date{09}{2020}
+
+  \keyword{Edge Path}
+  \keyword{Grid Path}
+  \keyword{Intersections}
+  \keyword{search}
+
+  \maketitle
+
+  \frontmatter
+  \dedication{Dedico à minha filha, Ana Flor de Lis, e à minha esposa, Juliana Pontes.
+  Dedico também aos meus avós maternos, Teobaldo Ferreira Dias (\textit{in memoriam}) e Lídia Andrade Ferreira (\textit{in memoriam}), e paternos,
+  Armando Bento de Oliveira e Josefa Ericino de Oliveira (\textit{in memoriam}).
+  }
+
+  \include{Agradecimentos}
+
+  \include{Abstract}
+
+  \include{ForeingAbstract}
+
+  \tableofcontents
+  \listoffigures
+  %\listoftables
+  \printlosymbols
+  \printloabbreviations
+
+  \mainmatter
+  \include{capI-introducao}
+  \include{capII-GrafosdeInterseccao}
+  \include{capIII-propriedadeHellyGrafosEPG}
+  \include{capIV-ONumeroDeHelly}
+  \include{capV-RelacaoEntreClassesB1-EPGEPTeVPT}
+  %\include{ResultadosQuantica}
+  \include{Conclusao}
+
+  \backmatter
+
+  \bibliographystyle{coppe-plain}
+  %\bibliographystyle{plain}
+
+  \bibliography{refs}
+
+ % \appendix
+ % \include{Apendice}
+  
+  \printindex   % Se não tiver indice remissivo pode remover
+\end{document}
