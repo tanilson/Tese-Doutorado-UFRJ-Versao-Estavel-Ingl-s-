@@ -196,7 +196,10 @@ $B_0$-VPG graphs restricted to Block graphs were studied by \citet{Alcn2017Verte
 
 \subsection{The EPT and VPT graphs}
 
-Models based on paths intersection  may consider  intersections by vertices or   intersections by edges.  Cases where the paths are hosted on a tree  appear first in the literature, see for instance \cite{gavril1978recognition, golumbic1985edge, golumbic1985}.  Representations using paths on a grid were considered later, see  \cite{golumbic2009,golumbic2013, golumbic2013intersection}. .
+Models based on paths intersection  may consider  intersections by vertices or   intersections by edges.  Cases where the paths are hosted on a tree  appear first in the literature, see for instance \cite{gavril1978recognition, golumbic1985edge, golumbic1985}.  Representations using paths on a grid were considered later, see  \cite{golumbic2009,golumbic2013, golumbic2013intersection}.
+
+EPT and VPT graphs have applications in communication networks, see~\cite{boyaci2013graphs} in~\cite{brandstadt2013graph}. Assume
+that we model a communication network as a tree $T$ and the message routes to be delivered in this communication network as paths on $T$ . Two paths conflict if they both require to use the same link (vertex). This conflict model is equivalent to an EPT (a VPT) graph. Suppose we try to find a schedule for the messages such that no two messages sharing a link (vertex) are scheduled in the same time interval. Then a vertex coloring of the EPT (VPT) graph corresponds to a feasible schedule on this network, ~\cite{boyaci2013graphs} in~\cite{brandstadt2013graph}.
 
  Let $P$ be a family of paths on a host tree $T$ . Two types of intersection graphs from the pair <$P,T$> are defined, namely VPT and EPT graphs.
 The \textit{edge intersection graph} of $P$, EPT(P), has vertices which correspond to the members of $P$, and two vertices are adjacent in EPT(P) if and only if the corresponding paths in $P$ share at least one edge in T. Similarly, the \textit{vertex intersection graph} of $P$, VPT(P), has vertices which correspond to the members of $P$, and two vertices are adjacent in VPT(P) if and only if the corresponding paths in $P$ share at least one vertex in $T$.
@@ -206,13 +209,34 @@ VPT graphs coincides with the family of EPT graphs \cite{golumbic1985edge}. Also
 
 Next, we list some research involving EPT and VPT graphs.
 
+EPT and VPT graphs have been extensively studied in the literature. Although VPT graphs can be characterized by a fixed number of forbidden subgraphs, see~\cite{leveque2009characterizing}, it is show that EPT graphs recognition is NP-complete, see~\cite{golumbic1985}.
+
+Main optimization and decision problems such as recognition~\cite{gavril1978recognition}, the maximum clique~\cite{gavril2000maximum} , the minimum vertex coloring~\cite{golumbic2004algorithmic}  and the maximum stable set problems~\cite{spinrad1995algorithms} are polynomial-time solvable in VPT whereas recognition and minimum vertex coloring problems remain NP-complete in EPT graphs~\cite{golumbic1985edge}. In contrast, we can solve in polynomial time the maximum clique,
+see~\cite{golumbic1985}, and the maximum stable set, see~\cite{tarjan1985decomposition},  problems in EPT graphs. 
+
+
+The class of graphs that have an $[h,s,t]$-representation is denoted by $[h,s,t]$. A graph $G$ has an $[h,s,t]$-representation  when $h,s,$ and $t$ are positive integers such that $h \geq s$, there is a host tree $T$ with maximum degree $\Delta(T) \leq h$, there is a family of subtrees $S = \{S_u \subseteq T / u\in V(G) \}$ with $\Delta(S_u)\leq s$, and there is an edge $uv \in E(G)$ if and only if $|S_u \cap S_v|\geq t$.    
+
+In~\citet{alcon2015characterizing} was studied a set of minimal forbidden induced subgraphs from VPT and their $[h,s,t]$-representations.
+When there is no restriction on the maximum degree of $T$ or on the maximum degree of the subtrees is used the notation $h=\infty $  and $s=\infty$,  respectively. Therefore, $[\infty, \infty, 1]$ is the class of Chordal graphs and $[2, 2, 1]$ is the class of interval graphs. The classes $[\infty, 2, 1]$ and $[\infty, 2, 2]$ correspond to VPT and EPT respectively in~\cite{golumbic1985edge}; and UV and UE, respectively in~\cite{monma1986intersection}.
+By taking $h=3$ they obtain a characterization by minimal forbidden induced subgraphs of the class VPT $\cap$ EPT = EPT $\cap$ Chordal = $[3,2,2] = [3,2,1]$, see~\citet{golumbic1985edge}. The paper also proved that the problem of deciding whether a given VPT graph belongs to $[h,2,1]$ is NP-complete even when restricted to the class VPT $ \cap $ Split without dominated stable vertices, among other minor results.
+
+
+ It is known that when the EPT graphs are restricted to host trees of vertex degree 3 this class corresponds precisely to the Chordal EPT graphs. In~\citet{golumbic2008representing} was  proved an analogous result that Weakly Chordal EPT graphs are precisely the EPT graphs whose host tree restricted to degree 4. Moreover, they provide an algorithm to reduce a given EPT representation of a Weakly Chordal EPT graph to an EPT representation on a degree 4 tree. In resume, their proof state that  $[4, 2, 2]$ graphs are equivalent to Weakly Chordal $[\infty, 2, 2]$ graphs. In addition, we know that when the maximum degree of the host tree T is 3, the coloring problem is polynomial, by
+~\cite{golumbic1985}. The paper of~\cite{golumbic2008representing} also shows the analogous polynomial result for a degree 4 host tree, thus the coloring problem on EPT graphs restricted to a host tree of vertex degree 4 is polynomial.
+
+In~\citet{golumbic2008equivalences}, the research presents equivalences and the complete hierarchy of intersection graphs of paths in a tree, in particular orthodox-$[h,s,t]$ graphs with $s=2$ and considering variations of $h,t$. For more information about orthodox-$[h,s,t]$ graphs see~\citet{jamison2005constant} and \citet{jose2018}.
+
+
+
+
+
+
+
+
+
 
 %\subsection{The VPT graphs}
-
-
-
-
-
 
 \section{Terminology of text}
 
