@@ -131,7 +131,7 @@ In addition to the results cited for bounds on the bend number of some classes o
 Although it is possible to find several researches on EPG graphs investigating the bend number, the interests of studies in this class of graphs extend to other classic problems, which we can mention to follow.
 
 
-In~\citet{cohen2014} a linear time recognition algorithm is presented for $ B_{1}$-EPG Cographs by a family of forbidden induced subgraphs. The algorithm that the work presents uses the Cotree of the Cograph in the recognition process.
+In~\citet{cohen2014} a linear time recognition algorithm is presented for $ B_{1}$-EPG Cographs by a family of forbidden induced subgraphs. The algorithm that the paper presents uses the Cotree of the Cograph in the recognition process.
 
 Approximation Algorithms for colorize $ B_1$-EPG graphs  were studied in~\cite{epstein2013approximation}. The work cited shows that the coloring problem and the maximum independent set problem are both $ NP$-complete for graphs $ B_1$-EPG even when the EPG representation is given. The authors present a 4-approximate algorithm that solves both problems, assuming that the EPG representation is given. The work still shows that the maximum clique can be found efficiently in graphs $ B_1$-EPG even when the representation is not given.
 
@@ -156,11 +156,11 @@ several layers where the paths on each layer are not allowed to intersect. This 
 
 
 A graph is a VPG if it is the vertex intersection graph of paths in a grid. A graph is called
-$B_k$-VPG if it has a $B_k$-VPG representation, i.e. if there is a representation where each path in this representation has at most $k$ bends. VPG graphs was introduced in 2011 by~\citet{asinowski2011string} and~\citet{asinowski2012}. They prove that VPG and STRING are
-the same graph class.
+$B_k$-VPG if it has a $B_k$-VPG representation, i.e. if there is a representation where each path in this representation has at most $k$ bends. VPG graphs was introduced in 2011 by~\citet{asinowski2011string} and~\citet{asinowski2012}. They prove that VPG and String are
+the same graph class. However, it is known that  recognizing String graphs is an $NP$-complete problem, by the results of~\cite{schaefer2003recognizing, kratochvil1991string}.
 
 \citet{asinowski2012} study $B_0$-VPG graphs and observe
-that horizontal and vertical segments have strong Helly number 2 and that the clique problem has polynomial-time complexity, given the path representation. Among other results, they present a proof that the recognition and coloring problems for $B_0$-VPG graphs are $NP$-complete. But they  give a 2-approximation algorithm for coloring $B_0$-VPG graphs. Furthermore, they prove that triangle-free $B_0$-VPG graphs are 4-colorable, and this is best  possible. In addition, they present a hierarchy of VPG graphs relating them to other known families of graphs, see Figure~\ref{fig:hierarquiaVPG}. The grid intersection graphs are shown to be equivalent to the bipartite $B_0$-VPG graphs and the circle graphs are strictly contained in $B_1$-VPG. They still prove the strict containment of $B_0$-VPG into $B_1$-VPG, and conjecture that, in general, this strict containment continues for all values of $k$. Finally, they present
+that horizontal and vertical segments have strong Helly number 2 and that the clique problem has polynomial-time complexity, given the path representation. Among other results, they present a proof that the recognition and coloring problems for $B_0$-VPG graphs are $NP$-complete. Moreover, they  give a 2-approximation algorithm for coloring $B_0$-VPG graphs. Furthermore, they prove that triangle-free $B_0$-VPG graphs are 4-colorable, and this is best  possible. In addition, they present a hierarchy of VPG graphs relating them to other known families of graphs, see Figure~\ref{fig:hierarquiaVPG}. The grid intersection graphs are shown to be equivalent to the bipartite $B_0$-VPG graphs and the circle graphs are strictly contained in $B_1$-VPG. They still prove the strict containment of $B_0$-VPG into $B_1$-VPG, and conjecture that, in general, this strict containment continues for all values of $k$. Finally, they present
 a graph which is not in $B_1$-VPG. 
 
 \input{includes/include-img/hierarquiaVPG}
@@ -175,8 +175,8 @@ Approximation algorithms for the maximum independent set problem over the class 
 \citet{cohen2016posets} investigate the VPG graphs, and specifically the relationship between the bend number of a Cocomparability graph and the poset dimension of its complement. They show that the bend number of a Cocomparability graph $G$ is at most the poset dimension of the complement of $G$ minus one. Then, via Ramsey type arguments, they show that their upper bound is best  possible.
 
 
-In \citet{felsner2016intersection}, the authors research the L-shapes representations for $B_k$-VPG graphs. The work investigates several known subclasses of segment graphs (SEG-graphs), motivated mainly by research \cite{middendorf1992max} that states that every $[\llcorner, \ulcorner]$-shape is a SEG-graph.
-They show that this subclasses of SEG-graphs belong to $[\llcorner]$-shapes, also that all Planar 3-trees, all Line graphs of Planar graphs, and all full subdivisions of Planar graphs are $[\llcorner]$-shapes. Furthermore \cite{felsner2016intersection} showed that complements of planar graphs are $B_{17}$-VPG graphs and complements of full subdivisions are $B_2$-VPG graphs. 
+In \citet{felsner2016intersection}, the authors research the L-shapes representations for $B_k$-VPG graphs. The paper investigates several known subclasses of segment graphs (SEG-graphs), motivated mainly by research \cite{middendorf1992max} that states that every $[\llcorner, \ulcorner]$-shape is a SEG-graph.
+They show that this subclasses of SEG-graphs belong to $[\llcorner]$-shapes, also that all Planar 3-trees, all Line graphs of Planar graphs, and all full subdivisions of Planar graphs are $[\llcorner]$-shapes. Furthermore \cite{felsner2016intersection} showed that complements of Planar graphs are $B_{17}$-VPG graphs and complements of full subdivisions are $B_2$-VPG graphs. 
 
 In paper of \citet{golumbic2013intersection} certain subclasses of $B_0$-VPG graphs have been characterized and showed to admit polynomial time recognition. We can list these classes as Split, Chordal claw-free, and Chordal bull-free $B_0$-VPG graphs.
 The $B_0$-VPG Split graphs were characterized by  a set of forbidden induced subgraph. The same is true for another listed subclasses.
@@ -209,10 +209,13 @@ VPT graphs coincides with the family of EPT graphs \cite{golumbic1985edge}. Also
 
 Next, we list some research involving EPT and VPT graphs.
 
-EPT and VPT graphs have been extensively studied in the literature. Although VPT graphs can be characterized by a fixed number of forbidden subgraphs, see~\cite{leveque2009characterizing}, it is show that EPT graphs recognition is NP-complete, see~\cite{golumbic1985}.
-
-Main optimization and decision problems such as recognition~\cite{gavril1978recognition}, the maximum clique~\cite{gavril2000maximum} , the minimum vertex coloring~\cite{golumbic2004algorithmic}  and the maximum stable set problems~\cite{spinrad1995algorithms} are polynomial-time solvable in VPT whereas recognition and minimum vertex coloring problems remain NP-complete in EPT graphs~\cite{golumbic1985edge}. In contrast, we can solve in polynomial time the maximum clique,
+%EPT and VPT graphs have been extensively studied in the literature. 
+Although VPT graphs can be characterized by a fixed number of forbidden subgraphs, see~\cite{leveque2009characterizing}, it is show that EPT graphs recognition is an NP-complete problem, see~\cite{golumbic1985}. Main optimization and decision problems such as recognition~\cite{gavril1978recognition}, the maximum clique~\cite{gavril2000maximum} , the minimum vertex coloring~\cite{golumbic2004algorithmic}  and the maximum stable set problems~\cite{spinrad1995algorithms} are polynomial-time solvable in VPT whereas recognition and minimum vertex coloring problems remain NP-complete in EPT graphs~\cite{golumbic1985edge}. In contrast, we can solve in polynomial time the maximum clique,
 see~\cite{golumbic1985}, and the maximum stable set, see~\cite{tarjan1985decomposition},  problems in EPT graphs. 
+
+In~\citet{alcon2010necessary} we find a short paper that deals with EPT graphs. The paper defines the concept of satellite of a clique and we give us a necessary condition for structure of cliques in EPT graphs based on satellites of cliques. In addition, the paper presents a finite family of minimal forbidden subgraphs for the EPT class.
+
+Next we will present the notation $[h,s,t]$ so that we can talk about some equivalences known in the literature.
 
 
 The class of graphs that have an $[h,s,t]$-representation is denoted by $[h,s,t]$. A graph $G$ has an $[h,s,t]$-representation  when $h,s,$ and $t$ are positive integers such that $h \geq s$, there is a host tree $T$ with maximum degree $\Delta(T) \leq h$, there is a family of subtrees $S = \{S_u \subseteq T / u\in V(G) \}$ with $\Delta(S_u)\leq s$, and there is an edge $uv \in E(G)$ if and only if $|S_u \cap S_v|\geq t$.    
@@ -225,26 +228,21 @@ By taking $h=3$ they obtain a characterization by minimal forbidden induced subg
  It is known that when the EPT graphs are restricted to host trees of vertex degree 3 this class corresponds precisely to the Chordal EPT graphs. In~\citet{golumbic2008representing} was  proved an analogous result that Weakly Chordal EPT graphs are precisely the EPT graphs whose host tree restricted to degree 4. Moreover, they provide an algorithm to reduce a given EPT representation of a Weakly Chordal EPT graph to an EPT representation on a degree 4 tree. In resume, their proof state that  $[4, 2, 2]$ graphs are equivalent to Weakly Chordal $[\infty, 2, 2]$ graphs. In addition, we know that when the maximum degree of the host tree T is 3, the coloring problem is polynomial, by
 ~\cite{golumbic1985}. The paper of~\cite{golumbic2008representing} also shows the analogous polynomial result for a degree 4 host tree, thus the coloring problem on EPT graphs restricted to a host tree of vertex degree 4 is polynomial.
 
-In~\citet{golumbic2008equivalences}, the research presents equivalences and the complete hierarchy of intersection graphs of paths in a tree, in particular orthodox-$[h,s,t]$ graphs with $s=2$ and considering variations of $h,t$. For more information about orthodox-$[h,s,t]$ graphs see~\citet{jamison2005constant} and \citet{jose2018}.
+In~\citet{golumbic2008equivalences}, the research presents equivalences and the complete hierarchy of intersection graphs of paths in a tree, this including VPT and EPT grpahs, in particular orthodox-$[h,s,t]$ graphs with $s=2$ and considering variations of $h,t$. For more information about orthodox-$[h,s,t]$ graphs we recommend reading~\citet{jamison2005constant} and \citet{jose2018}.
 
+Other researches still focus on variations of the EPT representations, such as \cite{boyaci2013graphs} and \cite{boyaci2016graphs}. These two articles represent a same research divided into two parts. Given a set of paths $P$, they define the graph ENPT($P$) of edge intersecting non-splitting paths of a tree, denoted by ENPT graph, as the graph having a vertex for each path in $P$, and an edge between every pair of vertices representing two paths that are both edge-intersecting and non-splitting. A graph $G$ is an ENPT graph if there is a tree $T$ and a set of paths $P$ of $T$ such that $G$ = ENPT($P$). The papers investigate basic properties of this class and proof that some graph classes belong to ENPT, such that Trees, Holes, Complete graphs, etc. Among the results they show that the problem of finding such a representation is $NP$-Hard in general also for this class.
 
+As we can see, EPT and VPT graphs have been extensively studied in the literature. With approaches that study from classic problems in these classes of graphs to variations of constructions and representations in those same classes. In this thesis, in particular, we will study the relationship of the VPT and EPT graphs with the EPG graphs.
 
-
-
-
-
-
-
+In the next section we present a table with the main notations used in the text.
 
 %\subsection{The VPT graphs}
 
 \section{Terminology of text}
 
-Table tal resumes the basic symbols and their meanings about graph theory.
+Table~\ref{tab:terminologyTable} resumes the basic symbols and their meanings about graph theory.
 More specific definitions will be given in the next chapters as necessary.
 
+\input{includes/include-tab/terminologyTable}
 
-
- No capítulo seguinte nos dedicaremos a expor os principais resultados obtidos até aqui.
-
-%\cite{Asinowski2009} mostrou que não existe um k para o qual todo grafo é B_k-EPG, somente uma pequena quantidade de grafos com n vertices pertencem a B_k-EPG para algum k dado.
+In the following chapters we will dedicate ourselves to expose the main results obtained by researching this thesis.
