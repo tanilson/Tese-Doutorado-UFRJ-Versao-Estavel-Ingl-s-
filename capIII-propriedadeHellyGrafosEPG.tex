@@ -11,92 +11,123 @@ Talento é 1\% inspiração e 99\% transpiração. }
 Thomas Edison
 \end{flushright}
 
-Neste capítulo examinaremos as relações hierárquicas entre algumas classes EPG e EPG-Helly. Ademais, abordaremos representações $B_1$-EPG de alguns grafos que serão utilizados posteriormente. Primeiro, vamos observar como as classes $B_0$-EPG, $B_0$-EPG-Helly, $B_1$-EPG e $B_1$-EPG-Helly se relacionam, em seguida consideramos as representações $B_1$-EPG de $C_4$'s e do grafo octaedro. Por último, apresentaremos a prova de $NP$-completude do problema de reconhecimento de grafos $B_1$-EPG-Helly.
+% Neste capítulo examinaremos as relações hierárquicas entre algumas classes EPG e EPG-Helly. Ademais, abordaremos representações $B_1$-EPG de alguns grafos que serão utilizados posteriormente. Primeiro, vamos observar como as classes $B_0$-EPG, $B_0$-EPG-Helly, $B_1$-EPG e $B_1$-EPG-Helly se relacionam, em seguida consideramos as representações $B_1$-EPG de $C_4$'s e do grafo octaedro. Por último, apresentaremos a prova de $NP$-completude do problema de reconhecimento de grafos $B_1$-EPG-Helly.
+
+In this chapter we will examine the hierarchical relationships between some EPG and Helly-EPG classes. In addition, we will approach $ B_1$-EPG representations of some graphs that will be used later. First, let is focus our attention to understand how the classes $B_0$-EPG, $B_1$-EPG,  Helly-$B_1$ EPG and  $L$-shaped paths are related, then we consider the $ B_1$-EPG representations of graphs $C_4 $ and the Octahedral graph. Next, we will present the proof of $NP$-completeness to Helly-$B_1$-EPG graph recognition problem. Finally, at the end of this chapter the reader can find a section with a complete version of the paper published in the journal DMTCS that contains the set of proofs that have been omitted from the text.
 
 
-\section{Subclasses of $B_1$-EPG graphs}
+\section{Introduction}
+An EPG graph $G$ is a graph that admits a representation in which its vertices are represented by paths of a grid $Q$, such that two vertices of $G$ are adjacent if and only if the corresponding paths have at least one common edge.
 
-Apesar das classes $B_1$-EPG e $ B_1$-EPG-Helly não coincidirem,  o mesmo não ocorre para as classes $ B_0$-EPG e $ B_0$-EPG-Helly, conforme será visto mais adiante.
+The study of EPG graphs has motivation related to the problem of VLSI design that combines the notion of edge intersection graphs of paths in a  tree with a  VLSI  grid layout model, see~\cite{golumbic2009}. The number of bends in an integrated circuit may increase the layout area, and consequently, increase the cost of chip manufacturing.
+This is one of the main applications that instigate research on the EPG representations of some graph families when there are constraints on the number of bends in the paths used in the representation.
+Other applications and details on circuit layout problems can be found in~\cite{bandy1990, molitor1991}.
 
-Primeiro, observamos que quando não restringimos o número de dobras de cada caminho podemos mostrar que qualquer grafo pode ser representado como um grafo EPG.
-É fácil construir representações EPG que verificam o seguinte lema. 
+A graph is a $ B_k$-EPG graph if it admits a representation in which each path has at most $k$ bends. As an example, Figure~\ref{fig:trianguloepgRepresentacao}(a) shows a $C_3$, Figure~\ref{fig:trianguloepgRepresentacao}(b) shows an EPG representation where the paths have no bends and Figure~\ref{fig:trianguloepgRepresentacao}(c) shows a representation with at most one bend per path.   
+Consequently, $C_3$ is a $B_0$-EPG graph. More generally, $B_0$-EPG graphs coincide with interval graphs.
 
- 
- 
- \begin{lema} \cite{golumbic2009} \label{lem:todoGrafoEpg}
- Todo grafo é um grafo EPG.
- \end{lema}
-%   \begin{prove}
-%  Seja $G=(V,E)$ um grafo com vértices $v_1,\dots ,v_n$. Considere a grade $Q$ com linhas $[1,\dots ,n]$ e colunas $[1, 1', 2, 2', \dots, n,n']$. 
- 
-%  Considere o vértice $v_i$ e denote $N^+(v_i)$= $\{v_j|i<j,(i,j)\in E\}$, onde $N^+(v_i)$= $\{v_{j_1}, \dots, v_{j_k}\}$ é ordenado de acordo com $\{v_{j_1}< \dots < v_{j_k}\}$.   The path $P_i$ on $Q$ is defined starting horizontally from grid point $(1,i)$ to $(i,i)$, continuing vertically to $(i,j_1)$, horizontally to $(i',j_1)$, continuing vertically to $(i,j_2)$, horizontally to $(i',j_2)$, continuing vertically $(i,j_3)$, horizontally $(i',j_3)$, etc. i.e., we alternate between column $i$ and column $i'$ as we go across on each level $j_1, j_2, \dots, j_k$. %reference Figure
-%  We prove that $P_i$ on the grid $Q$ is an EPG representation of $G$. For every $i<j,(v_i,v_j)\in E(G)$ if and only if the paths $P_i$, $P_j$ contain the horizontal grid edge $((i,j), (i',j))$. Moreover, no paths share vertical grid edges. Therefore the vertices in the graph are adjacent if and only if the corresponding paths share a common grid edge.
-%  $\square$ \end{prove}
- 
- %Moreover, the same applies to EPG-Helly graphs. 
- 
- De forma equivalente, também é possível mostrar que todo grafo possui uma representação EPG que satisfaz à propriedade Helly. Um algoritmo que efetua essa construção é apresentado no Lema~\ref{lem:todoGrafoEpgHelly}.
- 
- \begin{lema}\label{lem:todoGrafoEpgHelly}
- Todo grafo é um grafo EPG-Helly.
- \end{lema}
-%  \setcounter{prove}{1}
-  \begin{proof}
-  Seja $G$ um grafo com $n$ vértices $v_1, v_2, \dots, v_n$ e $\mu$ cliques maximais $C_1, C_2, \dots , C_{\mu }$. É possível construir uma representação EPG-Helly de $G$ usando uma grade $Q$ de tamanho $(\mu \times 2n)$. As linhas correspondem às cliques maximais e são enumeradas $1, 2, \dots , \mu$. Cada vértice $v_j$ corresponde ao par de colunas $j, j+n$. Cada clique maximal  $C_i$ é mapeada para uma aresta $(i,n), (i,n+1)$. %Cada caminho $P_j$ contém todas arestas $(i,n), (i,n+1)$ correspondendo às cliques maximais $C_i$ contendo $v_i$.
+\input{includes/include-img/cliqueTypes}
+
+The \emph{bend number} of a graph $G$ is the smallest $k$ for which $G$ is a $B_k$-EPG graph. Analogously, the bend number of a class of graphs is the smallest $k$ for which all graphs in the class have a $B_k$-EPG representation. Interval graphs have bend number $0$, trees have bend number $1$, see~\cite{golumbic2009}, and outerplanar graphs have bend number $2$, see~\cite{daniel2014b}. The bend number for the class of planar graphs is still open, but according to \cite{daniel2014b}, it is either $3$ or $4$.
+
+The class of EPG graphs has been studied in several papers, such as \cite{alcon2016, Asinowski2009, cohen2014, golumbic2009, heldt2014,  martin2017,golumbic2019edge}, among others. The investigations regarding EPG graphs frequently approach characterizations concerning the number of bends of the graph representations. Regarding the complexity of recognizing $B_k$-EPG graphs, only the complexity of recognizing a few of these sub-classes of EPG graphs have been determined: $B_0$-EPG graphs can be recognized in polynomial time, since it corresponds to the class of interval graphs, see ~\cite{booth1976}; in contrast, recognizing $B_1$-EPG and $B_2$-EPG graphs are NP-complete problems, see~\cite{heldt2014} and \cite{martin2017}, respectively. 
+Also, note that the paths in a $B_1$-EPG representation have one of the following shapes: $\llcorner$, $\lrcorner$, $\ulcorner$ and $\urcorner$. \cite{cameron2016edge} showed that for each $S\subset \{\llcorner, \lrcorner, \ulcorner, \urcorner\}$, it is NP-complete to determine if a given graph $G$ has a $B_1$-EPG representation using only paths with shape in $S$.
+
+A  collection $C$ of sets satisfies the Helly property when every sub-collection of $C$ that is pairwise intersecting has at least one common element. 
+The study of the Helly property is useful in diverse areas of science. We can enumerate applications in semantics, code theory, computational biology, database, image processing, graph theory, optimization, and linear programming, see \cite{dourado2009}.
+
+The Helly property can also be applied to the $B_k$-EPG representation problem, where each path is considered a set of edges. A graph $G$ has a  Helly-$B_k$-EPG representation if there is a $B_k$-EPG representation of $G$ where each path has at most $k$ bends, and this representation satisfies the Helly property. Figure~\ref{fig:envelopeRepresentacoes}(a) presents two $B_1$-EPG representations of a graph with five vertices.  Figure~\ref{fig:envelopeRepresentacoes}(b)   illustrates 3 pairwise intersecting paths ($P_{v_1}, P_{v_2}, P_{v_5}$), containing a common edge, so it is a Helly-$B_1$-EPG representation. In Figure~\ref{fig:envelopeRepresentacoes}(c), although the three paths are pairwise intersecting, there is no common edge in all three paths, and therefore they do not satisfy the Helly property.
+
+The Helly property related to EPG representations of graphs has been studied in~\cite{golumbic2009} and~\cite{golumbic2013}. 
+
+Let $\cal {F}$ be a family of subsets of some universal set $U$, and $h\geq 2$ be an integer.  Say that $\cal{F}$ is $h$-{\it intersecting} when every group of $h$ sets of $\cal {F}$ intersect. The {\it core} of $\cal {F}$, denoted by $core(\cal F)$, is the intersection of all sets of $\cal {F}$. The family $\cal{F}$ is $h$-{\it Helly} when every $h$-intersecting subfamily $\cal{F'}$ of $\cal{F}$ satisfies $core(\cal{F'}) \neq \emptyset$, see e.g. \cite{D76}. On the other hand, if for every subfamily $\cal{F'}$ of $\cal{F}$, there are $h$ subsets whose core equals the core of  $\cal {F'}$, then $\cal {F}$ is said to be {\it strong} $h$-{\it Helly}.
+Note that the Helly property that we will consider in this paper is precisely the property of being 2-Helly. 
+
+The  {\it Helly number} of the family $\cal{F}$ is the least integer $h$, such that $\cal{F}$ is $h$-Helly. Similarly, the {\it strong Helly number} of $\cal{F}$ is the least $h$, for which  $\cal{F}$ is strong $h$-Helly. It also follows that the strong Helly number of $\cal{F}$ is at least equal to its Helly number. In~\cite{golumbic2009} and~\cite{golumbic2013}, they have determined the strong Helly number of $B_1$-EPG graphs. 
+
+\input{includes/include-img/envelope}
+
+
+Next, we describe some terminology and notation.
+
+The term \emph{grid} is used to denote the Euclidean space of integer orthogonal coordinates. Each pair of integer coordinates corresponds to a \emph{point} (or vertex) of the grid. The \emph{size} of a grid is its number of points. The term \emph{edge of the grid} will be used to denote a pair of vertices that are at a distance one in the grid. Two edges $e_1$ and $e_2$ are \emph{consecutive edges} when they share exactly one point of the grid.
+ A (simple) path in the grid is as a sequence of distinct edges $e_1, e_2, \leq, e_m$,  where consecutive edges are adjacent, i.e., contain a common vertex, whereas non-consecutive edges are not adjacent.  In this context, two paths only intersect if they have at least a common edge. The first and last edges of a path are called \emph{extremity edges}.
   
-  %Além disso, dois caminhos distintos $P_j,P_k$ intersectam nas arestas correspondendo às cliques maximais contendo $v_j,v_k$.
-  
-  Tome $v_j \in V(G)$, considere a clique maximal contendo $v_j$ em ordem ascendente de seus índices. O caminho $P_j$ representando $v_j$, inicia no vértice $(1,j)$ de $Q$ e desce na coluna $j$ até $(i,j)$, onde $C_i$ é a primeira clique contendo $v_j$ então $P_j$ dobra no vértice  $(i,j)$ e prossegue para a direita, atravessa a aresta $(i,n), (i,n+1)$ representando $C_i$. Então $P_j$ prossegue  sobre a linha $i$ até atingir o vértice  $(i, j+n)$, onde dobra novamente, descendo na coluna $j+n$ até atingir o vértice $(l,j), l>i$, onde $C_l$ está a próxima clique maximal contendo  $v_j$ onde ele dobra mais uma vez. O caminho prossegue a linha $l$, atravessando a aresta $(l,n),(l,n+1)$, e assim por diante, até que todas as arestas de $Q$ correspondendo às cliques maximais contendo $v_j$ terem sido atravessadas por $P_j$.   
-  
-Segue então que dois caminhos distintos, $P_j$ e $P_q$, intersectam-se exatamente nas linhas correspondendo às cliques maximais contendo ambos $v_j$ e $v_q$.  
-  \end{proof}
- 
- A Figura~\ref{fig:gradeDemonstracao} apresenta a grade $Q$ e o caminho $P_2$ correspondendo ao vértice $v_2 \in V(G)$, contendo as cliques maximais  $C_2, C_4$ e $C_5$ de $G$.
- 
-  \input{./includes/include-img/grade.tex}
- 
- 
- 
- \begin{corollary}
- Todo grafo $G$ contendo  $\mu$ cliques maximais admite uma representação $B_{2\mu -1}$-EPG-Helly. %in a grid $Q$ of dimension $(\mu \times 2n)$.
- \end{corollary}
- 
+The \emph{direction of an edge} is vertical when the first coordinates of its vertices are equal, and is horizontal when the second coordinates are equal. A \emph {bend} in a path is a pair of consecutive edges $ e_1, e_2 $ of that path, such that the directions of $ e_1$ and $ e_2$ are different. When two edges $ e_1$ and $e_2 $ form a bend, they are called \emph { bend edges}. A \emph {segment} is a set of consecutive edges with no bends. %is a path with no bends.
+Two paths are said to be \emph{edge-intersecting}, or simply  \emph{intersecting} if they share at least one edge. Throughout the paper, any time we say that two paths intersect, we mean that they edge-intersect. If every path in a representation of a graph $G$ has at most $k$ bends, we say that this graph $G$ has a \emph{$B_k$-EPG} representation. When $k = 1$ we say that this is a \emph{single bend} representation.
 
-%Note que a classe de grafos $B_0$-EPG coincide com a bem conhecida classe de grafos de intervalo, i.e. grafos de intersecção de intervalos sobre uma reta real. 
+\medskip
+
+In this chapter, we study the Helly-$B_k$-EPG graphs. First, we show that every graph admits an EPG representation that is Helly, and present a characterization of Helly-$B_1$-EPG representations. Besides, we relate Helly-$B_1$-EPG graphs with L-shaped graphs, a natural family of subclasses of $B_1$-EPG. Finally, we prove that recognizing Helly-$B_k$-EPG graphs is in NP, for every fixed $k$. Besides, we show that recognizing Helly-$B_1$-EPG graphs is NP-complete, and it remains NP-complete even when restricted to 2-apex and 3-degenerate graphs.
+
+The rest of the chapter is organized as follows. In Section~\ref{sec:prelim}, we present some preliminary results, we show that every graph is a Helly-EPG graph, present a characterization of Helly-$B_1$-EPG representations, and relate Helly-$B_1$ EPG with L-shaped graphs. In Section~\ref{sec:NPpert}, we discuss the NP-membership of {\sc Helly-$B_k$ EPG Recognition}. In Section~\ref{sec:sectionDispositivoClausula}, we present the NP-completeness of recognizing Helly-$B_1$-EPG graphs. Finally, in the last section the reader can find the complete paper accepted to  journal Discrete Mathematics \& Theoretical Computer Science (DMTCS) that contains the set of proofs that have been omitted from the text.
 
 
-\begin {lema} \label{lem:b0epg}
-Toda representação $ B_0$-EPG satisfaz à propriedade Helly.
-\end {lema}
+\section{Preliminaries} \label{sec:prelim}
+
+Before leaving for more laborious results to obtain, let us first notice a simple result. We can observe that when we do not restrict the number of bends of each path, we can show that any graph can be represented as an EPG graph.
+
+This study starts with the following lemma.
+
+\begin{lemma}[\citet{golumbic2009}] \label{lem:todoGrafoEpg}
+ Every graph is an EPG graph.
+ \end{lemma}
+ 
+ Moreover, the same applies to EPG-Helly graphs. 
+ 
+In an equivalent way, it is also possible to show that every graph has an EPG representation that satisfies the Helly property. An algorithm that performs this construction is presented in the Lemma~\ref{lem:todoGrafoEpgHelly}.
+
+ \begin{lemma}\label{lem:todoGrafoEpgHelly}
+ Every graph is a Helly-EPG graph.
+ \end{lemma}
 
 \begin{proof}
-Segue diretamente da seguinte observação de \citeauthor{golumbic2009}~\cite{golumbic2009}: a classe de grafos $B_0$-EPG pode ser vista como a classe de grafos de intervalo, grafos de intersecção de intervalos sobre uma linha. Note que  intervalos sobre linhas distintas da grade, horizontais ou verticais, formam componentes distintas do grafo.
+Let $G$ be a graph with $n$ vertices $v_1, v_2, \dots, v_n$ and $\mu$ maximal cliques $C_1, C_2, \dots , C_{\mu }$. We construct a Helly-EPG representation of $G$ using a $\mu +1\times \mu +1$ grid $Q$. 
+%The rows and columns correspond to each maximal cliques and are numbered $1, 2, \dots , \mu$. 
+Each maximal clique $C_i$ of $G$ is mapped to an edge of $Q$ as follow: 
+\begin{itemize}
+    \item if $i$ is even then the maximal clique $C_i$ is mapped to the edge in column $i$ between rows $i$ and $i+1$;
+    \item if $i$ is odd then the maximal clique $C_i$ is mapped to the edge in row $i$ between columns $i$ and $i+1$.
+\end{itemize}
+
+The following describes a descendant-stair-shaped construction for the paths.
+  
+Let $v_l \in V(G)$ and $C_i$ be the first maximal clique containing $v_l$ according to the increasing order of their indices. If $i$ is even (resp. odd) the path $P_l$ starts in column $i$ (resp. in row $i$), in the point $(i,i)$. Then $P_l$ extends to at least the point $(i+1, i)$ (resp. $(i, i+1)$) proceeding to the until the row (resp. column) corresponding to next maximal clique of the sequence containing $v_l$, we say $C_{j}$.
+At this point, we bend $P_l$, which goes to the point $(j,j)$ and repeat the process previously described. 
+%
+Figure~\ref{fig:gradeDemonstracao} shows the Helly-EPG representation of the octahedral graph $O_3$, according to the construction previously described.
+
+By construction, each path travels only rows and columns corresponding with maximal cliques containing its respective vertex. And, every path crosses the edges of the grid to which your maximal cliques were mapped. Thus, the previously described construction results in an EPG representation of $G$, which is Helly since every set ${\mathcal P}$ of paths representing a maximal clique has at least one edge in its core.
 \end{proof}
+ 
+ \input{./includes/include-img/grade.tex}
 
 
-% \begin {proof}
-% Assuma por contradição que exista um grafo $G$ que admite uma representação $ B_0$-EPG que não satisfaz à propriedade Helly. Então, essa representação possui uma coleção minimal de caminhos mutuamente intersectantes $ \mathcal{P} = \{P_{1}, P_{2}, \ldots, P_{k} \} $ tal que $ P_{1} \cap P_{2} \cap \cdots \cap P_{k} = \emptyset, k \geq 3. $
-% Por minimalidade, sabemos que  $ \bar{P_1} = \mathcal{P} \setminus \{P_1 \}$, $ \bar {P_2} = \mathcal{P} \setminus \{P_2 \} $ e $ \bar {P_3 } = \mathcal{P} \setminus \{P_3) \} $ são mutuamente intersectantes e satisfazem à propriedade Helly.
-% Assim, existem os seguintes segmentos distintos $ s_{\bar{P_1}}, s_{\bar {P_2}}, s_{\bar {P_3}}$ associados com a intersecção de caminhos em $ \bar {P_1},  \bar {P_2} $ e $ \bar {P_3} $. Uma vez que a representação não possui caminhos com dobras, então sabemos que os caminhos em  $ \mathcal{P}$ estão sobre a mesma linha.
-% Sem perda de generalidade, vamos assumir que  $ s_{ \bar {P_1}}, s_{ \bar {P_2}}$ e $ s_{ \bar {P_3}}$ ocorrem da esquerda para a direita nessa ordem. Uma vez que $ s_{\bar {P_3}}$ e $ s_{\bar {P_1}}$ intersectam $ P_2 $, e $ P_2 $ é um caminho sem dobra, então $ P_2$ intersecta $ s_{\bar {P_2}}$. Dessa forma temos uma contradição, pois $ s_{\bar {P_2}} $ intersecta todos os caminhos em $ \mathcal{P}$, contradizendo a hipótese de $ P_1 \cap P_2 \cap \cdots \cap P_k = \emptyset $.
-% \end {proof}
-%%%%%%%%%
+ The provided construction in Lemma~\ref{lem:todoGrafoEpgHelly} can be modified to represent an monotonic row-ascendant EPG representation how in~\cite{golumbic2009} and~\cite{golumbic2013}. To do this, it is enough to change the orientation of the y-axis such that it grows from bottom to up.
+
+
+ 
+  The Helly property related to EPG representations of graphs has been studied in~\citet{golumbic2009,golumbic2013}.
+
+
+\section{Subclasses of $B_1$-EPG graphs}\
+
+Although the classes $ B_1$-EPG and Helly-$B_1$ EPG are distinct, the same is not true for the classes $B_0$-EPG and Helly-$B_0 $ EPG, which in this case coincide and correspond exactly to the class of interval graphs, see~\citet{booth1976}.  The reason these two representations coincide is because any $B_0$-EPG representation is Helly. Throughout the text we will show that each class of Helly-$B_k$ EPG is contained in the corresponding non-Helly class for all $ k \geq 1$, i.e. Helly-$B_k$ EPG $ \subsetneq$ $B_k$-EPG.
+
+
 
 \begin{corollary}
 A classe $B_0$-EPG coincide com a classe $B_0$-EPG-Helly.
 \end{corollary}
 
-Grafos $B_0$-EPG coincidem com a classe de grafos de intervalo. O problema de reconhecimento de grafos de intervalo pode ser resolvido em tempo linear~\cite{booth1976}. Já o problema de reconhecimento de grafos $ B_1$-EPG é $NP$-completo \cite {heldt2014}. Em particular, os grafos $ B_1$-EPG-Helly formam uma subclasse propriamente contida em $ B_1$-EPG, ver a Figura~\ref{fig:diagramaEPG}. Além disso, a complexidade de reconhecimento da classe de grafos $ B_1$-EPG-Helly é um problema em aberto. Este trabalho se propõe a resolvê-lo.% que foi resolvido por este trabalho. 
+Além disso, a complexidade de reconhecimento da classe de grafos $ B_1$-EPG-Helly é um problema em aberto. Este trabalho se propõe a resolvê-lo.
+
 
 %O Lema \ref{lem:octaedronaohelly} mostra que 
-As classes  $ B_1$-EPG e $ B_1$-EPG-Helly são distintas, observe o grafo octaedro $ O_3$, ver Figura~\ref{fig:octaedro}(a), que apresenta uma representação  $B_1$-EPG minimal, a menos de isomorfismos, como na Figura~\ref{fig:octaedro}(b). O grafo octaedro  $ O_3 $ pertence a $ B_1$-EPG mas não pertence a $B_1$-EPG-Helly.
+As classes  $ B_1$-EPG e $ B_1$-EPG-Helly são distintas, observe o grafo octaedro $ O_3$, ver Figura~\ref{fig:octaedro}(a), que apresenta uma representação  $B_1$-EPG minimal, que sempre possui mesmo shape, como na Figura~\ref{fig:octaedro}(b). O grafo octaedro  $ O_3 $ pertence a $ B_1$-EPG mas não pertence a $B_1$-EPG-Helly.
 
 \input{./includes/include-img/diagramaEpg.tex}
 
-
-
-\section{Representações $B_1$-EPG para os grafos $C_4$ e Octaedro}
-%{The Classes $B_1$-EPG and $B_1$-EPG-Helly}
 
 A seguir descrevemos quais são as representações de um grafo $C_4$ em uma representação de dobra simples. Uma descrição alternativa das possíveis representações de um $C_4$ pode ser encontrada em~\cite{golumbic2009}, onde o autor demonstra que são somente essas as poucas representações possíveis para o ciclo induzido de tamanho 4.
 
@@ -133,16 +164,6 @@ Seja $ Q $ uma grade e sejam $ (a_1, b),$ $(a_2, b),$ $(a_3, b),$ $(a_4, b)$ are
 \begin{lema}\label{lem:representacaoC4}
 \cite{golumbic2009} Todo $C_4$ que é um subgrafo induzido de um grafo $ G $ corresponde, em qualquer representação de dobra simples, a uma torta verdadeira, a uma torta falsa, ou a uma moldura.
 \end{lema}
-% \begin{prove} Consider a collection of paths $ P = \ {P_1, \dots, P_4}$ of a grid $ Q $ in a $ B_1$-EPG representation of the graph $G$.
-
-% Consider $ C_4 = (v_1, v_2, v_3, v_4) $ that is a chordless 4-cycle in $ G$. Consider $P_i$ the path in $ G $ that corresponds to $v_i $.
-% Suppose $ \displaystyle \bigcap _{P_i \in P} P_i \neq \emptyset $, then clearly $ \displaystyle \bigcap _{P_i \in P} P_i = {b} $, for some point $ b $ of the grid. Since each vertex in $ C_4 $ has exactly 2 neighbors, each path $ P_i $ contains exactly two edges of the grid with end point $ b$. Thus, we obtain a star subgraph with centro point $ b $ and edges $ (a_1, b), (a_2, b), (a_3, b), (a_4, b)$.
-% Without loss of generality, $ P_1 $ contains the edges $ (a_1, b), (a_2, b) $ of the grid. If $ P_2 $ contains $ (a_2, b), (a_3, b) $ or $ (a_1, b), (a_4, b) $, then we get a torta verdadeira. Otherwise, $ P_2 $ contains the edges $ (a_2, b), (a_4, b) $ or $ (a_1, b), (a_3, b) $ and we obtain a torta falsa.
-
-% Otherwise, $ \displaystyle \bigcaP_ {P_i \in P} P_i = \emptyset$. Suppose $ P_1 $ is a path without bend. Each of the $ P_2 $ and $ P_4 $ paths share an edge with $ P_1 $ but do not share a common edge with any other path. If $ P_2 $ and $ P_4 $ do not have a bend, then we get a interval representation of $ C_4 - v_3 $. However, it is not possible to add a $ P_3 $ path with at most of one bend. Similarly, if $ P_2 $ and $ P_4 $ have a single bend, the $ P_3 $ path can not be added either. Therefore, $ P_1 $ has a single bend.
-
-% By symmetry, we assume that all $ P_i $ must has a single bend. Moreover, two paths can not have a bend on a common point in the grid. Thus, we obtain a rectangular subgraph with angles $ (x_1, y_1), (x_2, y_1), (x_2, y_2), (x_1, y_2) $, where $ P_1 $ bends at $ (x_1, y_1) $, $ P_2 $ bends at $ (x_2, y_1) $, $ P_3 $ bends at $ (x_2, y_2) $, and $ P_4 $ bends at $ (x_1, y_2) $, forming a frame.
-% $\square$ \end{prove}
 
 \begin{definition}
 %A edge is \emph{unnecessary} if its removal keeps the intersections and not intersection of the representation. 
@@ -166,7 +187,7 @@ Com o mesmo raciocínio, tome uma representação $ B_1$-EPG de $C_4$ agora por 
 
 Pelo Lema~\ref{lem:octaedronaohelly}, o grafo $ O_3 $ possui uma representação  $B_1$-EPG minimal única, a menos de isomorfismos, como retratado na Figura~\ref{fig:octaedro}(b). Como os caminhos $ P_a, P_b $ e $ P_c $  não satisfazem à propriedade Helly, então $O_3 \notin B_1$-EPG-Helly. 
 
-\section{Pertinência a $\mathcal{NP}$}
+\section{Membership in $\mathcal{NP}$} \label{sec:NPpert}
 
 %In this paper we are interested in characterizing the complexity of the $B_1$-EPG-Helly recognition problem, whose formal definition is presented next:
 Nesta seção, mostraremos que o problema de reconhecimento de grafos $B_k$-EPG-Helly, onde $k$ é limitado por um polinômio de $|V(G)|$, pertence a  $\mathcal{NP}$. O problema pode ser formalmente descrito como segue.
@@ -283,7 +304,7 @@ Pelo Lema~\ref{lem:gridPolinomial} e o fato de que $k$ é limitado por uma funç
 Finalmente, pelos Lemas~\ref{lem:verify1}, \ref{lem:relevantEdges} e \ref{lem:verify3}, segue que podemos verificar em tempo polinomial sobre o tamanho de $G$ se $\mathcal{P}$ é uma família de conjuntos codificada como uma sequência de arestas relevantes que constituem uma representação $B_k$-EPG-Helly de um grafo  $G$.
 \end{proof}
 
-\section{$NP$-Dificuldade}\label{sec:sectionDispositivoClausula}
+\section{$NP$-Hardness}\label{sec:sectionDispositivoClausula}
 
 Agora provaremos que o reconhecimento de grafos   $B_1$-EPG-Helly é $NP$-completo. Para essa demonstração seguiremos o roteiro de prova de dificuldade traçado por~\cite{heldt2014}.  Estabelecemos a redução do problema {\sc Positive (1 in 3)-3SAT} definido como segue:
 
@@ -567,3 +588,10 @@ Finalmente, podemos substituir os vértices que representavam as variáveis e cl
 
 
 \input{./includes/include-img/grafoIncidenciaCompleto.tex}
+
+
+
+
+
+\section{Article accepted for publication in the journal  Discrete Mathematics \& Theoretical Computer Science} 
+\includepdf[pages=-]{./includes/include-pdf-files/dmtcsTanilson.pdf}

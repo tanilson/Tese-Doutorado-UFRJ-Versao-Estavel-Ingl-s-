@@ -93,7 +93,8 @@ Figure~\ref{fig:envelopeRepresentacoes}(a) depicts two representations $ B_1$-EP
 
 \input{./includes/include-img/envelope.tex}
 
-
+In this thesis we are interested in EPG representations of graphs that satisfy the Helly property. In particular, for the $ B_1$-EPG graphs, this directly implies that each clique has a special format and the paths that compose it always share an edge of the representation in the grid, i.e. an edge-clique. Using this premise we were able to present Helly subfamilies for $ B_1$-EPG graphs and we also presented a hardness proof  in recognizing this class of graphs.
+ We will also study within the scope of this research the parameters Helly number and strong Helly number in paths on a grid.
 
 \subsection{An approach in EPG graphs}
 
@@ -188,9 +189,9 @@ algorithms for recognizing chordal $B_0$-VPG graphs, and for recognizing $B_0$-V
 \citet{chaplick2012bend} show  that for every fixed $k$, $B_k$-VPG $\subsetneq$ $B_{k+1}$-VPG and that recognition of graphs from $B_k$-VPG is $NP$-complete even when the input graph is given by a $B_{k+1}$-VPG representation. 
 
 
-$B_0$-VPG graphs restricted to Block graphs were studied by \citet{Alcn2017VertexIG}. Their research given a characterization by an infinite family of minimal forbidden induced subgraph  for $B_0$-VPG Block graphs. Fhurthemore, the work provides an alternative recognition and representation algorithm for $B_0$-VPG graphs also in the class of Block graphs.
+$B_0$-VPG graphs restricted to Block graphs were studied by \citet{Alcn2017VertexIG}. Their research given a characterization by an infinite family of minimal forbidden induced subgraph  for $B_0$-VPG Block graphs. Furthermore, the work provides an alternative recognition and representation algorithm for $B_0$-VPG graphs also in the class of Block graphs.
 
-
+In Chapter~\ref{cap:iv} we study the parameters Helly number  and strong Helly number for $B_k$-VPG graphs. We determine the value of these parameters to $ k = 0,1,2,3 $ and verify that they are unbounded for $ k\geq 4 $.
 
 
 
@@ -225,7 +226,12 @@ When there is no restriction on the maximum degree of $T$ or on the maximum degr
 By taking $h=3$ they obtain a characterization by minimal forbidden induced subgraphs of the class VPT $\cap$ EPT = EPT $\cap$ Chordal = $[3,2,2] = [3,2,1]$, see~\citet{golumbic1985edge}. The paper also proved that the problem of deciding whether a given VPT graph belongs to $[h,2,1]$ is NP-complete even when restricted to the class VPT $ \cap $ Split without dominated stable vertices, among other minor results.
 
 
- It is known that when the EPT graphs are restricted to host trees of vertex degree 3 this class corresponds precisely to the Chordal EPT graphs. In~\citet{golumbic2008representing} was  proved an analogous result that Weakly Chordal EPT graphs are precisely the EPT graphs whose host tree restricted to degree 4. Moreover, they provide an algorithm to reduce a given EPT representation of a Weakly Chordal EPT graph to an EPT representation on a degree 4 tree. In resume, their proof state that  $[4, 2, 2]$ graphs are equivalent to Weakly Chordal $[\infty, 2, 2]$ graphs. In addition, we know that when the maximum degree of the host tree T is 3, the coloring problem is polynomial, by
+In her master thesis, \citet{petito2002grafos} research UE and UV graphs and the Helly property. In particular, when it considers the UE family with Helly property its study leads to a new graph class denoted by UEH graph class. The master thesis also presents results to directed and rooted trees. Furthermore, the master thesis also considers the relationship among these classes in addition to others. In time, the work still considers the parameter strong Helly number in its scope. This doctoral thesis approaches a similar branch of research since we studied EPG and Helly graphs, the parameters Helly number and Strong Helly number and also VPT and EPT (UV and UE respectivaly) graphs.
+
+ \citet{petito2002grafos} continued her study in her doctoral thesis, now \citet{petito2009grafos} and specifically about UEH graphs. 
+
+
+Returning to $[h,s,t]$ notation, it is known that when the EPT graphs are restricted to host trees of vertex degree 3 this class corresponds precisely to the Chordal EPT graphs. In~\citet{golumbic2008representing} was  proved an analogous result that Weakly Chordal EPT graphs are precisely the EPT graphs whose host tree restricted to degree 4. Moreover, they provide an algorithm to reduce a given EPT representation of a Weakly Chordal EPT graph to an EPT representation on a degree 4 tree. In resume, their proof state that  $[4, 2, 2]$ graphs are equivalent to Weakly Chordal $[\infty, 2, 2]$ graphs. In addition, we know that when the maximum degree of the host tree T is 3, the coloring problem is polynomial, by
 ~\cite{golumbic1985}. The paper of~\cite{golumbic2008representing} also shows the analogous polynomial result for a degree 4 host tree, thus the coloring problem on EPT graphs restricted to a host tree of vertex degree 4 is polynomial.
 
 In~\citet{golumbic2008equivalences}, the research presents equivalences and the complete hierarchy of intersection graphs of paths in a tree, this including VPT and EPT grpahs, in particular orthodox-$[h,s,t]$ graphs with $s=2$ and considering variations of $h,t$. For more information about orthodox-$[h,s,t]$ graphs we recommend reading~\citet{jamison2005constant} and \citet{jose2018}.
@@ -233,6 +239,8 @@ In~\citet{golumbic2008equivalences}, the research presents equivalences and the 
 Other researches still focus on variations of the EPT representations, such as \cite{boyaci2013graphs} and \cite{boyaci2016graphs}. These two articles represent a same research divided into two parts. Given a set of paths $P$, they define the graph ENPT($P$) of edge intersecting non-splitting paths of a tree, denoted by ENPT graph, as the graph having a vertex for each path in $P$, and an edge between every pair of vertices representing two paths that are both edge-intersecting and non-splitting. A graph $G$ is an ENPT graph if there is a tree $T$ and a set of paths $P$ of $T$ such that $G$ = ENPT($P$). The papers investigate basic properties of this class and proof that some graph classes belong to ENPT, such that Trees, Holes, Complete graphs, etc. Among the results they show that the problem of finding such a representation is $NP$-Hard in general also for this class.
 
 As we can see, EPT and VPT graphs have been extensively studied in the literature. With approaches that study from classic problems in these classes of graphs to variations of constructions and representations in those same classes. In this thesis, in particular, we will study the relationship of the VPT and EPT graphs with the EPG graphs.
+
+In Chapter~\ref{cap:v} we consider relationship between classes VPT, EPT and Chordal $B_1$-EPG graphs.
 
 In the next section we present a table with the main notations used in the text.
 
