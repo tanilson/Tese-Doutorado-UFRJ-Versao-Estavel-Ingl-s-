@@ -1,4 +1,4 @@
-\chapter{The Helly and Strong Helly numbers fo graphs $B_k$-EPG and $B_k$-VPG}
+\chapter{The Helly and Strong Helly numbers for graphs $B_k$-EPG and $B_k$-VPG}
 \label{cap:iv}
 
 \begin{flushright}
@@ -13,520 +13,397 @@ Falta algo para completar esta demonstração, mas não tenho tempo.}
 Évariste Galois
 \end{flushright}
 
-Definir Helly number e strong Helly number.
 
-A pergunta natural a ser feita é sobre as relações entre estes parâmetros e entre
-eles e a propriedade Helly. Alguns resultados são imediatos. Por exemplo, como
-a noção de número Helly forte generaliza a de número Helly temos que o número
-Helly de qualquer família é menor ou igual do que seu número Helly forte.
-
-O estudo de grafos EPG foi introduzido por  Golumbic, Lypshteyn e Stern (2009) e consiste dos grafos de intersecção de conjuntos de caminhos sobre uma grade ortogonal, cujas intersecções são tomadas considerando as arestas dos caminhos. Se as intersecções dos caminhos consideram os vértices e não as arestas, a classe de grafos resultante é chamada de grafos VPG. Tal classe foi introduzida em 2011 \cite{asinowski2011string} e \cite{asinowski2012}. Nesse capítulo estudaremos dois parâmetros em ambas classes de grafos EPG e VPG. Os parâmetros que serão estudados são nomeadamente o número de Helly e o número de Helly forte.
-
-\section{Discussão Inicial}
-
-Seja  $\cal {F}$ uma família de conjuntos de algum conjunto universal $U$, e $h$ um número inteiro tal que $h\geq 1$. Podemos dizer que $\cal{F}$ é $h$-{\it intersectante} quando todos  $h$ subconjuntos de $\cal {F}$ intersectam-se. Chamamos de {\it core} de $\cal {F}$ a intersecção de todos conjuntos de $\cal {F}$, e denotamos por $core(\cal F)$. 
-
-A família $\cal{F}$ é $h$-{\it Helly} quando toda subfamília $h$-intersectante $\cal{F'}$ satisfaz $core(\cal{F'}) \neq \emptyset$, ver mais em \cite{duchet1978propriete}. Por outro lado, se para toda subfamília $\cal{F'}$ de $\cal{F}$, existem $h$ subconjuntos cujo core é igual ao core de  $\cal {F'}$, então $\cal {F}$ é dito ser  $h$-{\it Helly} {\it forte}. Claramente, se $\cal {F}$ é $h$-Helly então ele também é $h'$-Helly, para $h' \geq h$. Similarmente, se ${\cal F}$ é $h$-Helly forte então ele também é $h'$-Helly forte, para $h' \geq h$. 
-
-Finalmente, o   {\it número de Helly} da família  $\cal{F}$ é o menor inteiro $h$, tal que $\cal{F}$ é  $h$-Helly. Similarmente, o {\it número de Helly forte} de  $\cal{F}$ é o menor $h$, para o qual  $\cal{F}$ é  $h$-Helly forte. Também segue que o número de Helly forte de $\cal{F}$ é no mínimo igual ao seu número de Helly.
+EPG graphs were introduced by \citet{golumbic2009} and consist of the intersection graphs of sets of paths on the orthogonal grid, whose intersections are taken considering the edges of the paths. If the intersections of the paths consider the vertices and not the edges, the resulting graph class is called VPG graphs. This last class was introduced in 2011 by \citet{asinowski2011string} e \citet{asinowski2012}.  In this chapter we investigate two parameters in both graph classes, EPG and VPG. The parameters that will be studied are namely the Helly number and the strong Helly number. The parameter strong Helly number  generalizes the parameter Helly number. Thus, by definition the Helly number is a natural lower bound for the strong Helly number in any family of sets studied. In this chapter, we solve the problem of determining both the Helly and strong Helly numbers, for $B_k$-EPG, and $B_k$-VPG graphs, for each value $k$. In last section of this chapter the reader can find a complete version of the paper submitted to  the journal DMGT that contains the set of proofs that have been omitted from the text.
 
 
-Uma  {\it classe} $\cal {C}$ de famílias $\cal {F}$  de subconjuntos de algum conjunto universal $U$ é uma  subcoleção das famílias $\cal {F}$ de $U$. Dizemos que  $\cal C$ é uma {\it classe hereditária}, quando ela é fechada sob inclusão, i.e. se um grafo $G$ pertence a uma classe $C$ então todo subgrafo induzido de $G$ também pertence a $C$. O {\it número de Helly}  de uma classe  $\cal{C}$ de famílias $\cal{F}$ de subconjuntos é o maior número de Helly entre todas as famílias de $\cal {F}$. Similarmente, o {\it número de Helly forte} de uma classe  $\cal {C}$ é o maior número de Helly forte das famílias de $\cal {C}$.
-
-Se $\cal F$ é uma família de subconjuntos e $\cal C$ uma classe de famílias, denotamos por $H(\cal F)$ e por 
-$H(\cal C)$,  o número de  Helly de $\cal F$ e $\cal C$, respectivamente, enquanto  $sH({\cal F})$ e $sH({\cal C})$  representam os números de  Helly forte de $\cal F$ e $\cal C$.
 
 
-Nesse capítulo, nos preocupamos com famílias de subconjuntos $\cal{F}$ de caminhos de arestas e vértices em uma grade. No primeiro contexto, consideramos que cada caminho $P_i$  consiste de uma sequência de arestas consecutivas na grade ortogonal, que forma o caminho, e chamaremos essas de   {\it representações EPG}. Dessa forma, segue que dois caminhos intersectam-se se e somente se eles contém no mínimo uma aresta da grade em comum. Aos grafos que  correspondem às representações EPG denotaremos por {\it grafos EPG}. 
-No segundo contexto, um caminho é visto como uma sequência de vértices consecutivos, e dois caminhos intersectam-se se eles contém um vértice comum. Analogamente aos anteriores esses são chamados de {\it representações VPG} e {\it grafos VPG}. 
 
-Cada aresta possui uma direção associada na grade, a qual pode ser horizontal ou vertical. Uma  {\it dobra} no caminho é um par de arestas consecutivas que possuem direções distintas.  Um {\it segmento} de um caminho é uma sequência de arestas consecutivas do caminho, sem dobras. Dizemos que o caminho $P_i$ é um  $B_k$-{\it path} se ele contém $k$ dobras. Dizemos que $\cal {F}$ é uma família de $B_k$-caminhos, ou simplesmente  uma $B_k$-família, se cada caminho de $\cal {F}$ contém no máximo $k$ dobras. 
 
- Nesse capítulo, resolvemos completamente o problema de determinar ambos o número de Helly e o número de Helly forte, para ambos contextos de grafos $B_k$-EPG e $B_k$-VPG. Determinamos o número de Helly em grafos $B_k$-EPG e $B_k$-VPG, para cada valor de $k$.
+\section{Introduction}
 
-Para grafos EPG, o número de Helly de $B_0$-families é bem conhecido e é igual a 2, uma vez que  grafos $B_0$-EPG coincidem com grafos de intervalo. Também é simples concluir que o número de Helly forte dos grafos $B_0$-EPG é também igual a 2. Para $k = 1$,   provamos que ambos o número de Helly e número de Helly forte da classe de $B_1$-families são iguais a 3. Para a classe de  $B_2$-families, provamos que esses dois parâmetros são iguais a 4. Além disso o número de Helly e número de Helly forte para $B_3$-families é igual a 8, e finalmente esses parâmetros são ilimitados para  $k \geq 4$. 
-Quanto aos grafos VPG, é simples concluir que o número de Helly de grafos $B_0$-VPG é igual a 2, e provamos que grafos $B_1$-VPG possuem número de Helly  4, grafos $B_2$-VPG possuem número de Helly  6, grafos $B_3$-VPG possuem número de Helly 12, enquanto o número de Helly para grafos $B_4$-VPG novamente é ilimitado.
+%\footnote{
+%$1$ Federal University of Rio de Janeiro, Brazil \\
+%$^2$ University of Haifa, Israel \\
+%$^3$ Holon Institute of Technology, Israel \\
+%$^{1,4}$ Federal University of Tocantins, Brazil \\
+%$^5$ Federal Fluminense University, Brazil \\
+%$^6$ State University of Rio de Janeiro, Brazil}
 
-Finalmente, o número de Helly forte é igual ao número de Helly nos grafos  $B_k$-EPG, para cada $k$. O mesmo vale para grafos $B_k$-VPG.
+%EPG graphs were by \item 
+EPG graphs were introduced by Golumbic, Lypshteyn, and Stern (2009) and consist of the intersection graphs of sets of paths on the orthogonal grid, whose intersections are taken considering the edges of the paths. If the intersections of the paths consider the vertices and not the edges, the resulting graph class is called VPG graphs. Such a class was introduced in 2011 \cite{asinowski2011string} and \cite{asinowski2012}.  In the present chapter, we study two graph parameters of both EPG and VPG graphs, namely the Helly number and the strong Helly number.
 
-Com relação aos resultados existentes, 
-Golumbic, Lipshteyn  e Stern \cite{golumbic2009} já tem mostrado que o número de Helly forte para grafos $B_1$-EPG é igual a 3, e para grafos $B_1$-VPG é igual a  4. Empregando técnicas de prova diferentes das utilizadas neste trabalho. Veja  \cite{golumbic2019edge}, Teorema 11.13, abaixo:
-\begin{theorem}\label{thm:golumbic2019edge}{\cite{golumbic2019edge}}
-Seja $P$ uma coleção de caminhos de dobra simples sobre uma grade. Se cada 2 caminhos em  $P$ compartilham no mínimo uma aresta da grade, então $P$ possui número de Helly forte igual a 3. Caso contrário, $P$ possui número de Helly forte igual a 4. 
+Let $\cal {F}$ be a family of subsets of some universal set $U$, and $h$ an integer $\geq 1$.  Say that $\cal{F}$ is $h$-{\it intersecting} when every group of $h$ sets of $\cal {F}$ intersect. The {\it core} of $\cal {F}$ is the intersection of all sets of $\cal {F}$, denoted $core(\cal F)$. 
+
+The family $\cal{F}$ is $h$-{\it Helly}  when every $h$-intersecting subfamily $\cal{F'}$ of it satisfies $core(\cal{F'}) \neq \emptyset$, see e.g. \cite{duchet1978propriete}. On the other hand, if for every subfamily $\cal{F'}$ of $\cal{F}$, there are $h$ subsets whose core equals the core of  $\cal {F'}$, then $\cal {F}$ is said to be {\it strong} $h$-{\it Helly}. Clearly, if $\cal {F}$ is $h$-Helly then it is $h'$-Helly, for $h' \geq h$. Similarly, 
+ if ${\cal F}$ is strong $h$-Helly then it is strong $h'$-Helly, for $h' \geq h$. 
+
+Finally, the  {\it Helly number} of the family $\cal{F}$ is the least integer $h$, such that $\cal{F}$ is $h$-Helly. Similarly, the {\it strong Helly number} of $\cal{F}$ is the least $h$, for which  $\cal{F}$ is strong $h$-Helly. It also follows that the strong Helly number of $\cal{F}$ is at least equal to its  Helly number.
+
+
+A {\it class} $\cal {C}$ of families $\cal {F}$  of subsets of some universal set $U$ is a subcollection  of the families  $\cal {F}$ of $U$. Say that $\cal C$ is a {\it hereditary} class when it closed under inclusion. The {\it Helly number} of a class $\cal{C}$ of families $\cal{F}$ of subsets is the largest Helly number among the families $\cal {F}$. Similarly, the {\it strong Helly number} of a class $\cal {C}$ is the largest strong Helly number of the families of $\cal {C}$.
+
+If $\cal F$ is a family of subsets and $\cal C$ a class of families, denote by $H(\cal F)$ and 
+$H(\cal C)$,  the Helly numbers of $\cal F$ and $\cal C$, respectively, while  $sH({\cal F})$ and $sH({\cal C})$  represent the strong Helly numbers of $\cal F$ and $\cal C$.
+
+
+In this chapter, we study families of subsets $\cal{F}$ of edge and vertex paths in a grid. In the context of edge paths, a path consists of a sequence of consecutive edges in the orthogonal grid. We call a collection of such paths an {\it EPG representation}, i.e., a collection of paths that represent a graph via its intersection graph (considering edge intersections). {\it EPG graphs} are the class of graphs that admit an EPG representation.
+Similarly, for vertex paths, a path consists of a sequence of consecutive vertices of the orthogonal grid and a collection of
+these paths form a {\it VPG representation} and correspond to a {\it VPG graph}. 
+
+Each edge has an associated direction in the grid, which can be either horizontal or vertical. A {\it bend} in a path is a pair of consecutive edges that have different directions. A {\it segment} of a path is a sequence of consecutive edges of the path, with no bends. Say that a path $P_i$ is a $B_k$-{\it path} if it contains at most $k$ bends. Say that $\cal {F}$ is a  $B_k$-paths family, or simply a $B_k$-family,  if each path of $\cal {F}$ is a $B_k$-path. 
+
+ In this chapter, we solve the problem for determining the Helly and strong Helly numbers, for both $B_k$-EPG and $B_k$-VPG graphs, for each value $k$.
+
+For EPG graphs,  the Helly number of  $B_0$-families is well known and is equal to 2, since $B_0$-EPG graphs coincide with interval graphs. It is also simple to conclude that the strong Helly number of $B_0$-EPG graphs are also equal to 2. For $k = 1$,  
+we prove that both the Helly number and the strong Helly number of the class of $B_1$-families are equal to 3. For the class of $B_2$-families, we prove that these two parameters are equal to 4. The Helly and strong Helly number for $B_3$-families equal 8, and finally, these parameters are unbounded for $k \geq 4$. 
+
+As for VPG graphs, it is simple to verify that the Helly number of $B_0$-VPG graphs equals 2, and we prove that $B_1$-VPG have Helly number 4, $B_2$-VPG graphs have Helly number 6, $B_3$-VPG has Helly number 12, while the Helly number for $B_4$-VPG graphs is again unbounded. 
+
+Finally, the strong Helly number equals the Helly number of $B_k$-EPG graphs, for each $k$. Similarly, for $B_k$-VPG graphs. 
+
+As for existing results, 
+Golumbic, Lipshteyn, and Stern \cite{golumbic2009}  have already shown that the strong Helly number for $B_1$-EPG graphs equal 3, and for $B_1$-VPG graphs is equal to 4. employing a different proof technique. See  \cite{chung201950}, Theorem 11.13, below:
+\begin{theorem}\label{thm:chung201950}{\cite{chung201950}}
+Let $P$ be a collection of single bend paths on a grid. If every two paths in $P$ share at least one grid-edge, then $P$ has strong Helly number 3. Otherwise, $P$ has strong Helly number 4.
 \end{theorem}
-Nenhum outro resultado relacionado ao número de Helly forte, ou resultados relacionados ao número de Helly de grafos $B_k$-EPG foi notado ter sido reportado na literatura levantada. Quanto a outras classes, Golumbic e Jamison  tem determinado o número de Helly forte dos caminhos de intersecção de arestas sobre uma árvore em~\cite{golumbic1985}. Finalmente, Asinowski, Cohen, Golumbic, Limouzy, Lipshteyn e Stern tem reportado que o número de Helly forte de grafos $B_0$-VPG é igual a 2 \cite{asinowski2011string}.  
-Alguns resultados relacionados estão listados a seguir. Decidir se um dado hipergrafo é  $k$-Helly pode ser feito em tempo polinomial para um  $k$ fixo,  empregando a caracterização proposta por Berge e Duchet \cite{bergeDuchet1975}. Para algum $k$ arbitrário, o problema é  \cal{co-NP}-completo \cite{dourado2009}. Para ver mais problemas correspondendo à propriedade $k$-Helly forte e exemplos sugerimos a leitura de~\cite{dourado2008strong,dourado2009}.
+No other results concerning the strong Helly number, or no results for the Helly number of $B_k$-EPG graphs seem to have been reported in the literature. As for other classes, Golumbic and Jamison have determined the strong Helly number of the intersection of edge paths of a tree \cite{golumbic1985}. Finally, Asinowski, Cohen, Golumbic, Limouzy, Lipshteyn, and Stern have reported that the strong Helly number of $B_0$-VPG graphs equals two \cite{asinowski2011string}.  
 
-Este capítulo está organizado como listado a seguir. A seção~\ref{sec:preliminares4}, contém algumas proposições preliminares e notações adicionais utilizadas neste escrito. A seção~\ref{sec:Helly-number}  descreve os resultados para o número de Helly de grafos $B_k$-EPG, enquanto a seção~\ref{sec:helly-vpg} contém resultados desse parâmetro para grafos $B_k$-VPG. O número de Helly forte é considerado na seção~\ref{sec:helly-forte}. Considerações finais são efetuadas na seção~\ref{sec:finalRemarks4}.
+Deciding whether a given hypergraph is $k$-Helly can be done in polynomial time for fixed $k$, employing the characterization by Berge and Duchet \cite{bergeDuchet1975}. For arbitrary $k$, the problem is co-NP-complete \cite{dourado2009}. For the corresponding problems for strong $k$-Helly see \cite{dourado2008strong,dourado2009}.
 
-\section{Preliminares}\label{sec:preliminares4}
+The chapter is organized as follows. Section~\ref{sec:preliminares4} contains some preliminary propositions and further notation. Section~\ref{sec:Helly-number} describes the results for the Helly number of $B_k$-EPG graphs, while Section~\ref{sec:HellynumberVPG} contains the results of this parameter for $B_k$-VPG graphs. The strong Helly number is considered in Section~\ref{sec:strongHellyNumber}. Following, we present the final remarks in Section~\ref{sec:concludingRemarks} and in the last section appear the paper submitted to the journal Discussiones Mathematicae Graph Theory (DMGT).
 
-O seguinte teorema caracteriza famílias de subconjuntos $h$-Helly.
+
+
+
+\section{Preliminaries}\label{sec:preliminares4}
+
+The following theorem characterizes $h$-Helly families of subsets.
 
 
 \begin{theorem}\label{thm:BD}(\cite{bergeDuchet1975}):
-Uma família $\cal{F}$ de subconjuntos do conjunto universal  $U$ é $h$-Helly se e somente se para todo subconjunto   $U' \subseteq U$, $|U'|= h+1$,  a subfamília  $\cal{F'}$ de $\cal{F}$,  formada pelos subconjuntos contendo no mínimo  $h$ dos $h+1$ elementos de $U'$, tem um core não vazio. 
+A family $\cal{F}$  of subsets of the universal set $U$ is $h$-Helly if and only if for every subset $U' \subseteq U$, $|U'|= h+1$, the subfamily $\cal{F'}$ of $\cal{F}$, formed by the subsets containing at least $h$ of the $h+1$ elements of $U'$, has a non-empty core. 
 \end{theorem}
 
-O próximo teorema é central para os nossos resultados.
+The next theorem is central to our results.
 
-\begin{theorem}\label{thm:minimal}Seja ${\cal C}$ uma classe hereditária de famílias ${\cal F}$ de subconjuntos do conjunto universal $U$, cujo número de Helly $H({\cal C})$ é igual a $h$. Então, existe uma família ${\cal F'} \in {\cal C}$ com exatamente $h$ subconjuntos, satisfazendo as seguintes condições: 
+\begin{theorem}\label{thm:minimal}
+Let ${\cal C}$ be a hereditary class of families ${\cal F}$ of subsets of the universal set $U$, whose Helly number $H({\cal C})$ equals $h$. Then there exists a family ${\cal F'} \in {\cal C}$ with exactly $h$ subsets, satisfying the following condition: 
 
-Para cada subconjunto  $P_i \in \cal {F'}$, existe exatamente um elemento distinto $u_i \in U$, tal que \\
+For each subset $P_i \in \cal {F'}$, there is exactly one distinct element $u_i \in U$, such that \\
 $$u_i \not \in P_i,$$ 
-mas $u_i$ está contido em todos subconjuntos 
+but $u_i$ is contained in all  subsets 
 $$P_j \in {\cal F'} \setminus P_i.$$
 \end{theorem}
  
 
 Proof: 
-Seja ${\cal C}$ uma classe de famílias  ${\cal F}$ de subconjuntos $P$, cada subconjunto formado pelos elementos  $u \in U$, tal que o número de Helly $H({\cal C})$  é igual a $h$. Então cada família   ${\cal F} \in {\cal C}$ satisfaz $H({\cal F}) \leq h$. Considere uma família ${\cal F'} \in {\cal C}$  cujo número de Helly é  exatamente $h$, e contendo exatamente $h$ subconjuntos. Essa família deve existir uma vez que  ${\cal C}$ é uma classe hereditária. Além disso $H({\cal F'}) = h$, $\cal F'$ é $h$-intersectante, e portanto $(h-1)$-intersectante. Ademais, ${\cal F'}$ não é $(h-1)$-Helly. Aplicando o   Teorema~\ref{thm:BD}, podemos concluir que existem   $h$ elementos $U' = \{u_1, \ldots, u_h\} \subset U$, tal que cada conjunto de ${\cal F'}$ contem no mínimo $h-1$ elementos de $U'$. Uma vez que $H({\cal F'}) > h-1$, $core({\cal F'}) = \emptyset$ e além disso não existe elemento comum entre os conjuntos de $\cal F'$. Em particular, uma vez que cada conjunto $P_i \in {\cal F'}$ contem no mínimo  $h-1$ elementos de $U'$, e $core(\cal F') = \emptyset$, podemos escolher   $h$ subconjuntos $P_i$, em que cada um deles deixa de possuir um elemento distinto  $u_i \in U'$. Então para cada subconjunto  $P_i \in \cal F$, existe algum elemento $u_i \not \in P_i$, mas $u_i \in P_j$, para todos $P_j \in \cal F'$, $j \neq i$. \qed
+Let ${\cal C}$ be a class of families ${\cal F}$ of subsets $P$, each subset formed by elements $u \in U$, such that the Helly number $H({\cal C})$ equals $h$. Then each family ${\cal F} \in {\cal C}$ satisfies $H({\cal F}) \leq h$. Consider a family ${\cal F'} \in {\cal C}$  whose Helly number is exactly $h$, and containing exactly $h$ subsets. Such a family must exist since ${\cal C}$ is hereditary. Since $H({\cal F'}) = h$, $\cal F'$ is $h$-intersecting, and therefore $(h-1)$-intersecting. Furthermore, ${\cal F'}$ is not $(h-1)$-Helly. Applying  Theorem \ref{thm:BD}, we conclude that there are $h$ elements $U' = \{u_1, \ldots, u_h\} \subset U$, such that each set of ${\cal F'}$ contains at least $h-1$ elements of $U'$. Since $H({\cal F'}) > h-1$, $core({\cal F'}) = \emptyset$ and therefore there is no common element among the sets of $\cal F'$. In particular, since each set $P_i \in {\cal F'}$ contains at least $h-1$ elements of $U'$, and $core(\cal F') = \emptyset$, we can choose $h$ subsets $P_i$, in which each of them misses a distinct element $u_i \in U'$. Then for each subset $P_i \in \cal F$, there exists some element $u_i \not \in P_i$, but $u_i \in P_j$, for all $P_j \in \cal F'$, $j \neq i$. \qed
 
-Seja $\cal{ F'}$ como descrito no teorema anterior. É simples concluir que ao remover qualquer subconjunto de $\cal {F'}$ este torna-se $(h-1)$-Helly.  Todavia podemos chamar $\cal {F'}$ de uma {\it família minimal não}-$(h-1)$-{\it Helly}. Além do mais, o elemento $u_i \not \in P_i$, contido em todos os subconjuntos $P_j \in {\cal{F'}} \setminus P_i$, exceto $P_i$, é o {\it $h$-não-representativo} de $P_i$.  
+Let $\cal{ F'}$ be as in the previous theorem. It is simple to conclude that the removal of any subset from $\cal {F'}$ makes it an $(h-1)$-Helly family. Therefore we  call $\cal {F'}$ a {\it minimal non}-$(h-1)$-{\it Helly family}. Moreover, the element $u_i \not \in P_i$, contained in all subsets $P_j \in {\cal{F'}} \setminus P_i$, except $P_i$, is the {\it $h$-non-representative} of $P_i$.  
 
-Empregaremos as famílias de subconjuntos minimais citadas anteriormente, aplicadas à $B_k$-caminhos em uma grade. Note que $B_k$-caminhos em uma grade formam uma classe hereditária.
+We can apply this notion of minimal families of subsets for the $B_k$-EPG and $B_k$-VPG representations. Recall that $B_k$-EPG and $B_k$-VPG graphs are hereditary classes. 
 
-\section{O Número de Helly de Grafos $B_k$-EPG}\label{sec:Helly-number}
+\section{The Helly Number of $B_k$-EPG Graphs}\label{sec:Helly-number}
 
-Nessa seção determinaremos o número de Helly das classes de grafos $B_1$-EPG, $B_2$-EPG e $B_3$-EPG, e mostraremos que para os grafos $B_k$-EPG, $k \geq 4$, o número de Helly é ilimitado. Provaremos os seguintes resultados.
+In this section, we determine the Helly number of the classes of $B_1$-EPG, $B_2$-EPG and $B_3$-EPG graphs, and show that for $B_k$-EPG graphs, $k \geq 4$, the Helly number is unbounded. We prove the following result.
 
 \begin{theorem}\label{thm:Helly-EPG}
-O número de Helly de grafos $B_k$-EPG satisfaz:
+The Helly number of $B_k$-EPG graphs satisfy:
 \begin{enumerate}[nosep,label=\emph{(\roman*)}]
-\item  $H(B_1$-EPG) = 3 
-\item $H(B_2$-EPG)  = 4 
-\item $H(B_3$-EPG)  = 8 
-\item $H(B_k$-EPG) é ilimitado, para 
+\item  $H(B_1$-EPG) = 3.
+\item $H(B_2$-EPG)  = 4. 
+\item $H(B_3$-EPG)  = 8. 
+\item $H(B_k$-EPG) is unbounded, for 
 $k \geq 4$.
 \end{enumerate}
 
 \end{theorem}
 
-A prova consiste em determinar limites inferiores e limites superiores justos, como mostrado nas próximas subseções.
+The proof consists in determining tight lower and upper bounds, as shown in the next two subsections. 
 
-\subsection{Limites Inferiores}
+\subsection{Lower Bounds}
 
-Primeiro, descreveremos limites inferiores para o parâmetro número de Helly, como função do número de dobras $k$.
+We present lower bounds for the Helly number, as a function of the number $k$ of bends.
 
-\begin{lema}\label{claim:lower-Bk-EPG} 
-Os seguintes são limites inferiores para os grafos  $B_k$-EPG.
+\begin{claim}\label{claim:lower-Bk-EPG} 
+The following are lower bounds for $B_k$-EPG graphs.
 \begin{enumerate}[nosep,label=\emph{(\roman*)}]
-\item   $H(B_1$-$EPG) \geq 3$ 
-\item $H(B_2$-$EPG) \geq 4$ 
-\item $H(B_3$-$EPG) \geq 8$ 
-\item $H(B_k$-$EPG )$ é ilimitado para  $k \geq 4$.
+\item   $H(B_1$-$EPG) \geq 3$. 
+\item $H(B_2$-$EPG) \geq 4$. 
+\item $H(B_3$-$EPG) \geq 8$. 
+\item $H(B_k$-$EPG )$ is unbounded for $k \geq 4$.
 \end{enumerate}
-\end{lema}
+\end{claim}
 
-\proof:
-
-Para cada valor de  $k$, exibiremos uma $B_k$-família de caminhos em arestas na grade, tendo o número de dobras requerido, e cujo número de Helly é no mínimo o valor correspondente declarado. Nos referimos ao par de coordenadas dos pontos da grade (arestas da grade), de forma a descrever os caminhos.
+For each value of $k$, we exhibit a $B_k$-family of edge paths whose Helly number is the corresponding stated value. In other words, if we can present a family of subsets pairwise intersecting  with $|\mathcal{P}|$ paths, where each path has at most $k$ bends, this means that for this given value of $ k $ the Helly number of $B_k$-EPG is at least $ |\mathcal{P}|$. Figures~\ref{fig:lowerBoundBkEPG1}(a), (b), (c) illustrate path families in $B_1$-EPG, $B_2$-EPG and $B_3$-EPG that have exactly $ |\mathcal{P}|$ paths pairwise intersecting. However, the lower bound for the Helly number in these classes are those described in Lemma
+~\ref{claim:lower-Bk-EPG}.
 
 \begin{figure}[!h]
 \begin{center}
-% \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=3.7mm,y=3.7mm]
-% \draw [color=cqcqcq,, xstep=0.37cm,ystep=0.37cm] (-7,-1.4) grid (22.16,6.8);
-% \clip(-5.7,-2.5) rectangle (25,9.6);
-% \draw (-5,-1.3) node[anchor=north west] {(a)};
-% \draw (2.5,-1.3) node[anchor=north west] {(b)};
-% \draw (14.5,-1.3) node[anchor=north west] {(c)};
-% \draw [line width=2pt] (4,0)-- (4,2)-- (6,2)-- (6,0);
-% \draw [line width=2pt] (3,2)-- (1,2)-- (1,0)-- (3,0);
-% %\draw (-0.3,3.7) node[anchor=north west] {0};
-% %\draw (-0.3,5.1) node[anchor=north west] {1};
-% %\draw (-0.3,6.1) node[anchor=north west] {2};
-% \draw [line width=2pt] (1,5)-- (3,5)-- (3,3)-- (1,3);
-% \draw [line width=2pt] (4,5)-- (4,3)-- (6,3)-- (6,5);
-% %\draw (8.7,0.7) node[anchor=north west] {0};
-% %\draw (8.7,2.1) node[anchor=north west] {1};
-% %\draw (8.7,3.1) node[anchor=north west] {2};
-% %\draw (8.7,3.7) node[anchor=north west] {0};
-% %\draw (8.7,5.1) node[anchor=north west] {1};
-% %\draw (8.7,6.1) node[anchor=north west] {2};
-% \draw [line width=2pt] (10,5)-- (12,5)-- (12,3)-- (10,3)-- (10,4);
-% \draw [line width=2pt] (14,5)-- (13,5)-- (13,3)-- (15,3)-- (15,5);
-% \draw [line width=2pt] (19,3)-- (19,5)-- (21,5)-- (21,3)-- (20,3);
-% \draw [line width=2pt] (18,4)-- (18,5)-- (16,5)-- (16,3)-- (18,3);
-% \draw [line width=2pt] (10,1)-- (10,2)-- (12,2)-- (12,0)-- (10,0);
-% \draw [line width=2pt] (13,2)-- (13,0)-- (15,0)-- (15,2)-- (14,2);
-% \draw [line width=2pt] (20,0)-- (19,0)-- (19,2)-- (21,2)-- (21,0);
-% \draw [line width=2pt] (18,2)-- (16,2)-- (16,0)-- (18,0)-- (18,1);
-% \draw [line width=2pt] (-6,2.25)-- (-4.25,2.25)-- (-4.25,4);
-% \draw [line width=2pt] (-3.75,4)-- (-3.75,2.25)-- (-2,2.25);
-% \draw [line width=2pt] (-6,1.75)-- (-2,1.75);
-% \end{tikzpicture}
 \includegraphics[width=12cm]{./img/b1epgSub.pdf}
 \end{center}
-\caption{Subfamílias Minimais não-Helly para $B_1$, $B_2$ e $B_3$ -families.}
-\label{fig:b1b2b3families}
+\caption{Minimal non-Helly sub-families for the $B_1$, $B_2$ and $B_3$ -families.}
+\label{fig:lowerBoundBkEPG1}
 \end{figure}
 
-Para $k=1$, seja $\cal{F}$ uma família de três caminhos de 1-dobra que são mutuamente intersectantes mas que não possuem aresta em comum, como ilustrado na Figura~\ref{fig:b1b2b3families}$(a)$. 
-%For $k=1$, let $\cal{F}$ be the família %of three 1-dobra caminhos, $P_1: (0,0),(0,1),(1,1)$; $P_2: (1,1), (1,0),(0.2)$; and $P_3: (0,0),(0,2)$.  See Figure   $1a$. 
-Então $\cal{F}$ é uma família de três caminhos  2-intersectante e $B_1$-EPG, tendo um core vazio. Portanto, $H(B_1$-EPG$) \geq 3$. 
-Além disso, pela remoção de qualquer dos caminhos o core de $\cal{F}$ torna-se não-vazio. Todavia $\cal{F}$ é uma família de caminhos minimal não 2-Helly.
-
-Seja $S$ o 4-ciclo, formado pelos 4 segmentos de pares de arestas, com dobras nos seguintes pontos da grade $(0,0),(0,2),(2,2),(2,0)$, respectivamente.
- Para $k= 2$,  considere $\cal{F}$ ser a família de quarto caminhos de 2-dobras formada quando removemos exatamente um par de arestas que formam os segmentos de cada lado do 4-ciclo, como ilustrado na  Figura~\ref{fig:b1b2b3families}$ (b)$.
-Segue que $\cal{F}$ é 3-intersectante e seus caminhos não possuem nenhuma aresta comum. Consequentemente $H(B_2$-EPG)$ \geq 4$.
-
-Para $k=3$, considere a família $\cal{F}$ de oito caminhos de  3-dobras, respectivamente, que podem ser obtidos de $S$. O 4-ciclo $S$ contem exatamente  8 arestas da grade. A  família $\cal{F}$ consiste de oito caminhos $P_i$, $1 \leq i \leq 8$, obtidos pela remoção de $S$, exatamente uma dessas oito arestas distintas, como ilustrado na Figura~\ref{fig:b1b2b3families} $ (c)$. Consequentemente, $\cal{F}$ é 7-intersectante, mas $core({\cal{F}}) = \emptyset$. Portanto, $H(B_3$-EPG)$\geq 8$.
-
-Finalmente, para $k = 4$, seja $\cal{F}$ a família de $n$ $B_4$-caminhos $P_i$, descrita como segue:
-
-\begin{itemize}
-    \item $P_1$ é formado pelos segmentos: \\ $(0,0),(0,1),(1,1),(1,0),(n,0)$; 
-
-     \item para $2 \leq i \leq n-1$, $P_i$ contem os segmentos: \\
-     $(0,0),(0,i-1),(i-1,1),(i,1),(i,0),(n,0)$;
-     
-     \item  $P_n$ é formado pelos seguintes segmentos: \\ $(0,0),(n-1,0),(n-1,1),(n-1,0).$
-     
-\end{itemize}     
-
-Observe que $\cal{F}$ é $(n-1)$-intersectante, enquanto $core({\cal{F}})=\emptyset$. Veja a Figura~\ref{fig:figurab4}. Dessa forma $H(B_4$-EPG) é ilimitado. Claramente o mesmo vale para $k >4$. \qed  
-
-
+Observe that for $k=4$ we can always to construct families $\cal{F}$ that are $(n-1)$-intersecting, while $core({\cal{F}})=\emptyset$ (see Figure~\ref{fig:lowerBoundB4EPG}). Therefore $H(B_4$-EPG) is unbounded. Clearly the same holds for $k >4$. 
 
 \begin{figure}[!h]
 \begin{center}
-% \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=3.7mm,y=3.7mm]
-% \draw [color=cqcqcq,, xstep=0.74cm,ystep=0.74cm] (-7,-1.0) grid (22.8,14.8);
-% \clip(-6.7,-1.8) rectangle (27,14.6);
-% \draw [line width=2pt] (-6,0)-- (-6,2)-- (-4,2)-- (-4,0)-- (22,0);
-
-% \draw [line width=2pt] (-6,4)-- (-4,4)-- (-4,6)-- (-2,6)-- (-2,4)-- (22,4);
-
-% %\draw [line width=2pt] (-6,6)-- (-2,6)-- (-2,8)-- (0,8)-- (-0,6)-- (22,6);
-
-% \draw [line width=2pt] (-6,8)-- (10,8)-- (10,10)-- (12,10)-- (12,8)-- (22,8);
-
-% \draw [line width=2pt] (-6,12)-- (20,12)-- (20,14)-- (22,14)-- (22,12);
-
-
-% \draw (6.5,6.5) node[anchor=north west] {.};
-% \draw (6.5,7) node[anchor=north west] {.};
-% \draw (6.5,7.5) node[anchor=north west] {.};
-
-% \draw (6.5,10.5) node[anchor=north west] {.};
-% \draw (6.5,11) node[anchor=north west] {.};
-% \draw (6.5,11.5) node[anchor=north west] {.};
-
-% \draw (-5.65,0.4) node[anchor=north west] {1};
-% \draw (-3.65,3.4) node[anchor=north west] {2};
-
-% %\draw (-1.65,6.4) node[anchor=north west] {3};
-
-% \draw (10.35,8.4) node[anchor=north west] {i};
-
-% \draw (20.35,12.4) node[anchor=north west] {n};
-
-% \end{tikzpicture}
 \includegraphics[width=12.5cm]{./img/b4epg.pdf}
 \end{center}
-\caption{$B_4$ possui número de Helly ilimitado.}\label{fig:figurab4}
+\caption{$B_4$-EPG has an unlimited Helly number.}
+\label{fig:lowerBoundB4EPG}
 \end{figure}
 
-A seguir, nos preocupamos em encontrar limites superiores para grafos $H(B_k$-EPG).
+Next, we consider upper bounds for the Helly number $B_k$-EPG graphs.
 
-\subsection{Limites Superiores}\label{subsec-upper}
+\subsection{Upper Bounds}\label{subsec-upper}
 
-De forma a obter um limite superior justo para o número de Helly, em termos do número de dobras, introduzimos abaixo mais algumas notações e lemas.
+In order to obtain tight upper bounds for the Helly number, in terms of the number of bends, we introduce below more notation and lemmas.
 
-Dizemos que um conjunto de arestas da grade é {\it co-linear} se todas arestas do conjunto pertencem a uma mesma linha da grade, horizontal ou vertical. O conjunto de arestas é chamado {\it paralelo} se todas as suas arestas estiverem sobre linhas paralelas da grade mas nenhuma delas for co-linear.
+Say that a set of edges of a grid is {\it co-linear} if all edges of the set belong to the same line of the grid, horizontal or vertical. The set of edges is called {\it parallel} if all its edges lie on parallel lines of the grid, but no two of them are co-linear.  
 
 
 \begin{lemma}
 \label{lemma:3colin}
-Seja $\cal {F}$ uma família minimal não-$(h-1)$-Helly de caminhos sobre uma grade contendo três arestas co-lineares não representativas. Então $\cal{F}$ deve conter caminhos com no mínimo quatro dobras.
+Let $\cal {F}$ be a minimal non-$(h-1)$-Helly family of paths on a grid containing three co-linear non-representative edges. Then $\cal{F}$ must contain paths with at least four bends.
 \end{lemma}
 
-\proof
-Seja  $u_i$ a aresta do meio entre as três arestas  co-lineares não representativas. Ela corresponde ao caminho $P_i$ de $\cal {F'}$, não contendo $u_i$.
- Então $P_i$ deve passar pelas outras duas arestas mas ele não deve incluir a aresta do meio. Portanto, o caminho $P_i$ deve sair da linha comum da grade, contendo essas três arestas representativas, e retornar à mesma linha, assim requerendo no mínimo quatro dobras.
-\qed
 
 
 \begin{lemma}
 \label{lemma:3par}
-Seja $\cal{F}$ uma família minimal não-$(h-1)$-Helly de caminhos sobre uma grade, contendo três arestas paralelas, e tendo número de Helly $H(\cal{F})$   $\geq 4$. Então $\cal{F}$ deve conter caminhos com no mínimo quatro dobras. 
+Let $\cal{F}$ be a minimal non-$(h-1)$-Helly family of paths on a grid, containing three parallel edges, and having  Helly number $H(\cal{F})$   $\geq 4$. Then $\cal{F}$ must contain paths with at least four bends. 
 \end{lemma}
-
-\proof
-Uma vez que $H(\cal{F}) $ $\geq 4$ e $\cal{F}$ é uma $(h-1)$-família minimal, segue que $\cal{F}$ deve conter no mínimo quatro caminhos, $P_1,P_2,P_3,P_4$. Sem perda de generalidade, sejam $u_1,u_2,u_3$ as arestas não-representativas dos caminhos $P_1,P_2,P_3$ que são paralelas. Então $P_4$ deve passar por todas três arestas paralelas não-representativas $u_1,u_2,u_3$, assim requerendo no mínimo quatro dobras. 
-\qed
 
 
 \begin{lemma} \label{lemma:Lwit}
-Seja $\cal{F}$ uma família minimal não-$(h-1)$-Helly de caminhos sobre uma grade com  número de Helly $H({\cal F}) \geq 4$. Se  ${\cal F}$ contem três arestas  não-representativas que se encontram sobre um mesmo $B_1$-caminho  $P_1$ de $\cal{F}$, então $\cal {F}$ deve possuir algum caminho com no mínimo três dobras. \end{lemma}
+Let $\cal{F}$ be a minimal non-$(h-1)$-Helly family of paths on a grid with  Helly number $H({\cal F}) \geq 4$. If ${\cal F}$ contains three non-representative edges that lie on a common $B_1$-subpath $P_i$, then $\cal {F}$ must have some path with at least three bends. \end{lemma}
 
-\proof
-Visto que $\cal{F}$ é uma  $(h-1)$-família minimal tendo  número de Helly $\geq 4$, ela contem no mínimo quatro caminhos. Sem perda de generalidade, sejam  $u_1, u_2, u_3$ as três arestas não-representativas contidas em $P_4$ e tal que  $u_2$ encontra-se entre $u_1$ e $u_3$ em $P_4$. Então o caminho $P_2$ deve conter $u_1$ e $u_3$, mas evite $u_2$, assim requerendo no mínimo três dobras.  
-\qed
 
-A seguir são apresentados os limites superiores justos para os números de Helly de $B_k$-caminhos em arestas, para $k = 1,2,3$.
+The following are tight upper bounds for the Helly numbers of $B_k$-EPG paths, for $k = 1,2,3$.
 
-\begin{lema}\label{claim:upper-B1}
+\begin{claim}\label{claim:upper-B1}
 $H(B_1$-$EPG) \leq 3.$
-\end{lema}
+\end{claim}
  
 \proof
-Assuma por contradição que o número de Helly de famílias de caminhos $B_1$-EPG é $h > 3$. Nesse caso, considere uma família minimal não-$(h-1)$-Helly $\cal F$ de caminhos $B_1$-EPG. Então $\cal F$ contem no mínimo  $h$ caminhos.  
-Qualquer caminho $P_1 \in \cal{F}$ deve conter $h-1$ arestas não-representativas  correspondendo aos $h-1$ distintos caminhos de $\cal F$, diferentes de $P_i$. Uma vez que $h-1 \geq 3$, $P_1$  contem no mínimo três arestas  distintas não-representativas $u_2, u_3, u_4 \in P_1$, com $u_3$ encontrando-se entre $u_2$ e $u_4$ no caminho.  Se $P_1$ não possui dobras, $u_2,u_3,u_4$ são co-lineares. Pelo Lema~\ref{lemma:3colin},  o caminho $P_3 \in \cal{F}$ deve conter no mínimo quatro dobras. Se $P_1$ possui exatamente uma dobra, segue do Lema~\ref{lemma:Lwit} que $P_3$ possui três dobras. Em qualquer situação, uma contradição surge, implicando que $H({\cal F}) \leq 3$.
+Assume by contradiction that the Helly number of $B_1$-EPG paths is $h > 3$. In this case, consider a minimal non-$(h-1)$-Helly family of $\cal F$ of $B_1$-EPG paths. Then $\cal F$ contains at least $h$ paths.  
+Any path $P_1 \in \cal{F}$ must contain $h-1$ non-representative edges  corresponding to the $h-1$ distinct paths of $\cal F$ other than $P_1$. Since $h-1 \geq 3$, $P_1$ contains at least three distinct non-representative edges $u_2, u_3, u_4 \in P_i$, with $u_3$ lying  between $u_2$ and $u_4$ in the path.   
+
+If $u_2$, $u_3$ and $u_4$ are co-linear then by Lemma~\ref{lemma:3colin} $P_3 \in \cal{F}$ must contain at least four bends. Otherwise, the edges must lie on $P_1$ which has a single bend. Thus, it follows from Lemma~\ref{lemma:Lwit} that $P_3$ has three bends. In any situation, a contradiction arises, implying that $H({\cal F}) \leq 3$.
 \qed
 
-\begin{lema}\label{claim:upper-B2}
+\begin{claim}\label{claim:upper-B2}
 $H(B_2$-EPG$) \leq 4.$
-\end{lema}
+\end{claim}
 
 \proof
-Assuma por contradição que o  número de Helly de famílias de caminhos  $B_2$-EPG é $h > 4$. Nesse caso, considere uma família minimal não-$(h-1)$-Helly  $\cal F$ de caminhos $B_2$-EPG. A família  $\cal F$ deve conter no mínimo $h \geq 5$ caminhos distintos, cada um deles correspondendo a uma aresta distinta  não-representativa. Selecione arbitrariamente 5 dessas arestas não-representativas.
+Assume by contradiction that the Helly number of  $B_2$-EPG families of paths is $h > 4$. Consider a minimal non-$(h-1)$-Helly family $\cal F$ of $B_2$-EPG paths. The family  $\cal F$ must contain at least $h \geq 5$ distinct paths, each of them corresponding to a distinct non-representative edge. Choose arbitrarily 5 of these non-representative edges.
 
-Pelos Lemas~\ref{lemma:3colin} e ~\ref{lemma:3par} quaisquer dessas três arestas escolhidas não podem ser  co-lineares nem paralelas. Por consequência, no mínimo uma das 5 arestas não-representativas escolhidas deve estar em uma direção que é diferente da direção da maioria das outras arestas escolhidas. Chamemos a direção dessa aresta de vertical, e a direção da maioria das outras arestas de horizontal. Considere um caminho $P_1$ da família $\cal F$ que passa por essa aresta vertical. 
-O caminho $P_1$ contem no mínimo quatro das arestas   não-representativas escolhidas, e no mínimo uma delas é vertical. Uma vez que $P_1$ possui no máximo duas dobras então ele deve ter no máximo três segmentos. Uma vez que temos três segmentos e quatro arestas não-representativas que $P_1$ deve conter, pelo princípio da casa dos pombos, um desses segmentos deve ter duas arestas não-representativas. Se esse par de arestas está em um segmento horizontal de $P_1$, então esse par de arestas, juntamente com a aresta vertical estão em dois segmentos consecutivos desse caminho, formando um $B_1$-subcaminho em $\cal F$. Então o Lema~\ref{lemma:Lwit} implica que algum caminho de $\cal F$ deve possuir no mínimo três dobras.  Caso contrário, as duas arestas seriam verticais. Mas as outras devem estar na  horizontal, e novamente temos no mínimo três arestas em um par de segmentos consecutivos formando um subcaminho em  $\cal F$ tendo uma dobra. Novamente, o  Lema ~\ref{lemma:Lwit} implica que algum caminho deve possuir no mínimo três dobras.
+By Lemmas ~\ref{lemma:3colin} and ~\ref{lemma:3par} any three of these chosen edges can  neither be co-linear nor parallel. Therefore, at least one of the five chosen non-representative edges must be in a different direction from the majority of the chosen edges. Call the direction of this edge vertical and the direction of the majority of the chosen edges horizontal. Consider a path $P_1$ from the family $\cal F$ that goes through this vertical edge. 
+The path $P_1$ contains at least four of the chosen non-representative edges, at least one of which is vertical. Since $P_1$ has at most two bends, then it must have at most three segments. Since we have three segments and four non-representative edges which $P_1$ must contain, by the pigeon hole principle, one of these segments must have two non-representative edges. If this pair of edges are in a horizontal segment of $P_1$, then such pair of edges, along with the vertical edge are in two consecutive path segments, forming a $B_1$-subpath in $\cal F$. Then Lemma~\ref{lemma:Lwit} implies that some path of $\cal F$ must have at least three bends.   Otherwise, the two edges are vertical. But the others must be horizontal, and again we have at least three edges in a pair of consecutive segments forming a subpath in $\cal F$ having one bend. Again,  Lemma ~\ref{lemma:Lwit} implies that some path has at least three bends.
 \qed
 
-\begin{lema}\label{claim:upper-B3}
+\begin{claim}\label{claim:upper-B3}
 $H(B_3$-EPG$) \leq 8.$
-\end{lema}
+\end{claim}
 
 \proof
-Assuma por contradição que o número de Helly de caminhos  $B_3$-EPG é $h > 8$. Nesse caso, considere uma família minimal não-$(h-1)$-Helly $\cal F$ de caminhos $B_3$-EPG. Então $\cal F$ contem no mínimo $h$  arestas não-representativas distintas,  correspondendo a  $h$ subconjuntos distintos. Pelo Lema~\ref{lemma:3par} já que podemos ter no máximo três dobras em qualquer caminho, então essas $h$ arestas  não-representativas devem encontrar-se em no máximo duas linhas vertical e horizontal da grade. Por esse motivo uma dessas quatro linhas possíveis deve conter pelo menos três arestas não-representativas distintas. Pelo  Lema~\ref{lemma:3colin},  isso implica na existência de um caminho com quatro dobras.\qed
+Assume by contradiction that the Helly number of  $B_3$-EPG paths is $h > 8$. In this case, consider a minimal non-$(h-1)$-Helly family $\cal F$ of $B_3$-EPG paths. Then $\cal F$ contains at least $h$  distinct non-representative edges,  corresponding to $h$ distinct paths.  By Lemma~\ref{lemma:3par}, since we can have at most three bends in any path, then these $h$  non-representative edges must lie in at most two vertical and two horizontal lines of the grid. Therefore one of these four possible lines must contain at least three distinct non-representative edges. By Lemma~\ref{lemma:3colin},  that would imply the existence of a path with four bends.\qed
 
-Isso completa a prova do Teorema~\ref{thm:Helly-EPG}. 
+This completes the proof of Theorem \ref{thm:Helly-EPG}. 
 
 
-\section{Número de Helly of $B_k$-VPG Graphs}\label{sec:helly-vpg}
+\section{Helly number of $B_k$-VPG Graphs}\label{sec:HellynumberVPG}
 
-Nessa seção determinaremos o número de Helly de grafos $B_k$-VPG. Para isso, provamos os seguintes resultados.
+In this section, we determine the Helly number of $B_k$-VPG graphs. We prove the following results.
 \begin{theorem}\label{thm:Bk-VPG}
-O número de Helly para grafos $B_k$-VPG satisfaz:
+The Helly numbers for $B_k$-VPG graphs satisfy:
 \begin{enumerate}
-\item $H(B_1$-VPG) = 4
-\item $H(B_2$-VPG) = 6
-\item $H(B_3$-VPG) = 12
-\item $H(B_4$-VPG) é ilimitado.
+\item $H(B_1$-VPG) = 4.
+\item $H(B_2$-VPG) = 6.
+\item $H(B_3$-VPG) = 12.
+\item $H(B_4$-VPG) is unbounded.
 \end{enumerate}
 \end{theorem}
 
-Novamente, a demonstração do teorema é efetuada pela apresentação de limites superiores e inferiores justos.
+Again, we prove the theorem by showing tight lower and upper bounds.
 
-\subsection{Limites Inferiores}
+\subsection{Lower Bounds}
 
-Primeiro, apresentamos um conjunto de instâncias com caminhos que possuem no máximo $k$ dobras para delimitar um limite inferior para cada $k=1,2,3$.
-
-A Figura~\ref{VPG:lower-B1} ilustra um conjunto de  quatro $B_1$-caminhos de um grafo $G$, em uma grade $2 \times 2$, tal que cada caminho cobre exatamente três vértices de  $G$, e evita exatamente um  dos  vértices. 
+%First, we describe lower bounds.
+We start by describing some sets of paths that achieve our lower bounds. 
+Figure \ref{VPG:lower-B1} shows a set of 4 $B_1$-paths of a graph $G$, in a $2 \times 2$ grid, such that each path covers three vertices of the grid, and avoids exactly one of the vertices. 
 
 \begin{figure}[!h]
     \centering
     \includegraphics[width=3cm]{./img/lower-bound-B1-VPG.pdf}
-    \caption{Limite inferior para grafos $B_1$-VPG.}
+    \caption{Lower bound for $B_1$-VPG graphs.}
     \label{VPG:lower-B1}
 \end{figure}
 
-A Figura~\ref{VPG:lower-B2} ilustra um conjunto de seis $B_2$-caminhos de um grafo $G$, em uma grade  $2 \times 3$, tal que cada caminho cobre cinco vértices de $G$, e evita exatamente um.
+Figure \ref{VPG:lower-B2} shows a set of 6 $B_2$-paths of a graph $G$, in a $2 \times 3$ grid, such that each path covers five vertices of the grid, and avoids exactly one. 
 
 
 \begin{figure}[!h]
     \centering
     \includegraphics[width=8cm]{./img/lower-bound-B2-VPG.pdf}
-    \caption{Limite inferior para grafos $B_2$-$VPG$.}
+    \caption{Lower bound for $B_2$-$VPG$ graphs.}
     \label{VPG:lower-B2}
 \end{figure}
 
 
-A Figura~\ref{VPG:lower-B3} ilustra um conjunto de doze $B_3$-caminhos de um grafo $G$, em uma grade, de perímetro 12, tal que cada caminho cobre  onze vértices de $G$, evitando um deles.
+Figure \ref{VPG:lower-B3} shows 12 $B_3$-paths of a graph $G$, in a grid, of perimeter 12, such that each path covers 11  vertices of the grid,  avoiding one of them. 
 
 \begin{figure}[!h]
     \centering
     \includegraphics[width=12cm]{./img/lower-bound-B3-VPG.pdf}
-    \caption{Limite inferior para grafos $B_3$-VPG.}
+    \caption{Lower bound for $B_3$-VPG graphs.}
     \label{VPG:lower-B3}
 \end{figure}
 
-A Figura~\ref{VPG:lower-B4} ilustra um conjunto de $n$ $B_4$-caminhos de um grafo $G$ com $n$-vértices, em uma grade que possui perímetro $n$,  tal que cada caminho cobre exatamente   $n-1$  vértices do perímetro da grade, e evitando um deles. 
+Figure \ref{VPG:lower-B4} shows a set of $n$ $B_4$-paths of a $n$-vertex graph $G$, in a grid having perimeter $n$,  such that each path covers $n-1$  vertices of $G$, avoiding one of them. 
 
 \begin{figure}[!h]
     \centering
     \includegraphics[width=12cm]{./img/lower-bound-B4-VPG.pdf}
-    \caption{Limite inferior para grafos $B_4$-VPG.}
+    \caption{Lower bound for $B_4$-VPG graphs.}
     \label{VPG:lower-B4}
 \end{figure}
 
-Aplicando o Teorema~\ref{thm:minimal}, podemos então concluir que o número de vértices de cada um dos grafos descritos anteriormente são limites inferiores para as classes correspondentes. Então, podemos estabelecer os seguintes limites.
+Applying Theorem \ref{thm:minimal}, we can then conclude that the number of vertices of each of the above-described graphs is lower bound for the corresponding class. Then, we can claim the following bounds.
 
-\begin{lema}\label{claim:VPG-lower}
-Os seguintes são limites inferiores para $H(B_k$-VPG).
+\begin{claim}\label{claim:VPG-lower}
+The following are lower bounds for the Helly numbers of $B_k$-VPG graphs.
 \begin{enumerate}
-\item $H(B_1$-VPG) $\geq 4$
-\item $H(B_2$-VPG) $\geq 6$
-\item $H(B_3$-VPG) $\geq 12$
-\item $H(B_4$-VPG) é ilimitado.
+\item $H(B_1$-VPG) $\geq 4$.
+\item $H(B_2$-VPG) $\geq 6$.
+\item $H(B_3$-VPG) $\geq 12$.
+\item $H(B_4$-VPG) is unbounded.
 \end{enumerate}
-\end{lema}
+\end{claim}
 
-\subsection{Limites Superiores}
+\subsection{Upper Bounds}
 
-A seguir, provamos limites superiores para o número de Helly de grafos $B_k$-VPG. Os seguintes lemas são empregados.
+Next, we provide upper bounds for the Helly number of $B_k$-VPG graphs. The following lemmas are employed.
 
 \begin{lemma}\label{column-sizes}
-Seja $\cal F$ uma família minimal não-$(h-1)$-Helly de caminhos, para algum $h$, contendo $k \in \{3,4,5\}$ distintos pontos co-lineares não-representativos da grade. Então $\cal F$ contem um caminho com pelo menos $k-1$ dobras.
+Let $\cal F$ be a minimal non-$(h-1)$-Helly family of paths, for some $h$, containing $k \in \{3,4,5\}$ distinct co-linear non-representative points of the grid. Then $\cal F$ contains a path having at least $k-1$ bends.
 \end{lemma}
 
-\proof Para $k \in \{3,5\}$, o caminho que evita o ponto do meio possui pelo menos $k-1$ dobras; enquanto para $k = 4$ o caminho evitando um dos pontos do meio também possui essa mesma propriedade.
-\qed
+% \proof For $k \in \{3,5\}$, the path avoiding the middle point has at least $k-1$ bends, while for $k = 4$, the path avoiding one of the middle points also has this same property.
+% \qed
 
 \begin{lemma}\label{column-number}
-Seja $\cal F$ uma família minimal não-$(h-1)$-Helly de caminhos, sobre uma grade contendo $k < h$ pontos distintos mutuamente não-co-lineares não-representativos. Então $\cal F$ deve conter um caminho com no mínimo $k-1$ dobras.
+Let $\cal F$ be a minimal non-$(h-1)$-Helly family of paths, on a grid containing $k < h$ distinct pairwise non-co-linear non-representative points. Then $\cal F$ must contain a path with at least $k-1$ bends.
 \end{lemma}   
 
-\proof Uma vez que $k < h$, $\cal F$ deve conter um caminho que visite todos esses $k$ pontos mutuamente não-co-lineares. Esse caminho exige pelo menos uma dobra, entre dois pontos consecutivos não-co-lineares. Portanto $\cal F$ contem um caminho com pelo menos $k-1$ dobras. \qed \\
+% \proof Since $k < h$, $\cal F$ must contain a path that visits all such $k$ pairwise non-co-linear points. Such a path requires at least one bend, between two consecutive non-co-linear points. Therefore $\cal F$ contains a path with at least $k-1$ bends. \qed \\
 
-Também empregamos alguns conceitos e notações adicionais, descritos abaixo.
+We also employ some additional concepts and notation, below described.
 
-Seja $\cal F$ uma família minimal não-$(h-1)$-Helly  de $B_{k-1}$-caminhos sobre uma grade $Q$. Pelo Teorema~\ref{thm:minimal},  podemos escolher $h$ caminhos $P_i \in {\cal F}$, cada um deles associado a um ponto $p_i$ distinto não-representativo da grade, tal que $P_i$ evita $p_i$, mas contem todos os outros  $h-1$ pontos distintos não-representativos  $p_j \in P_J$, para cada $j \neq i$. Denote por $P_N$, $|P_N|=h$, o subconjunto de pontos da grade $Q$, restritos ao conjunto escolhido de distintos pontos  não-representativo $p_i$. Pelos Lemas~\ref{column-sizes} e \ref{column-number}, os pontos da grade de $P_N$ estão contidos em no máximo $k$ colunas (linhas), e cada  coluna (linha) contem no máximo $k$ pontos de $P_N$. Consequentemente, as cardinalidades dos pontos de $P_N$, contidas na coluna (linha) de $Q$,  forma uma partição  do inteiro $h$, em no máximo $k$ partes, tal que cada  parte possui tamanho no máximo  $k$. Chamemos tal partição como uma {\it partição viável de $h$, relativa a $P_N$}. Portanto, cada ponto não-representativo $p_i \in P_N$ contribui com uma unidade para alguma parte da partição, que é então referido como a parte da partição  {\it correspondendo} a $p_i$.    
+Let $\cal F$ be a minimal non-$(h-1)$-Helly family of $B_{k-1}$-paths on a grid $Q$. By Theorem \ref{thm:minimal},  we can choose $h$ paths $P_i \in {\cal F}$, each of them associated to a distinct non-representative grid point $p_i$, such that $P_i$ avoids $p_i$, but contains all the other $h-1$ distinct non-representative points $p_j \in P_J$, for each   $j \neq i$. Denote by $P_N$, $|P_N|=h$, the subset of grid  points of  $Q$, restricted to the chosen set of distinct  non-representative points $p_i$. By Lemmas \ref{column-sizes} and \ref{column-number}, the grid points of $P_N$ are contained in at most $k$ columns (lines), and each column (line) contains at most $k$ points of $P_N$. Consequently, the cardinalities of the points of $P_N$, contained in the columns (lines) of $Q$,  form a partition of the integer $h$, into at most $k$ parts, such that each part is at most $k$. Call such a partition as a {\it feasible  partition  of $h$, relative to $P_N$}. Therefore, each non-representative point $p_i \in P_N$ contributes with one unit to some part of the partition, which is then referred to,   as the part of the partition {\it corresponding} to $p_i$.    
 
-O seguinte lema descreve condições suficientes para um inteiro $h$ ser um limite superior do número de Helly.
+The following lemma describes sufficient conditions for an integer $h$ to be an upper bound for the Helly number.
 
-\begin{lemma}\label{upper-bound} Seja $\cal F$ uma família minimal não-$(h-1)$-Helly de $B_{k-1}$-caminhos sobre uma grade $Q$, e $P_N$ o conjunto de pontos não-representativos de $Q$. Sejam $k,h$ inteiros, $1 \leq k \leq 3$ e $k < h$. As seguintes condições implicam que $H(B_k$-VPG) $\leq h$  
+\begin{lemma}\label{upper-bound} Let $\cal F$ be a minimal non-$(h-1)$-Helly family of $B_{k-1}$-paths on a grid $Q$, and $P_N$ the set of non-representative points of $Q$. Let $k,h$ be integers, $1 \leq k \leq 3$ and $k < h$. The following conditions imply $H(B_k$-VPG) $\leq h$  
 \begin{itemize}
-    \item[(i)] Não existe partição viável de $h+1$, relativa a $P_N$, ou 
-    \item[(ii)] Para qualquer possível partição viável, e para qualquer disposição dos pontos da grade de $P_N$ em $Q$, existe algum ponto não-representativo  $p_i \in P_N$, tal que não existe caminho em $Q$, tendo no máximo  $k$ dobras, contendo todos pontos de $P_N$, exceto $p_i$.    
+    \item[(i)] there is no feasible partition of $h+1$, relative to $P_N$, or 
+    \item[(ii)] for any possible feasible partition, and for any arrangement of the grid points of $P_N$ in $Q$, there is some non-representative point $p_i \in P_N$, such that  no path exists  in $Q$, having at most $k$ bends, containing all points of $P_N$, except $p_i$.    
 \end{itemize}
 \end{lemma}
-\proof A prova de (i) segue diretamente dos Lemas~\ref{column-sizes} e \ref{column-number}, enquanto a prova de (ii) é uma consequência do Teorema~\ref{thm:minimal}.  \qed \\
+{\it Proof}: The proof of (i) follows from Lemmas \ref{column-sizes} and \ref{column-number}, while the proof of (ii) is a consequence of Theorem \ref{thm:minimal}.  \qed \\
 
-Os seguintes são limites superiores para o número de Helly de grafos $B_k$-VPG, para cada $k$, $1 \leq k \leq 3$, obtido pela aplicação do Lema~\ref{upper-bound}.      
+The following are upper bounds for the Helly number of $B_k$-VPG graphs, for each $k$, $1 \leq k \leq 3$, obtained  by applying Lemma \ref{upper-bound}.      
  
-\begin{lema}\label{claim:upper-B1-VPG}
+\begin{claim}\label{claim:upper-B1-VPG}
 $H(B_1$-VPG) $\leq  4$.
-\end{lema}
+\end{claim}
 
-\proof Não há partição do número inteiro 5, em 2 partes, em que cada parte possua no máximo 2 elementos. Consequentemente, o resultado segue do Lema~\ref{upper-bound}~(i). \qed
+% \proof There is no partition of the integer 5, into two parts, in which each part is at most 2. Consequently, the result follows from Lemma \ref{upper-bound} (i). \qed
 
-\begin{lema}\label{claim:upper-B2-VPG}
+\begin{claim}\label{claim:upper-B2-VPG}
 $H(B_2$-VPG)  $\leq  6$.
-\end{lema}
+\end{claim}
 
-\proof Assuma o contrário. Então $H(B_2$-VPG) $\geq  7$, seja $\cal F$ uma família minimal não-$6$-Helly de $B_2$-caminhos, e  $P_N$ seja o conjunto de pontos  não-representativos de $\cal F$ in $Q$. Existem duas partições viáveis do inteiro 7, em três partes, cada uma delas de tamanho no máximo 3, nomeadamente $(3,3,1)$ e $(3,2,2)$. Em qualquer desses casos  é sempre possível selecionar algum ponto $p_i \in P_N$, pertencendo a uma parte da partição de tamanho 3, tal que um caminho em  $\cal F$  que evite $p_i$ e cubra os outros  6 pontos não-representativos, deve conter pelo menos  3 dobras.  Então pelo Lema~\ref{upper-bound}, de fato $H(B_2$-VPG)  $\leq  6$. \qed
+% \proof Assume the contrary. Then $H(B_2$-VPG) $\geq  7$, let $\cal F$ be a minimal non-6-Helly family of $B_2$-paths, and  $P_N$ be the set of non-representative points of $\cal F$ in $Q$. There are two possible partitions of the integer 7, in three parts, each of them of size at most 3, namely $(3,3,1)$ and $(3,2,2)$. In any of these cases,  it is always possible to choose some point  $p_i \in P_N$, belonging to a part of the partition of size 3, such that a path in $\cal F$  which avoids $p_i$ and covers the other six non-representative points, must contain at least three bends.  Then by Lemma \ref{upper-bound}, indeed $H(B_2$-VPG)  $\leq  6$. \qed
 
 
-\begin{lema}\label{claim:upper-B3-VPG}
+\begin{claim}\label{claim:upper-B3-VPG}
 $H(B_3$-VPG) $\leq  12$.
-\end{lema}
+\end{claim}
 
-\proof Assuma por contradição que $H(B_3$-VPG) $\geq  12$. Seja $\cal F$ uma família minimal não-$12$-Helly de $B_3$-caminhos, e $P_N$ seja o conjunto de pontos não-representativos de $\cal F$ em $Q$. Existem três possíveis partições do inteiro 13, em quatro partes, tal que cada parte tenha tamanho máximo 4, nomeadamente $(4,4,4,1)$, $(4,4,3,2)$ e $(4,3,3,3)$. Nesse caso, selecione $p_i \in P_N$ para ser um ponto  não-representativo, correspondendo a uma parte de tamanho $4$ da partição.  O caminho de ${\cal F}$, que evita $p_i$ deve cobrir os outros 12 pontos não-representativos. Esses pontos estão localizados em 4 distintas colunas, de cardinalidades 4,4,3,1, 4,3,3,2, ou 3,3,3,3, considerando as 3 possíveis partições, respectivamente. Esse caminho deve conter no mínimo 4 dobras, uma contradição. Então pelo Lema~\ref{upper-bound}, $H(B_3$-VPG) $\leq  12$.    \qed  
+% \proof Assume the contrary, $H(B_3$-VPG) $\geq  12$. Let $\cal F$ be a minimal non-12-Helly family of $B_3$-paths, and  $P_N$ be the set of non-representative points of $\cal F$ in $Q$. There are three possible partitions of the integer 13, into four parts, each of them of size at most 4, namely $(4,4,4,1)$, $(4,4,3,2)$ and $(4,3,3,3)$. In this case, choose $p_i \in P_N$ to be a non-representative point, corresponding to a part of size $4$ of the partition.  The path of ${\cal F}$, which avoids $p_i$, must cover the other 12 non-representative points. These points are located in 4 distinct columns, of cardinalities 4,4,3,1, 4,3,3,2, or 3,3,3,3, considering the three possible partitions, respectively. Such a path must contain at least four bends, a contradiction. Then by Lemma \ref{upper-bound}, $H(B_3$-VPG) $\leq  12$.    \qed  
 
-Dos limites inferiores e superiores descritos nas subseções anteriores, obtemos os resultados para o  número de Helly de grafos $B_k$-VPG, completando a prova do Teorema~\ref{thm:Bk-VPG}.
+From the lower and upper bounds described in the previous subsections, we obtain the results for the Helly numbers of $B_k$-VPG graphs, completing the proof of Theorem \ref{thm:Bk-VPG}.
 
-\section{Número de Helly forte}\label{sec:helly-forte}
+\section{Strong Helly Number} \label{sec:strongHellyNumber}
 
-Nesta seção, consideramos uma maneira de determinar o número de Helly forte de grafos  $B_k$-EPG.
+In this section, we first consider determining the strong Helly number of $B_k$-EPG graphs.
 
-Iniciamos por descrever um teorema similar ao Teorema~\ref{thm:minimal}.
+We start by describing a theorem similar to Theorem \ref{thm:minimal}.
 
 \begin{theorem}\label{thm:minimal-strong}
 
-Seja ${\cal C}$ uma classe de famílias hereditárias  $\cal F$ de subconjuntos do conjunto universal $U$, cujo número de Helly forte  $sH({\cal C})$ é igual a $h$. Então existe uma família ${\cal F'} \in {\cal C}$ com exatamente $h$ subconjuntos satisfazendo a seguinte condição: 
+Let ${\cal C}$ be a hereditary class of families $\cal F$ of subsets of the universal set $U$, whose strong Helly number $sH({\cal C})$ equals $h$. Then there exists a family ${\cal F'} \in {\cal C}$ with exactly $h$ subsets satisfying the following condition: 
 
-Para cada subconjunto $P_i \in \cal {F'}$, há exatamente um elemento distinto $u_i \in U$, tal que 
+For each subset $P_i \in \cal {F'}$, there is exactly one distinct element $u_i \in U$, such that \\
 $$u_i \not \in P_i,$$ 
-mas $u_i$ está condido em todos subconjuntos 
+but $u_i$ is contained in all  subsets 
 $$P_j \in {\cal F'} \setminus P_i.$$
 \end{theorem}
 
-\proof O número de Helly forte  de ${\cal C}$ é $h$ e não $h - 1$, de modo que deva existir alguma família ${\cal F} \in {\cal C}$ cujo  número de Helly forte  é exatamente $h$, i.e. $\cal F$  contem $h$ subconjuntos $P_i$ cuja intersecção é igual ao core($\cal F'$) mas é tal que nenhum de seus  $h-1$ subconjuntos possui a mesma intersecção. Em particular, seja $\cal F'$ a família contendo exatamente os  $h$ subconjuntos $P_i$ descritos anteriormente. Essa  família deve existir, uma vez que $\cal C$ é hereditária. Então cada  $P_i$ não contem pelo menos um elemento $u_i$ na intersecção dos  $h-1$ subconjuntos restantes $P_j$, $j \ne i$, 
-uma vez que a intersecção desses $h-1$ subconjuntos não deve ser igual ao core($\cal F'$).  \qed
+Proof: The strong Helly number of ${\cal C}$ is $h$ and not $h - 1$, so that  there must exist some family ${\cal F} \in {\cal C}$ whose strong Helly number is exactly $h$, i.e., $\cal F$  contains $h$ subsets $P_i$ whose intersection equals  core($\cal F'$) but is such that no  $h-1$ of its subsets have the same intersection. In particular, let $\cal F'$ be the family containing exactly the $h$ subsets $P_i$ described above. Such a family must exist, since $\cal C$ is hereditary. Then each $P_i$ does not contain at least one element $u_i$ in the intersection of the remaining $h-1$ subsets $P_j$, $j \ne i$, 
+since the intersection of these $h-1$ subsets must not be equal to the core($\cal F'$).  \qed
 
-Mais uma vez, se considerarmos a  família $\cal F'$ descrita no teorema anterior, então é simples concluir que a remoção de qualquer subconjunto de $\cal {F'}$ a torna $(h-1)$-Helly-forte.  Então denotamos $\cal {F'}$ como uma família {\it minimal} não-$(h-1)$-Helly-forte. Além disso, o elemento $u_i \not \in P_i$, contido em todos subconjuntos $P_j \in {\cal{F'}} \setminus P_i$, exceto $P_i$, é o {\it $h$ não-representativo} de $P_i$.  
+Again, if we consider the family $\cal F'$ described in the theorem above it is simple to conclude that the removal of any subset from $\cal {F'}$ turns it $(h-1)$-strong Helly.  Then call $\cal {F'}$ a {\it minimal} non-$(h-1)$-strong Helly family. Moreover, the element $u_i \not \in P_i$, contained in all subsets $P_j \in {\cal{F'}} \setminus P_i$, except $P_i$, is the {\it $h$ non-representative} of $P_i$.  
 
-Como antes, empregaremos os subconjuntos de famílias minimais já estabelecidos, aplicados a caminhos em uma grade.
+As before, we employ the above minimal families of subsets, applied to paths in a grid.
 
-De fato, provaremos que o número de Helly forte  de grafos $B_k$-EPG  coincide com o número de Helly, para cada valor de  $k$ correspondente. Similarmente, para grafos $B_k$-VPG. Para $k=0$, é  simples mostrar que se um conjunto de intervalos  $\cal I$ em uma linha mutuamente intersectam-se então existem dois intervalos de $\cal I$ cuja intersecção é igual à intersecção de todos os intervalos de $\cal I$. Consequentemente o $k$-número de Helly forte  de grafos $B_0$-EPG é igual a 2. 
-Similarmente, o mesmo vale para grafos $B_0$-VPG. 
-Relembrando que o número de Helly forte é pelo menos igual ao número de Helly de uma família, de modo que os limites inferiores apresentados  no Lema~\ref{claim:lower-Bk-EPG} também são válidos para o  número de Helly forte . As provas para o número de Helly forte s para $k \geq 1$ são similares às já descritas na Seção~\ref{sec:Helly-number}.  
+We prove that the strong Helly number of $B_k$-EPG graphs coincide with the Helly number, for each corresponding value of $k$. Similarly, for $B_k$-VPG graphs. For $k=0$, it is simple to show that if a set of intervals $\cal I$ in a line pairwise intersect, then there exist two intervals of $\cal I$, whose intersection equals the intersection of all intervals of $\cal I$. Consequently, the $k$-strong Helly number of $B_0$-EPG graphs equals 2. 
+Similarly, for $B_0$-VPG graphs. 
+Recall that the strong Helly number is at least equal to the Helly number of a family so that the lower bounds presented in Claim~\ref{claim:lower-Bk-EPG} also hold for the strong Helly number. The proofs for the strong Helly numbers for $k \geq 1$ are similar to those described in Section \ref{sec:Helly-number}.  
 
 
 
-\section{Considerações finais}\label{sec:finalRemarks4}
+\section{Concluding Remarks}\label{sec:concludingRemarks}
+We have determined the Helly number and strong Helly number of $B_k$-EPG graphs and $B_k$-VPG graphs, for $k \geq 0$. 
 
-Nesse capítulo, determinamos o  número de Helly e o número de Helly forte  de grafos $B_k$-EPG e de grafos $B_k$-VPG, para $k \geq 0$. Os limites inferiores foram determinados pela apresentação de instâncias de conjuntos que definiam uma família de caminhos dentro de cada configuração. Por outro lado, os limites superiores foram determinados por abordagens matemáticas/geométricas que levaram em consideração fatos como as posições relativas de uma sequência de arestas (vértices) dos caminhos ou as possíveis subdivisões em partições de cada um de seus respectivos subconjuntos.
-
-A Tabela \ref{tab:Helly-Strong-Helly} sumariza os resultados obtidos.
+Table \ref{tab:Helly-Strong-Helly} summarizes the results obtained.
  
 \Large 
 
 \begin{table}[htb]
     \centering
+    \caption{Helly and Strong Helly Numbers for $B_k$-EPG and $B_k$-VPG Graphs}
+    \label{tab:Helly-Strong-Helly}
     \begin{tabular}{c|c|c}
     \cline{1-3} $k$  & $B_k$-EPG & $B_k$-VPG \\
     \cline{1-3} 0 & 2 & 2 \\
     \cline{1-3} 1 & 3 & 4 \\
     \cline{1-3} 2 & 4 & 6 \\
     \cline{1-3} 3 & 8 & 12 \\
-    \cline{1-3} $\geq 4$ & ilimitado & ilimitado \\
+    \cline{1-3} $\geq 4$ & unbounded & unbounded \\
     \cline{1-3} 
     \end{tabular}
-    \caption{Número de Helly e número de Helly forte para grafos $B_k$-EPG e $B_k$-VPG.}
-    \label{tab:Helly-Strong-Helly}
 \end{table}
 
 \normalsize
 
-
-Levantamos duas questões para serem investigadas, em relação aos resultados apresentados nesse capítulo.
+We leave two questions to be investigated concerning the presented results.
 
 \begin{enumerate}
-\item Dado um {\it grafo específico}  EPG ou VPG, a  questão seria de formular um algoritmo capaz de determinar seu número de Helly e seu número de Helly forte. Ver o trabalho de~\cite{dourado2008improved}, para exemplos de tais algoritmos aplicados a grafos em geral.
+\item Given a {\it specific}  EPG or VPG graph, the question is to formulate an algorithm to determine its Helly and strong Helly numbers. See \cite{dourado2008improved}, for instance, for such algorithms, applied to general graphs. 
 
-\item Os valores do número de Helly e do número de Helly forte que foram determinados nesse capítulo coincidem em todos os casos. Claramente, em geral esse não é o caso. Deixamos uma questão em aberto, a de encontrar as condições para as quais essa igualdade ocorre.
-\end{enumerate}
+\item The values of the Helly and strong Helly numbers, which were determined in this paper, coincided in all cases. Clearly, in general, this is not the case. We leave as an open question, to find the conditions for such equality to occur. \end{enumerate}
 
 
-% \begin{thebibliography}{99}
-% \bibitem{asinowski2011string}
-% A. Asinowski, E. Cohen, M. C. Golumbic, V. Limouzy, M. Lipshteyn and M. Stern. Electronic Notes in Discrete Mathematics 37 (2011), pp. 141-146. 
+\newpage
 
-% \bibitem{asinowski2012}  A. Asinowski, E. Cohen, M. C. Golumbic, V. Limouzy, M. Lipshteyn, and M. Stern,
-% Vertex intersection graphs of caminhos on a grid, Journal of Graph Algorithms and
-% Applications, 16 (2012) pp. 129-150.
 
-% \bibitem{bergeDuchet1975}
-% C. Berge and P. Duchet. A generalization of Gilmore’s theorem, {\emph in} M. Fiedler,
-% editor, Recent Advances in Graph Theory, Acad. Praha, Prague, 1975, pp. 49-55
-
-% \bibitem{duchet1978propriete}
-% P. Duchet. Propriet\'e de Helly et probl\`emes de repr\'esentations. In Colloquium
-% International CNRS 260, Probl\'emes Combinatoires et Th\'eorie de Graphs, Orsay, France, 1976, pp. 117-118
-
-%  \bibitem{dourado2008improved}
-%  M. C. Dourado, M. C. Lin, F. Protti, and J. L. Szwarcfiter. Improved algorithms
-%  for recognizing $p$-Helly and hereditary $p$-Helly hypergraphs. Information Processing Letters 108  (2008), pp. 257-250.
-
-% \bibitem{dourado2008strong}
-% M. C. Dourado, F. Protti, and J. L. Szwarcfiter. On the strong $p$-Helly property.
-% Discrete Applied Mathematics, 156 (2008), pp. 1053–1057
-
-% \bibitem{dourado2009}
-% M. C. Dourado, F. Protti and J. L. Szwarcfiter,
-% Complexity aspects of the Helly
-% property: graphs and hypergraphs. Electronic Journal on Combinatorics, Dynamic Surveys 17, 2009 
-
-% \bibitem{golumbic1985}
-% M. C. Golumbic and R. E. Jamison,
-% The edge intersection graphs of caminhos in a tree,
-% Journal of Combinatorial Theory B 38 (1985), pp. 8-22.
-
-% \bibitem{golumbic2009}
-% M. C. Golumbic, M. Lipshteyn and  M. Stern,
-% Edge intersection graphs of single dobra caminhos on a grid, Networks 54 (2009), pp. 130-138.
-
-% \bibitem{golumbic2013}
-% M. C. Golumbic, M. Lipshteyn and  M. Stern,
-% Single dobra caminhos on a grid have número de Helly forte  4,
-% Networks (2013), 161-163
-
-%\bibitem{}
-% M. C. Golumbic and G. Morgenstern,
-% Edge intersection graphs of caminhos
-% on a grid, {\emph in} ``50 Years of Combinatorics, Graph Theory and Computing'', F.~Chung, R.~Graham, F.~Hoffman, L.~Hogben, R.~Mullin, D.~West, eds, CRC Press, 2019, pp. 193-209. 
+\section{Article submitted to journal  Discussiones Mathematicae Graph Theory (DMGT)} 
+\includepdf[pages=-]{./includes/include-pdf-files/paperDMGT2020.pdf}

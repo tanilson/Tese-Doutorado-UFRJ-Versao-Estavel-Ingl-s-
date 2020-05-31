@@ -231,11 +231,9 @@ The true pie presented in Figure~\ref{fig:octaedro}(b) is composite by paths cor
 By Lemma~\ref{lem:octaedronaohelly}, every minimal $B_1$-EPG representation of the octahedral graph $O_3$ has the same shape, as depicted in Fig.~\ref{fig:octaedro}(b). 
 Since in any representation of the graph $O_3$ there is always a triple of paths that do not satisfy the Helly property, paths $P_{a}, P_{b} $ and $P_{c}$ in the case of Fig.~\ref{fig:octaedro}(b), it holds that $O_3 \notin$ Helly-$B_1$ EPG, which implies that the class of Helly-$B_1$-EPG graphs is a proper subclass of $B_1$-EPG.
 
-Also, $B_0$-EPG and Helly-$B_0$-EPG graphs coincide. Hence, Helly-$B_0$ EPG can be recognized in polynomial time, see \cite{booth1976}.
+It is easy to see that any $B_0$-EPG representation is Helly. Thus, $B_0$-EPG and Helly-$B_0$-EPG graphs coincide.  Hence, Helly-$B_0$ EPG can be recognized in polynomial time, see \cite{booth1976}.
 
-%%%%%%%%%%%%%% 
-
-In a $B_1$-EPG representation of a graph, the paths can be of the following four shapes: $\llcorner$, $\lrcorner$, $\ulcorner$ and $\urcorner$. \cite{cameron2016edge} studied $B_1$-EPG graphs whose paths on the grid belong to a proper subset of the four shapes. If $S$ is a subset of $\{\llcorner, \lrcorner, \ulcorner, \urcorner\}$, then $[S]$ denotes the class of graphs that can be represented by paths whose shapes belong to $S$, where zero-bend paths are considered to be degenerate $\llcorner$'s. They consider the natural subclasses of $B_1$-EPG: $[\llcorner], [\llcorner, \ulcorner], [\llcorner, \urcorner]$ and $[\llcorner, \ulcorner, \urcorner]$, all other subsets are isomorphic
+In a $B_1$-EPG representation of a graph, the paths can be of the following four shapes: $\llcorner$, $\lrcorner$, $\ulcorner$ and $\urcorner$. \citet{cameron2016edge} studied $B_1$-EPG graphs whose paths on the grid belong to a proper subset of the four shapes. If $S$ is a subset of $\{\llcorner, \lrcorner, \ulcorner, \urcorner\}$, then $[S]$ denotes the class of graphs that can be represented by paths whose shapes belong to $S$, where zero-bend paths are considered to be degenerate $\llcorner$'s. They consider the natural subclasses of $B_1$-EPG: $[\llcorner], [\llcorner, \ulcorner], [\llcorner, \urcorner]$ and $[\llcorner, \ulcorner, \urcorner]$, all other subsets are isomorphic
 to these up to 90 degree rotation. \cite{cameron2016edge}  showed that recognizing each of these classes is NP-complete.
 
 The following shows how these classes relate to the class of Helly-$B_1$-EPG graphs.
@@ -245,18 +243,15 @@ The following shows how these classes relate to the class of Helly-$B_1$-EPG gra
 \begin{figure}[H]	
 \center%6.3
 \includegraphics[width=8.5cm]{./img/classes} %2
-\caption{Hierarchical diagram of some EPG classes}
+\caption{Hierarchical diagram of some EPG classes.}
 \label{fig:diagramaEPG}
 \end{figure}
 
 \begin{theorem}\label{theo:HellyLShaped}
 $[\llcorner]\subsetneq [\llcorner, \urcorner]\subsetneq$~Helly-$B_1$ EPG, and Helly-$B_1$ EPG is incomparable with $[\llcorner, \ulcorner]$ and $[\llcorner, \ulcorner, \urcorner]$.
 \end{theorem}
-\begin{proof}
-\cite{cameron2016edge} showed that $[\llcorner]\subsetneq [\llcorner, \urcorner]$. Also, it is easy to see that $\llcorner$’s and $\urcorner$’s cannot form a claw-clique, thus, by Lemma~\ref{caracterization}, it follows that $[\llcorner, \urcorner]\subseteq$~Helly-$B_1$ EPG. In order to observe that $[\llcorner, \urcorner]$ is a proper subclass of Helly-$B_1$ EPG, it is enough to analyze the bat graph (see Fig.~\ref{fig:grafoQ}): by Corollary~\ref{batgraph} follows that any $B_1$-EPG representation of a bat graph contains a square-frame, thus it is not in $[\llcorner, \urcorner]$. In addition, the bat graph is bipartite which implies that any $B_1$-EPG representation of that graph does not contain claw-cliques and therefore is Helly.
 
-Now, it remains to show that Helly-$B_1$ EPG is incomparable with $[\llcorner, \ulcorner]$ and $[\llcorner, \ulcorner, \urcorner]$. Again, since any $B_1$-EPG representation of a bat graph contains a square-frame, bat graph is a Helly-$B_1$-EPG graph that is not in $[\llcorner, \ulcorner, \urcorner]$. On the other hand, the $S_3$ (3-sun) is a graph in $[\llcorner, \ulcorner]$ such that any of its $B_1$-EPG representations have a claw-clique, see~Observation 7 in~\cite{cameron2016edge}. Therefore, $S_3$ is a graph in $[\llcorner, \ulcorner]$ that is not Helly-$B_1$ EPG.
-\end{proof}
+The demonstration of Theorem~\ref{theo:HellyLShaped} use statements of \cite{cameron2016edge} about $L$-shaped paths, it also use the bat graph representation (see Fig.~\ref{fig:grafoQ}) and Corollary~\ref{batgraph} and results known to Helly graphs. 
 
 Figure~\ref{fig:diagramaEPG} depicts example of graphs of the classes $B_0$-EPG, $[\llcorner]$, $[\llcorner, \urcorner]$, Helly-$B_1$ EPG, and $B_1$-EPG that distinguish these classes.
 
@@ -264,414 +259,248 @@ It is known that recognizing $[\llcorner]$, $[\llcorner, \urcorner]$, and $B_1$-
 
 Although the classes $ B_1$-EPG and Helly-$B_1$ EPG are distinct, the same is not true for the classes $B_0$-EPG and Helly-$B_0 $ EPG, because any $B_0$-EPG representation is Helly.  The $B_0$-EPG class corresponds exactly to class of interval graphs, see~\citet{booth1976}. Throughout the text we will show that each class of Helly-$B_k$ EPG is contained in the corresponding non-Helly class for all $ k \geq 1$, i.e. Helly-$B_k$ EPG $ \subsetneq$ $B_k$-EPG.
 
-In this paper, we show that it is NP-complete to recognize Helly-$B_1$-EPG graphs.
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+In following sections we show that it is NP-complete to recognize Helly-$B_1$-EPG graphs.
+
 
 \section{Membership in $\mathcal{NP}$} \label{sec:NPpert}
 
 %In this paper we are interested in characterizing the complexity of the $B_1$-EPG-Helly recognition problem, whose formal definition is presented next:
-Nesta seção, mostraremos que o problema de reconhecimento de grafos $B_k$-EPG-Helly, onde $k$ é limitado por um polinômio de $|V(G)|$, pertence a  $\mathcal{NP}$. O problema pode ser formalmente descrito como segue.
+In this section, we will show that the (Helly-)$B_k$-EPG graph recognition problem belongs to $\mathcal{NP}$, when $k$ is polynomial in size with respect to $ |V(G)|$. The problem can be formally described as follows.
 
 \input{./includes/include-tab/reconhecimentob1epghelly.tex}
 
-Um certificado (positivo) para o problema {\sc Reconhecimento $B_k$-EPG-Helly} consiste de uma grade $Q$, um conjunto de caminhos $\mathcal{P}$ com até $k$-dobras sobre $Q$, que tenham uma correspondência de um-para-um com os vértices do conjunto $V(G)$ de $G$, tais que, para cada par de caminhos distintos $P_i, P_j\in \mathcal{P}, P_i\cap P_j \neq \emptyset $  se e somente se os vértices correspondentes são adjacentes em $G$. Além disso, $\mathcal{P}$ deve satisfazer à propriedade Helly.
-
-Os seguintes conceitos são centrais para nosso propósito.
-Uma \emph{aresta relevante} em uma representação $B_k$-EPG é aquela que é aresta de extremidade ou uma aresta de dobra. Portanto, como cada caminho possui no máximo $k$ dobras, então cada caminho pode ter até $2(k+1)$ arestas relevantes, e qualquer representação $B_k$-EPG contém no máximo $2|\mathcal{P}|(k+1)$ arestas relevantes.
-
-%O certificado para o algoritmo de verificação que mostra que um grafo é um grafo $B_k$-EPG-Helly possui como parâmetros de entrada uma representação $B_k$-EPG, chamemos de $R$, contendo uma coleção de caminhos $\mathcal{P}$, $|\mathcal{P}|=|V(G)|$, onde cada caminho  $P_i \in \mathcal{P}$ é dado pelo seu conjunto de arestas relevantes mais o conjunto de arestas relevantes, que intersectam   $P_i$, de outros caminhos. As arestas relevantes devem ser dadas na ordem em que aparecem no caminho. Esse formato de codificação para os caminhos nos permite verificar se cada conjunto de arestas relevantes realmente representa um caminho com no máximo $k$-dobras. Essa representação também é útil para verificar se as intersecções correspondem a um modelo de intersecção para $G$.
-
-%Um certificado (positivo) para  {\sc Reconhecimento $B_k$-EPG-Helly} consiste de uma grade $Q$, um conjunto  $\mathcal{P}$ de caminhos com $k$-dobras sobre $Q$, which have a one-to-one correspondence with the vertex set $V(G)$ of $G$, such that, for each pair of distinct paths $P_i, P_j\in \mathcal{P}, P_i\cap P_j \neq \emptyset $ if and only if the corresponding vertices are adjacent in $G$. Furthermore, $\mathcal{P}$ satisfies the Helly property.
+A (positive) certificate for the {\sc Helly-$B_k$ EPG recognition} consists of a grid $Q$, a set $\mathcal{P}$ of $k$-bend paths on $Q$, which is in one-to-one correspondence with the vertex set $V(G)$ of $G$, such that, for each pair of distinct paths $P_i, P_j\in \mathcal{P}, P_i\cap P_j \neq \emptyset $ if and only if the corresponding vertices are adjacent in $G$. Furthermore, $\mathcal{P}$ satisfies the Helly property.
 
 
-Para mostrar que existe um algoritmo de tempo polinomial não determinístico para {\sc Reconhecimento $B_k$-EPG-Helly}, é suficiente considerar como certificado uma representação $B_k$-EPG, digamos  $R$, contendo uma coleção de caminhos  $\mathcal{P}$, onde $|\mathcal{P}| = |V(G)|$, tal que cada caminho   $P_i \in \mathcal{P}$  é dado pelo seu conjunto de arestas relevantes juntamente com o conjunto de todas as arestas relevantes de $P_j$ que intersectam $P_i$, onde $P_j \in \mathcal{P}$.  % as arestas relevantes, que intersectam $P_i$, de cada caminho $P_j$ que intersecta  $P_i$, onde $P_j \in \mathcal{P}$. 
- As arestas relevantes para cada caminho são dadas na ordem em que elas aparecem no caminho, de forma que é fácil checar se as arestas correspondem a um caminho único com no máximo  $k$ dobras. Essa representação é também utilizada para checar se os caminhos formam um modelo de intersecção para  $G$.
+The following are key concepts that make it easier to control the size of an EPG representation. A \emph{relevant edge} of a path in a $B_k$-EPG representation is either an extremity edge or a bend edge of the path. Note that each path with at most $k$ bends can have up to $2(k + 1)$ relevant edges, and any $B_k$-EPG representation contains at most $2|\mathcal{P}|(k + 1)$ distinct relevant edges. 
 
-A fim de verificar, em tempo polinomial, que a entrada de fato é um certificado para o problema, temos que verificar as seguintes afirmações:
 
-\begin{enumerate}[label=(\roman*)]
-\item A sequência de arestas relevantes de um caminho $P_i\in \mathcal{P}$ determina unicamente $P_i$ em tempo polinomial; \label{it:bullet1}
+To show that there is a non-deterministic polynomial-time algorithm for {\sc Helly-$B_k$ EPG recognition}, it is enough to consider as certificate a  $B_k$-EPG representation $R$ containing a collection $\mathcal{P}$ of paths, $|\mathcal{P}| = |V(G)|$, such that  each path $P_i \in \mathcal{P}$ is given by its set of relevant edges along with the relevant edges, that intersects $P_i$, of each path $P_j$ intersecting $P_i$, where $P_j \in \mathcal{P}$.  The relevant edges for each path are given in the order that they appear in the path, to make straightforward checking that the edges correspond to a unique path with at most $k$ bends.  This representation is also handy for checking that the paths form an intersection model for $G$.
 
-\item Dois caminhos  $P_i, P_j \in \mathcal{P}$ são intersectantes se e somente se eles se intersectam em alguma aresta relevante; \label{it:bullet2}
+To verify in polynomial time that the input is a positive certificate for the problem, we must assert the following:
 
-\item O conjunto  $\mathcal{P}$ de arestas relevantes satisfaz à propriedade Helly. \label{it:bullet3}
+\begin{enumerate}%[label=(\roman*)]
+\item[(i)] The sequence of relevant edges of a path $P_i\in \mathcal{P}$ determines $P_i$ in polynomial time; \label{it:bullet1}
+
+\item[(ii)] Two paths $P_i, P_j \in \mathcal{P}$ intersect if and only if they intersect in some relevant edge; \label{it:bullet2}
+
+\item[(iii)] The set $\mathcal{P}$ of relevant edges satisfies the Helly property.  \label{it:bullet3}
 \end{enumerate}
 
-O Lema a seguir mostra que a condição~\ref{it:bullet1} é válida.
 
-\begin{lema}\label{lem:verify1}
-Cada caminho $P_i$ pode ser determinado unicamente, em tempo polinomial pela sua sequência de arestas relevantes.
-\end{lema}
+%The following lemma shows condition~\ref{it:bullet1} holds.
+
+The following lemma states that condition~(i) holds. 
+
+
+
+\begin{lemma}\label{lem:verify1}
+Each path $P_i$ can be uniquely determined in polynomial time by the sequence of its relevant edges.
+\end{lemma}
+\begin{proof}
+%It is easy to verify that~\ref{it:bullet1} is true, 
+Consider the sequence of relevant edges of some path $P_i\in \mathcal{P}$. Start from an extremity edge of $P_i$. Let $t$ be the row (column) containing the last considered relevant edge. The next relevant edge $e'$ in the sequence, must be also contained in row (column) $t$. If $e'$ is an extremity edge, the process is finished, and the path has been determined. It contains all edges between the considered relevant edges in the sequence. Otherwise, if $e'$ is a bend edge, the next relevant edge is the second bend edge $e''$ of this same bend, which is contained in some column (row) $t'$. The process continues until the second extremity edge of $P_i$ is located. 
+
+With the above procedure, we can determine in $\mathcal{O}(k\cdot |V(G)|)$ time, whether path $P_i$ contains any given edge of the grid $Q$. Therefore, the sequence of relevant edges of $P_i$ uniquely determines $P_i$.
+ \end{proof}
+
+Next, we assert property~(ii).
+
+\begin{lemma}\label{lem:relevantEdges}
+Let $\mathcal{P}$ be the set of paths in a $B_k$-EPG representation of $G$, and let $P_1, P_2\in \mathcal{P}$. Then $P_1$, $P_2$ are intersecting paths if and only if their intersection contains at least one relevant edge.
+\end{lemma}
 
 \begin{proof}
-É fácil verificar que o item~\ref{it:bullet1} é verdadeiro. Considere a sequência de arestas relevantes de algum caminho $P_i\in \mathcal{P}$. Inicie de uma aresta de extremidade de $P_i$. Seja   $t$ a linha (coluna) contendo a última aresta relevante considerada. A próxima aresta relevante  $e'$ na sequência, deve estar contida na linha (coluna) $t$. Se $e'$ é uma aresta de extremidade, o processo está terminado e o caminho terá sido determinado. Ele contém todas arestas entre as arestas relevantes consideradas na sequência.  Caso contrário, se  $e'$ é uma aresta de dobra, a próxima aresta relevante é é a segunda aresta de dobra  $e''$ da mesma dobra, que está contida em alguma coluna (linha) $t'$. O processo continua até que a segunda aresta de extremidade de $P_i$ estar localizada.   
+ %If $P_1, P_2$ contain a common relevant edge there is nothing to prove. Otherwise,
+Assume that $P_1, P_2$ are intersecting, and we show they contain a common relevant edge. Without loss of generality, suppose $P_1, P_2$ intersect at row \textit{i} of the grid, in the  $B_k$-EPG representation $R$. The following are the possible cases that may occur:
 
-Com o procedimento acima podemos determinar em tempo $\mathcal{O}(k\cdot |V(G)|)$, se o caminho $P_i$ contém qualquer dada aresta da grade $Q$. Além disso, a sequência de arestas relevantes de  $P_i$ determina unicamente  $P_i$.
- \end{proof} %$\square$
+\begin{itemize}
+\item \textbf{Case 1:} Neither $P_1$ nor $P_2$ contain bends in row \textit{i}. 
 
-O lema abaixo mostra que o item~\ref{it:bullet2} é válido.
+Then $P_1$ and $ P_2$  are entirely contained in row \textit{i}. Since they intersect, either $P_1, P_2$  overlap, or one of the paths contains the other. In any of these situations, they intersect in a common extremity edge, which is a relevant edge.
 
-\begin{lema}\label{lem:relevantEdges}
-Seja $\mathcal{P}$ o conjunto de caminhos em uma representação $B_k$-EPG $R$ de $G$, e sejam $P_1,P_2 \in \mathcal{P}$. Então $P_1, P_2$ são caminhos intersectantes se e somente se sua intersecção contém no mínimo uma aresta relevante.%eles contêm no mínimo uma aresta relevante em comum.
-\end{lema}
+\item \textbf{Case 2:} $P_1$ does not contain bends in \textit{i}, but $ P_2$ does.
 
-\begin{proof}
-Se $P_1, P_2$ contém uma aresta relevante comum então claramente eles são intersectantes. Caso contrário, considere que $P_1, P_2$ são intersectantes, e mostraremos que eles contêm uma aresta relevante comum. Sem perda de generalidade, suponha que $P_1, P_2$ intersectam-se na linha \textit{i} da grade, em uma representação   $B_k$-EPG, digamos $R$. As seguintes são as possibilidades que podem ocorrer. 
+If some bend edge of $P_2$ also belongs to $P_1$, then $P_1, P_2$  intersect in  a relevant edge. Otherwise, since $P_1, P_2$  intersect, the only possibility is that the intersection contains an extremity edge of $P_1$ or $ P_2$. Hence the paths intersect in a relevant edge.  
 
-Seja $e$ uma aresta comum a $P_1$ e $P_2$. Se $e$ não é aresta relevante, então a aresta seguinte à  esquerda (ou direita) de $e$, digamos $e'$, também pertence a $P_1 \cap P_2$. Tome $e'$, se $e'$ é relevante, então encontramos a aresta relevante da intersecção de $P_1$ e $P_2$, se não repetimos o processo até que uma aresta relevante seja encontrada. Caso os caminhos sejam juntos, uma aresta de dobra ou de extremidade é comum aos dois. Caso os dois caminhos se separem em algum ponto também existe uma aresta de dobra ou de extremidade que é comum aos dois.
+\item \textbf{Case 3:} Both $P_1$,  $P_2$ contain bends in \textit{i}
 
-% \begin{itemize}
-% \item \textbf{Caso 1:} Nem $P_1$ nem $P_2$ contêm dobras na linha \textit{i}. 
-
-% Então $P_1$ e $ P_2$  estão inteiramente contidos na linha \textit{i}. Uma vez que eles se intersectam, ou  $P_1, P_2$  se cobrem parcialmente, ou um dos caminhos contém o outro. Em qualquer dessas situações eles intersectam em uma aresta de extremidade comum, que é uma aresta relevante.
-
-% \item \textbf{Caso 2:} $P_1$ não contém dobras em \textit{i}, mas $ P_2$ contém.
-
-% Se alguma aresta de dobra de $P_2$ também pertence a   $P_1$, então $P_1, P_2$  intersectam-se em uma aresta relevante. Caso contrário, uma vez que $P_1, P_2$  intersectam-se, a única possibilidade é que a intersecção contenha uma aresta de extremidade de  $P_1$ ou $ P_2$. Portanto, os caminhos se intersectam em uma aresta relevante.
-
-% \item \textbf{Caso 3:} Ambos $P_1$,  $P_2$ contém em \textit{i}.
-
-% Novamente, se a intersecção ocorre em alguma aresta de dobra de $P_1$  ou $P_2$, o lema segue válido. Caso contrário,  a mesma situação anterior deve ocorrer, ou seja, $P_1, P_2$  devem intersectar em alguma aresta de extremidade.
+Again, if the intersection occurs in some bend edge of $P_1$  or $P_2$, the lemma follows. Otherwise, the same situation as above must occur: $P_1, P_2$  must intersect in an extremity edge.
  
-% \end{itemize}
-Em qualquer dos casos, $P_1$ e $P_2$ intersectam-se em alguma aresta relevante.
-\end{proof}
+\end{itemize}
+In any of the cases, $P_1$ and $P_2$ intersect in some relevant edge.
+ \end{proof}
+ 
+ 
+The two previous lemmas let us check that a certificate is an actual $B_k$-EPG representation of a given graph $G$.  The next lemma says we can also verify in polynomial time that the representation encoded in the certificate is a Helly representation. Fortunately, we do not need to check every subset of intersecting paths of the representation to make sure they have a common intersection. 
 
-Os dois lemas anteriores nos permitem checar que um certificado é uma representação $B_k$-EPG correta de um dado grafo $G$. O próximo lema diz que podemos verificar em tempo polinomial que a representação codificada em um certificado é uma representação Helly. Felizmente nós não precisamos checar todos os subconjuntos de caminhos intersectantes da representação para ter certeza que eles possuem uma intersecção comum.
+% \begin{enumerate}[label=\roman*]
+% \setcounter{enumi}{2}
+% \item The set $\mathcal{P}$ of relevant edges satisfies the Helly property. The following lemma shows the above condition.
+% \end{enumerate}
 
-Finalmente, provamos o item~\ref{it:bullet3}.
-
-
-\begin{lema}\label{lem:verify3}
-Seja $\mathcal{P}$ uma coleção de caminhos codificados como uma sequência de arestas relevantes que constituem uma representação $B_k$-EPG  de um grafo  $G$. Podemos verificar em tempo polinomial se $\mathcal{P}$  possui a propriedade Helly.
-\end{lema}
-
+\begin{lemma}\label{lem:verify3}
+%Let $\mathcal{P}$ be the set of relevant edges of a $B_k$-EPG representation $R$ of a graph $G$. We can verify that $R$ is Helly representation in polynomial time.
+Let $\mathcal{P}$ be a collection of paths encoded as a sequence of relevant edges that constitute a  $B_k$-EPG representation of a graph $G$. We can verify in polynomial time if $\mathcal{P}$ has the Helly property.
+\end{lemma}
+%\setcounter{proof}{2}
 
 \begin{proof}
-Seja $\mathcal{T}$ o conjunto de arestas relevantes de $\mathcal{P}$. Consideramos cada tripla $T_i$ de arestas de  $\mathcal{T}$. Seja $\mathcal{P}_i$ o conjunto de caminhos de  $\mathcal{P}$ contendo no mínimo duas arestas relevantes de $T_i$. Pelo Teorema de Gilmore~\cite{bergeDuchet1975}, $\mathcal{P}$ possui a propriedade Helly se e somente se o subconjunto de caminhos de $\mathcal{P}_i$ correspondendo a cada tripla de $T_i$ tem intersecção não vazia.  Pelo Lema~\ref{lem:relevantEdges} é suficiente examinar a intersecção das arestas relevantes.  Além disso, um algoritmo polinomial para checar se $\mathcal{P}$ possui a propriedade Helly poderia examinar cada um dos subconjuntos $P_i$, e para cada aresta relevante $e$ de um caminho em $P_i$, computar o número de caminhos em $P_i$ que contêm $e$. $\mathcal{P}$ tem a propriedade Helly se e somente se para cada $P_i$ existe alguma aresta relevante que está em todos os caminhos de $P_i$ produzindo uma intersecção não vazia.
- \end{proof} %$\square$
-
+%Let $\mathcal{T}$ be the set of relevant edges of $R$. We consider each triple $T_i$ of edges of $\mathcal{T}$. Let $\mathcal{P}_i$ be the set of paths of $R$ containing at least two the relevant edges of $T_i$. By Gilmore's Theorem~\cite{bergeDuchet1975} the paths of $\mathcal{P}_i$  contain a common edge if only if  $R$ is a Helly representation.  By Lemma~\ref{lem:relevantEdges} they contain a common relevant edge. Since there is a polynomial number of relevant edges, we can identify such a common edge, in polynomial time, and confirm that $R$ is in fact Helly. Since the number of triples is also polynomial, the lemma follows.
+Let $T$ be the set of relevant edges of $\mathcal{P}$. Consider each triple $T_i$ of edges of $T$ . Let $P_i$ be the set of paths of $\mathcal{P}$ containing at least two of the edges in the triple  $T_i$. By Gilmore's Theorem, see \cite{bergeDuchet1975}, $\mathcal{P}$ has the Helly property if an only if the subset of paths $P_i$  corresponding to each triple  $T_i$  has a non-empty intersection.  By Lemma~\ref{lem:relevantEdges}, it suffices to examine the intersections on relevant edges. Therefore a polynomial algorithm for checking if $\mathcal{P}$ has the Helly property could examine each of the subsets $P_i$, and for each relevant edge $e$ of a path in $P_i$, to compute the number of paths in $P_i$ that contain $e$. Then  $\mathcal{P}$ has the Helly property if and only if for every  $P_i$,  there exists some relevant edge that is present in all paths in $P_i$,  yielding a non-empty intersection.
+ \end{proof}
 
 \begin{corollary}\label{cor:comumAtodos}
-Seja ${\mathcal P'}$ um conjunto mutuamente intersectante de caminhos em uma representação $B_k$-EPG-Helly de um grafo  $G$. Então a intersecção de todos os caminhos de ${\mathcal P'}$ contém no mínimo uma aresta relevante.
+Let ${\mathcal P'}$ be a set a pairwise intersecting paths in a Helly-$B_k$-EPG representation of a graph $G$. Then the intersection of all paths of  ${\mathcal P'}$ contains at least one relevant edge.
 \end{corollary}
 
-Note que a propriedade descrita no Corolário~\ref{cor:comumAtodos} é devida ao Teorema de Gilmore~\cite{bergeDuchet1975}, e se aplica somente a representações que satisfazem à propriedade Helly.
+Note that the property described in Corollary~\ref{cor:comumAtodos} is a consequence of Gilmore's Theorem, see~\cite{bergeDuchet1975}, and it applies only to representations that satisfy Helly's property.
 
-\medskip
+From Corollary~\ref{cor:comumAtodos}, the following theorem concerning the Helly-bend number of a graph holds.
+
+\begin{theorem}\label{teo:lowerboundCliques}
+For every graph $G$ containing $n$ vertices and $\mu$ maximal cliques, it holds that $$\frac{\mu}{2n}-1\leq b_H(G)\leq \mu -1.$$ 
+\end{theorem}
+\begin{proof}
+The upper bound follows from Corollary~\ref{cor:maxCliques}.
+For the lower bound first notice that each path with at most $k$ bends can have up to $2(k + 1)$ relevant edges, and any $B_k$-EPG representation with a set of paths $\mathcal{P}$ contains at most $2|\mathcal{P}|(k + 1)$ distinct relevant edges. Now, let $G$ be a graph with $n$ vertices, $\mu$ maximal cliques, and $b_H(G)=k$. From Corollary~\ref{cor:comumAtodos}, it follows that in a Helly-$B_k$-EPG representation of $G$ every maximal clique of $G$ contains at least one relevant edge. By maximality, two distinct maximal cliques cannot share the same edge-clique. Thus, in a Helly-$B_k$-EPG representation of $G$ every maximal clique of $G$ contains at least one distinct relevant edge, which implies that $\mu\leq 2n(k+1)$, so $\frac{\mu}{2n}-1\leq b_H(G)$.
+\end{proof}
 
 
 \begin{lemma}\label{lem:gridPolinomial}
-Seja $G$ um grafo $B_k$-EPG-Helly. Então $G$ admite uma representação $B_k$-EPG-Helly sobre uma grade de tamanho que é no máximo $4n(k+1) \times 4n(k+1)$.
+Let $G$ be a (Helly-)$B_k$-EPG graph. Then $G$ admits a (Helly-)$B_k$-EPG representation on a grid of size at most $4n(k+1) \times 4n(k+1)$.
 \end{lemma}
 \begin{proof}
-Seja $R$ uma representação $B_k$-EPG de um grafo $G$ sobre uma grade $Q$ com o menor tamanho possível.
-Seja $\mathcal{P}$ o conjunto de caminhos de  $R$. Note que $|\mathcal{P}|=n$.
- Existem no máximo $2|\mathcal{P}|(k+1)$ arestas relevantes em  $R$. 
- Se $Q$ possui um par de colunas consecutivas $c_i,c_{i+1}$ que não contém arestas relevantes de  $R$, e tais que não existem arestas relevantes cruzando de $c_i$ para $c_{i+1}$, então podemos contrair cada aresta cruzando de $c_i$ para $c_{i+1}$ em um único vértice de forma a obter uma nova representação  $B_k$-EPG  $G$ sobre uma grade de menor tamanho, o que é uma contradição. Um argumento análogo pode ser aplicado a pares de linhas consecutivas da grade.
-  Portanto, a grade  $Q$ é tal que cada par de colunas consecutivas e de linhas consecutivas de  $Q$ tem no mínimo uma aresta relevante de $R$ ou contém uma aresta relevante cruzando-as.  
-  Como $Q$ é a menor grade possível para representar  $G$ então a primeira linha e a primeira coluna de $Q$ ambas devem conter no mínimo um ponto  pertencendo a alguma aresta relevante de $R$. 
-Assim, se $G$ é $B_k$-EPG então ele admite uma  representação $B_k$-EPG sobre uma grade de tamanho no máximo $4|\mathcal{P}|(k+1) \times 4|\mathcal{P}|(k+1)$.
-Além do mais, pelo  Corolário~\ref{cor:comumAtodos}, sustenta-se que a operação de contração anteriormente descrita preserva à propriedade Helly, se houver. Assim, sendo $R$ uma representação $B_k$-EPG-Helly de um grafo $G$ sobre uma grade $Q$ com tamanho mínimo possível, é seguro afirmar que $Q$ possui tamanho no máximo  $4|\mathcal{P}|(k+1) \times 4|\mathcal{P}|(k+1)$.
-\end{proof}
+Let $R$ be a $B_k$-EPG representation of a graph $G$ on a grid $Q$ with the smallest possible size.
+Let $\mathcal{P}$ be the set of paths of $R$. Note that $|\mathcal{P}|=n$.
+A counting argument shows that there are at most $2|\mathcal{P}|(k+1)$ relevant edges in $R$. 
+ If $Q$ has a pair of consecutive columns $c_i,c_{i+1}$ neither of which contains relevant edges of $R$, and such that there is no relevant edge crossing from $c_i$ to $c_{i+1}$, then we can contract each edge crossing from $c_i$ to $c_{i+1}$ into single vertices so as to obtain a new  $B_k$-EPG representation of $G$ on a smaller grid, which is a contradiction. An analogous argument can be applied to pairs of consecutive rows of the grid.
+ Therefore the grid $Q$ is such that each pair of consecutive columns and consecutive rows of $Q$  has at least one relevant edge of $R$ or contains a relevant edge crossing it.  
+  Since $Q$ is the smallest possible grid for representing $G$, then the first row and the first column of $Q$ must contain at least one point belonging to some relevant edge of $R$. 
+Thus, if $G$ is $B_k$-EPG then it admits a $B_k$-EPG representation on a grid of size at most $4|\mathcal{P}|(k+1) \times 4|\mathcal{P}|(k+1)$.
+Besides, by Corollary~\ref{cor:comumAtodos}, it holds that the contraction operation previously described preserves the Helly property, if any. Hence, letting $R$ be a Helly-$B_k$-EPG representation of a graph $G$ on a grid $Q$ with the smallest possible size it holds that $Q$ has size at most $4|\mathcal{P}|(k+1) \times 4|\mathcal{P}|(k+1)$.\end{proof}
+
+Given a graph $G$ with $n$ vertices and an EPG representation $R$, it is easy to check in polynomial time with respect to $n +|R|$ whether $R$ is a $B_k$-EPG representation of $G$. By Lemma~\ref{lem:gridPolinomial}, if $G$ is a $B_k$-EPG graph then there is a positive certificate (an EPG representation) $R$ of polynomial size  with respect to $k+n$ to the question ``$G\in B_k$-EPG?''. Therefore, Corollary~\ref{BkNP} holds.
+
+\begin{corollary}\label{BkNP}
+Given a graph $G$ and an integer $k\geq 0$, the problem of determining whether $G$ is a $B_k$-EPG graph is in NP, whenever $k$ is bounded by a polynomial function of $|V(G)|$.
+\end{corollary}
+
+At this point, we are ready to demonstrate the NP-membership of {\sc Helly-$B_k$ EPG recognition}.
+
+\medskip
 
 \begin{theorem}\label{teo:nppertinencia}
-{\sc Reconhecimento $B_k$-EPG-Helly} está em  $\mathcal{NP}$, sempre que $k$ é limitado por uma função polinomial de $|V(G)|$.
+{\sc Helly-$B_k$ EPG recognition} is in NP.
 \end{theorem}
 \begin{proof}
-Pelo Lema~\ref{lem:gridPolinomial} e o fato de que $k$ é limitado por uma função polinomial de  $|V(G)|$, segue que a coleção  $\mathcal{P}$ pode ser codificada através de suas arestas relevantes com   $n^{\mathcal{O}(1)}$ bits.
+By Lemma~\ref{lem:gridPolinomial} and the fact that $k$ is bounded by a polynomial function of $|V(G)|$, it follows that the collection $\mathcal{P}$ can be encoded through its relevant edges with $n^{\mathcal{O}(1)}$ bits.
 
-Finalmente, pelos Lemas~\ref{lem:verify1}, \ref{lem:relevantEdges} e \ref{lem:verify3}, segue que podemos verificar em tempo polinomial sobre o tamanho de $G$ se $\mathcal{P}$ é uma família de conjuntos codificada como uma sequência de arestas relevantes que constituem uma representação $B_k$-EPG-Helly de um grafo  $G$.
+Finally, by Lemmas~\ref{lem:verify1}, \ref{lem:relevantEdges} and \ref{lem:verify3}, it follows that one can verify in polynomial-time in the size of $G$ whether $\mathcal{P}$ is a family of paths encoded as a sequence of relevant edges that constitute a Helly-$B_k$-EPG representation of a graph $G$.
 \end{proof}
 
 \section{$NP$-Hardness}\label{sec:sectionDispositivoClausula}
 
-Agora provaremos que o reconhecimento de grafos   $B_1$-EPG-Helly é $NP$-completo. Para essa demonstração seguiremos o roteiro de prova de dificuldade traçado por~\cite{heldt2014}.  Estabelecemos a redução do problema {\sc Positive (1 in 3)-3SAT} definido como segue:
+Now we will prove that  {\sc Helly-$B_1$ EPG recognition} is NP-complete. For this proof, we follow the basic strategy described in the prior hardness proof of~\cite{heldt2014}. We set up a reduction from {\sc Positive (1 in 3)-3SAT} defined  as follows:
 
 \input{./includes/include-tab/1em33sat.tex}
 
-{\sc Positive (1 in 3)-3SAT } é um problema $NP$-completo bem conhecido (ver \cite{johnson1979}, problema [L04], pág. 259). {\sc Positive (1 in 3)-3SAT} permanece $NP$-completo quando o grafo de incidência da fórmula CNF (Conjunctive Normal Form) é um grafo planar~\cite{mulzer2008minimum}.
+{\sc Positive (1 in 3)-3SAT } is a well-known NP-complete problem (see \cite{johnson1979}, problem [L04], page 259). Also, it remains NP-complete when the incidence graph of the input CNF (Conjunctive Normal Form) formula is planar, see~\cite{mulzer2008minimum}.
 
-Dada uma fórmula  $F$ que é uma instância de {\sc Positive (1 in 3)-3SAT} apresentaremos uma construção de tempo polinomial de um grafo $ G_F$ tal que  $ G_F $ é $ B_1$-EPG-Helly se e somente se $ F $ é satisfativa. Esse grafo conterá um subgrafo induzido  $ G_{c_i}$ com 12 vértices (chamado \emph {dispositivo cláusula}) para toda cláusula $C_i \in F$, e um subgrafo induzido (\emph {dispositivo variável}) para cada variável $ x_j$, contendo um vértice especial   $ v_j$, além de um  \emph{dispositivo base}  com 55 vértices adicionais.
+Given a formula $F$ that is an instance of {\sc Positive (1 in 3)-3SAT} we will present a polynomial-time construction of a graph $ G_F$ such that $ G_F \in$ Helly-$B_1$ EPG if and only if $ F $ is satisfiable. This graph will contain an induced subgraph $ G_{C_i}$ with 12 vertices (called \emph {clause gadget}) for every clause $C_i \in \mathcal{C}$, and an induced subgraph (\emph {variable gadget}) for each variable $ x_j$, containing a special vertex  $ v_j$, plus a \emph{base gadget}  with 55 additional vertices.
 
-%Since a Sun graph $S_4$ whose centro is a cycle of size 4 and adding a false twin to each vertex of $S_4$ that is not a member of central induced cycle then we have the graph $H$. 
-Utilizaremos um grafo $H$ isomorfo ao grafo ilustrado na Figura~\ref{fig:gadgetBase}, como um  dispositivo para realizar a prova. Para cada cláusula  $C_i$ de $F$ do nosso problema alvo, teremos um \emph{dispositivo cláusula} isomorfo a $H$, denotado por $G_{C_i}$. %The graph $H$ consists of subgraphs whose $B_1$-EPG representations are well known, such as: cycles of sizes 3 and 4.
+ 
+We will use a graph $H$ isomorphic to the graph presented in Figure~\ref{fig:gadgetBase}, as a gadget to perform the proof. For each clause $C_i$ of $F$ of the target problem, we will have a \emph{clause gadget} isomorphic to $H$, denoted by $G_{c_i}$.
 
 \input{./includes/include-img/gadgetB1EpgHelly.tex} 
 
-%\subsection{Definition}\label{sec:reducao}%The problem reduction}
 
-A redução  de uma instância $F$ de  {\sc Positive (1 in 3)-3SAT}  para um grafo particular $G_F$ tal que $G_F$ possui uma representação $B_{1}$-EPG-Helly se e somente se $F$ é satisfatível, é dada abaixo.
+The reduction of a formula $F$ from  {\sc Positive (1 in 3)-3SAT}  to a particular graph $G_F$ (where $G_F$ has a Helly-$B_1$-EPG representation if only if $F$ is satisfiable) is given below.
 
 \begin{definition}\label{sec:reducao}
-Seja $F$ uma fórmula na CNF sem literais negativos, em que toda cláusula possui exatamente três literais. O grafo $G_F$ é construído como segue:
+Let $F$ be a CNF-formula with variable set $\mathcal{X}$ and clause set $\mathcal{C}$ with no negative literals, in which every clause has exactly three literals. The graph $G_F$ is constructed as follows:
 
 \begin{enumerate}
-\item Para cada cláusula $C_i \in F$ criar um \textit{dispositivo cláusula} $G_{C_i}$, isomorfo ao grafo $H$;
+\item For each clause $C_i \in \mathcal{C}$ create a  \textit{clause gadget} $G_{C_i}$, isomorphic to  graph $H$;
 
-\item Para cada variável $x_{j}$ criar um \emph{vértice-variável} $v_{j}$ que é adjacente aos vértices $a$, $e,$ ou $h$ de $G_{C_i}$, quando $x_{j}$ é a primeira, segunda ou terceira variável em $C_i$, respectivamente;
+\item For each variable $x_{j}\in \mathcal{X}$ create a \emph{variable vertex} $v_{j}$ that is adjacent to the vertex $a$, $e,$ or $h$ of $G_{C_i}$, when $x_{j}$ is the first, second or third variable in $C_i$, respectively;
 
-\item Para cada vértice-variável $v_{j}$, construir um \emph{dispositivo variável} formado pela adição de duas cópias de  $H$, digamos $H_1$ e $H_2$, e fazendo $v_j$ adjacente aos vértices do triângulo $(a, b, c)$ em  $H_1$ e $H_2$.
+\item For each variable vertex $v_{j}$, construct a \emph{variable gadget} formed by adding two copies of $H$, $H_1$ and $H_2$, and making $v_j$ adjacent to the vertices of the triangles $(a, b, c)$ in  $H_1$ and $H_2$.
 
  %where $v_{j}$ is  adjacent to all vertices of the triangle (a,b,c);%; (c,e,g); (g,f,h); or (b,d,f)) of each $H_1$ and $H_2$; 
 
-%\item The  subgraph induced by \emph{vértice-variável}  $v_{j}$, and also $V(H_1)$ and $V(H_2)$ will be called \emph{dispositivo variável}; 
+%\item The  subgraph induced by \emph{variable vertex}  $v_{j}$, and also $V(H_1)$ and $V(H_2)$ will be called \emph{variable gadget}; 
 
-\item Criar um vértice $V$, que será utilizado como referência vertical para a construção, e adicionar arestas de  $V$ para cada vértice  $d$ nos \emph{dispositivos cláusula};%$d \in V(G_c)$;
+\item Create a vertex $V$, that will be used as a vertical reference of the construction, and add an edge from $V$ to each vertex $d$ of a clause gadget;%$d \in V(G_c)$;
 
-\item Criar um grafo bipartido $K_{2,4}$ com um vértice particular $T$ que faz parte do maior conjunto estável desse $K_{2,4}$. Esse vértice é denominado \emph{vértice-verdadeiro}. $T$ é adjacente a todos  $v_{j}$ e também a $V$;
+\item Create a bipartite graph $K_{2,4}$ with a particular vertex $T$ in the largest stable set. This vertex is nominated \emph{true vertex}. Vertex $T$ is adjacent to all $v_{j}$ and also to $V$;
 
-\item Criar dois grafos isomorfos a $H$, digamos $G_{B1}$ e $G_{B2}$. O vértice $T$ é conectado a todos os vértices do triângulo $(a,b,c)$
-em $G_{B1}$ e $G_{B2}$;
+\item Create two  graphs isomorphic to $H$, $G_{B1}$ and $G_{B2}$. The vertex $T$ is connected to each vertex of the triangle (a,b,c) in $G_{B1}$ and $G_{B2}$;
 
 
-\item Criar dois grafos isomorfos a $H$, digamos $G_{B3}$ e $G_{B4}$. O vértice $V$ está conectado a todos os vértices do triângulo $(a,b,c)$ em $G_{B3}$ e $G_{B4}$;
+\item Create two graphs isomorphic  to $H$, $G_{B3}$ and $G_{B4}$. The vertex $V$ is connected to each vertex of the triangle (a,b,c) in $G_{B3}$ and $G_{B4}$;
 
-\item O subgrafo induzido pelo conjunto de vértices $\{V(K_{2,4}) \cup  \{T, V\} \cup V(G_{B1}) \cup V(G_{B2}) \cup V(G_{B3}) \cup V(G_{B4})\}$ será denominado como \emph{dispositivo base}. 
+\item The  subgraph induced by the set of vertices $\{V(K_{2,4}) \cup  \{T, V\} \cup V(G_{B1}) \cup V(G_{B2}) \cup V(G_{B3}) \cup V(G_{B4})\}$ will be referred to as the  \emph{base gadget}. 
 \end{enumerate}
 \end{definition}
 
 
-A Figura~\ref{fig:exemploGrafoGF} retrata como essa construção funciona quando aplicada sobre uma pequena fórmula. %represents the graph that would be obtained when the previous construction is applied to the formula $ F = (x_1 + x_2 + x_3) \wedge (x_2 + x_3 + x_4) \wedge (x_3 + x_1 + x_4)$.
+Figure~\ref{fig:exemploGrafoGF} illustrates how this construction works on a small formula. 
 
 
 \input{./includes/include-img/exemploGrafoGF.tex}
 
+\begin{lemma}\label{lem:ida}
+Given a satisfiable instance $F$ of {\sc Positive (1 in 3)-3SAT}, the graph $G_F$ constructed from $F$ according to Definition~\ref{sec:reducao} admits a Helly-$B_1$-EPG representation.
+\end{lemma}
 
-\begin{lema}\label{lem:ida}
-Dada uma instância satisfatível $F$ de {\sc Positive (1 in 3)-3SAT}, o grafo  $G_F$ construído a partir de $F$ de acordo com a Definição~\ref{sec:reducao} admite uma representação $B_{1}$-EPG-Helly.
-\end{lema}
 
+Using base, variables and clause gadgets constructed in an appropriate way, it is possible to demonstrate that we can obtain a Helly-$B_1$-EPG representation from the input formula. Figure~\ref{fig:gadgetFormulaCompletaPies} depicts a Helly-$B_1$-EPG representation for the gadget built in Figure~\ref{fig:exemploGrafoGF}. For more proof details see the paper is last section of this chapter.
 
-\begin{proof}
 
-%~\ref{fig:representacaoCaminhos}
-Utilizaremos as estruturas  torta verdadeira e torta falsa para representar os  \textit{dispositivo cláusula} $ G_C$, mas a construção poderia ser feita com a estrutura moldura sem perda de generalidade, ver Figura~\ref{fig:falseAndTruePie}.  
+\input{includes/include-img/gadgetFormulaCompletaPies}
 
+Now, we consider the converse. Let $R$ be a Helly-$B_1$-EPG representation of $G_F$, then we will get the original formula.
 
-\input{./includes/include-img/falseAndTruePie.tex}
 
-Os \textit{dispositivo variável} serão representados por estruturas como da Figura~\ref{fig:gadgetVariavel}.
+\begin{lemma}\label{lem:volta}
+If a graph $G_F$, constructed according to Definition~\ref{sec:reducao}, admits a Helly-$B_1$-EPG representation, then the associated CNF-formula $F$ is a yes-instance of {\sc Positive (1 in 3)-3sat}.
+\end{lemma}
 
-\input{./includes/include-img/gadgetVariavel.tex}
-
-
-O \textit{dispositivo base} será representado pela estrutura retratada na  Figura~\ref{fig:gadgetBaseSingleBend}.
-
-\input{./includes/include-img/gadgetBase.tex}
-
-É fácil ver que as representações dos dispositivo cláusula, dispositivo variável e dispositivo base são todas  $B_1$-EPG-Helly. Agora precisamos descrever como essas representações podem ser combinadas de forma a construir uma representação  de dobra simples $R_{G_F}$.
-
-Dada uma atribuição  $A$ que satisfaz  $F$, podemos construir uma representação $R_{G_F}$ que seja  $B_{1}$-EPG-Helly. Primeiro, fixaremos a estrutura de representação do dispositivo base na grade para organizar a representação, ver Figura~\ref{fig:gadgetBaseSingleBend}. A seguir inserimos o  dispositivo variável com a seguinte regra: se a variável $x_i$ relacionada ao caminho   $P_{v_i}$ tiver atribuição  \textit{True}, então a adjacência entre o caminho $P_{v_i}$ com $P_{T}$ é horizontal, e vertical caso contrário. Por exemplo, uma atribuição  $A=\{x_1=False; x_2=False;x_3=True; x_4=False\}$  para as variáveis da fórmula  $F$ que gerou o dispositivo $G_F$ da Figura~\ref{fig:exemploGrafoGF}, nos dará um representação de dobra simples (dispositivo base + dispositivo variável) de acordo com a  Figura~\ref{fig:gadgetBasePlusVariables}(a). 
-
-Quando a fórmula  $F$ de {\sc Positive (1-in-3)-3sat} possui cláusulas cujo formato de atribuição é $(False, True, False)$ ou $(False, False, True)$ então usaremos torta falsa para representar essas cláusulas, mas quando a cláusula tem formato  $(True, False, False)$ utilizaremos  torta verdadeira para representar essa cláusula. Para inserir um  \textit{ dispositivo cláusula} $G_{C_i}$, introduziremos uma linha horizontal $l_{h}$ na grade entre as linhas horizontais usadas pelos caminhos para as duas variáveis $False$ em $ C_i $. Então conectaremos o caminho $P_{d_{c_i}}$ de $G_{C_i}$ em $P_{V}$ verticalmente usando a dobra de  $P_{d_{c_i}}$. No entanto, introduziremos uma linha vertical $ l_{v}$, na grade, entre a linha vertical da grade usada por $P_{V}$ e o caminho para  a variável $True$ em $C_i$, i.e. entre $P_{V}$ e o caminho representando a variável  $x_j \in C_i$. Onde  $l_{h}$  e $l_{v}$ cruzarem, nesse ponto iremos inserir o centro do  \textit{dispositivo cláusula} como pode ser visto na Figura~\ref{fig:gadgetOnePie}(b). Uma construção completa dessa representação de dobra simples para  $G_F$ pode ser verificada na 
-Figura~\ref{fig:gadgetFormulaCompletaPies}.%~\ref{fig:clausulagadgetgf}. 
-
-\begin{landscape}
-\input{./includes/include-img/gadgetBasePlusVariables.tex}
-\end{landscape}
-
-
-\input{./includes/include-img/gadgetFormulaCompletaPies.tex}
-
-
-Note que quando juntamos todas essas representações  dos  dispositivos que formam $ R_{G_F} $ não há inserção de mais dobras nos caminhos que já possuíam dobra, então a representação necessariamente permanece sendo uma representação  $ B_1$-EPG válida. Nos resta mostrar que ela satisfaz à propriedade Helly. 
-
-Uma forma simples de verificar que $ R_{G_F} $ satisfaz à propriedade Helly é notar que o grafo particular  $G_F$ nunca forma triângulos entre dispositivo variável, cláusula e base. Assim, qualquer triângulo de  $G_F$ está contido nos dispositivo variável, cláusula ou base. Como usamos somente representações  $B_1$-EPG-Helly desses dispositivos, $ R_{G_F} $ permanece uma representação $B_1$-EPG-Helly de $G_F$.
- \end{proof}
-
-%\cleardoublepage
-%\newpage
-
-A seguir consideramos a conversão. Tome uma representação $B_1$-EPG-Helly, $R$ de $G_F$.
-
-%To complete the proof of $NP$-hardness we will  present some considerations related with the single bend representation of gadgets that form the graph $G_F$. The way all gadgets can be drawn makes it possible to recover the formula that generated $G_F$ and a $True-$assignment for it. The following proofs help us understand the construction of a representation to $G_F$.  
-
-\begin{definition}
-Seja $H$ o grafo mostrado na  Figura~\ref{fig:gadgetBase}, tal que um 4-ciclo $H[\{b, c, f, g \}]$ corresponde em $R$ a uma estrutura de torta falsa ou torta verdadeira, então:
-
-\begin{itemize}
-\item O \emph{centro} é o único ponto da grade dessa representação que está contido em todo caminho representando o 4-ciclo $ \{b, c, f, g \}$; \label{lab:lab1}
-
-\item Um \emph {raio central} é uma aresta-intersecção entre dois dos caminhos correspondendo aos vértices $ b, c, f, g$, respectivamente.
-\end{itemize}
-\end{definition}
-
-
-Note que toda representação $B_1$-EPG de um $C_4$ satisfaz à propriedade Helly, ver Lema~\ref{lem:representacaoC4}, e os triângulos possuem $B_1$-EPG representações que satisfazem à propriedade Helly, e.g. a retratada na Figura~\ref{fig:trianguloepgRepresentacao}(b). O grafo $H$ é composto por um 4-ciclo,  $C_4^{H}=H[b, c, f, g]$ e oito triângulos, que são $(a,b,c);$ $(b,c,bc);$ $(c,e,g);$ $(c,g,cg);$ $(f,g,h);$ $(f,g,fg);$ $(b,d,f);$ $(b,f,bf).$
-
-Como $C_4^{H}$ é um grafo que possui representações bem conhecidas (ver Lema~\ref{lem:representacaoC4}), então podemos iniciar o desenho da representação $B_{1}$-EPG-Helly de $H$ dessas estruturas. As  Figuras~\ref{fig:falsepietruepieframe} retratam possibilidades de representações para $H$.
-
-Se um $C_4^{H}$ é representado por torta verdadeira ou torta falsa, então os caminhos $P_b, P_c, P_f, P_g$ compartilham um ponto central da representação. Por outro lado, se  $C_4^{H}$ é representado por uma moldura então as dobras dos caminhos correspondem aos quatro cantos distintos de um retângulo, i.e. todos os caminhos representando  vértices de um $C_4^{H}$ possuem pontos de dobra distintos, ver~\cite{golumbic2009}.
-
-A seguir examinaremos o uso da estrutura moldura.
-
-%Due asymmetric representations, the moldura structure needs to be studied in more detail. Next we will show some constraints of this structure. % in which allow us to consider it. %as gadget in the demonstration.
-
-\begin{proposition}\label{lem:direcoesdiferentes}
-Em uma representação $B_1$-EPG de um $C_4$ isomorfa a uma moldura, todo caminho  $P_i$ que representa um vértice do $C_4$ intersecta exatamente dois outros caminhos $P_{i-1}$ e $P_{i+1}$ da moldura, de modo que uma das intersecções é vertical e a outra é horizontal. %where one of them is vertical and another is a horizontal intersection.
-\end{proposition}
-
-\begin{proof}
-A prova é imediata, pela definição de moldura.
- \end{proof}
-
-\begin{proposition}\label{lem:mesmaretasuporte}
-Dada uma representação $B_1$-EPG-Helly de um grafo $G$ que possui um $C_4$ induzido cuja representação é isomorfa a uma moldura. Se existe um vértice $v$ de $G$, fora desse $C_4$, que é adjacente a exatamente dois vértices consecutivos desse $C_4$, então o caminho representado por  $v$ possui uma aresta comum com os caminhos representando ambos vértices do $C_4$.% of $v$ into such .  
-\end{proposition}
-
-\begin{proof}
-Por suposição, $G$ possui um triângulo contendo  $v$ e dois vértices de um $C_4$ representado por moldura. Além disso, o caminho representando  $v$ compartilha no mínimo uma aresta que é intersectante aos caminhos que representam seus vizinhos, caso contrário a representação não satisfaz à propriedade Helly.
- \end{proof}
-
-%\cleardoublepage
-
-Pela Proposição~\ref{lem:direcoesdiferentes} e Proposição~\ref{lem:mesmaretasuporte} podemos concluir que para todo vértice   $v_i \in V(H)$ tal que $v_i \neq V(C_4^{H})$, quando usamos uma moldura para representar o $C_4^{H}$, $P_{v_i}$ terá no mínimo uma aresta-intersecção comum ao par de caminhos representando seus vértices vizinhos em $H$. 
-A Figura~\ref{fig:falsepietruepieframe}(c) retrata uma possível representação $B_{1}$-EPG-Helly de $H$. 
-Note que ao aplicarmos operações de rotação e espelhamento, mantemos a representação $B_1$-EPG-Helly de $H$.
-%On this $B_{1}$-EPG-Helly representation presented we can apply rotation and mirroring operations, because these operations do not change the structure. We can also a change the direction of the bend (see Figure~\ref{fig:falsepietruepieframe}(c) and Figure~\ref{fig:outraRepresentacaoFrame}), but also adjust other paths if needed, so as to not change the intersections between the paths.
-
-\begin{definition}
-Em uma representação de dobra simples de um grafo  $C_4$ isomorfo a uma moldura, os caminhos representando vértices consecutivos no  $C_4$ são chamados \emph{caminhos consecutivos} e o segmento que corresponde à intersecção entre dois caminhos consecutivos é chamado \emph{intersecção de lado}.  
-\end{definition}
-
-\begin{lema}\label{lem:2vertical2horizontal}
-Em qualquer representação minimal de dobra simples de um grafo isomorfo a $H$, existem dois caminhos em   $\{P_a, P_e, P_d, P_h \}$ que tem direção horizontal e os outros dois caminhos possuem direção vertical.
-\end{lema}
-
-\begin{proof}
-Se o $C_4^{H} = [b,c,f,g]$ é representado por uma torta verdadeira ou torta falsa então cada caminho do  $C_4^{H}$ compartilha dois raios centrais com dois outros caminhos do  $C_4^{H}$, onde cada raio central corresponde a um par de vértices consecutivos no $C_4^{H}$.
-
-Como os vértices  $a, e, d, h$ são adjacentes a pares de vértices consecutivos no $C_4^{H}$ então os caminhos $P_a, P_e, P_d, P_h$ tem que se posicionar em cada um dos diferentes raios centrais,  2 estão na direção horizontal e 2 estão na direção vertical.
-
-Se o $C_4^{H}$ é representado por uma moldura então cada caminho do $C_4^{H}$ possui uma dobra posicionada em uma curva da moldura. Na moldura, o relacionamento de adjacência de pares de vértices consecutivos no $C_4^{H}$ é representado pela intersecção dos caminhos que constituem a moldura. Assim, como uma moldura possui duas partes da direção vertical e duas partes na direção horizontal, então existem dois caminhos em $\{P_a, P_e, P_d, P_h\}$ que possuem direção vertical e dois caminhos que possuem direção horizontal.
- \end{proof}
-
-\begin{corollary}
- \label{coro:paresMesmoSegmento}
-Em qualquer representação minimal de dobra simples de um grafo isomorfo a $H$, os seguintes caminhos estão sobre o mesmo raio central ou intersecção de lado: %$P_a$ and $p(bc)$; $p(e)$ and $p(cg)$; $p(h)$ and $p(fg)$; $p(d)$ and $p(bf)$.
-
-\begin{itemize}
-\item $P_a$ e $P_{bc}$;
-\item $P_e$ e $P_{cg}$;
-\item $P_h$ e $P_{fg}$;
-\item $P_d$ e $P_{bf}$.
-\end{itemize}
-\end{corollary}
-
-\input{./includes/include-img/representacoesB1EpgHellyBase.tex}
-
-\input{./includes/include-img/outraRepresentacaoFrame.tex}
-
-\begin{definition}
-Considere um grafo $G$ e um vértice $v \in V(G)$. Se em uma representação $B_1$-EPG de $G$ as duas arestas de dobra (ou uma aresta de extremidade) do caminho $P_v$ intersecta outros caminhos, então dizemos que  $P_v$ possui uma \emph{dobra obstruída (ou extremidade obstruída)}. 
-Além do mais, dada uma representação $B_1$-EPG de $G$ onde $P_v$ possui uma dobra (ou extremidade) obstruída, dizemos que um subconjunto de caminhos \emph{obstrui} uma aresta de dobra (ou uma aresta de extremidade) de  $P_v$ se eles intersectam essa aresta. 
-\end{definition}
-
-
-\begin{fac} \label{fact:k24facts}
-Em toda representação de dobra simples de um $K_{2,4}$, o caminho representando cada vértice do maior conjunto estável tem dobra em uma  torta falsa (ver mais em~\cite{Asinowski2009} e~\cite{daniel2014b}).
-\end{fac}
-
-
-\begin{lema}\label{lem:obstrucao}
-Em qualquer representação de dobra simples do grafo  $G'$ retratado na  Figura~\ref{fig:extremidadeDobraObstruida}(a), o caminho $P_x$ possui extremidades e dobra obstruídos.
-\end{lema}
-
-\begin{proof}
-Considere $G'$ consistindo de um vértice $x$, dois grafos isomorfos a  $H$, digamos $ H_1 $ e $ H_2 $, e um grafo bipartido $K_{2,4}$, tal que: $x$ é vértice do maior conjunto estável de $K_{2,4}$; $x$ é adjacente a um ciclo induzido de tamanho 3 de $H_1$, digamos $C_3^{H_1}$, e a um ciclo induzido de tamanho  3 de $H_2$, digamos $ C_3^{H_2}$, ver Figura~\ref{fig:extremidadeDobraObstruida}(a).
-
-Sabemos que os caminhos pertencentes ao maior conjunto estável de um $K_{2,4}$ sempre dobram em uma  torta falsa, ver Fato~\ref{fact:k24facts}. Além disso $P_x$ é parte do maior conjunto estável desse  $K_{2,4}$, então $P_x$ possui uma \emph {dobra obstruída}, ver Figura~\ref{fig:extremidadeDobraObstruida}(b). 
-
-O vértice  $x$ é adjacente ao $ C_{3}^{H_1}$ e ao $ C_3^{H_2}$, dessa forma o caminho $ P_x $ intersecta os caminhos representando eles. Mas em representações de dobra simples de um grafo isomorfo a $H$ existem pares de caminhos que sempre estão sobre o mesmo segmento de um raio central ou de uma intersecção de lado, ver o Corolário~\ref{coro:paresMesmoSegmento}, e a representação de  $C_{3}^{H_1}$ (similarmente para $C_3^{H_2})$ possui um desses caminhos. Todavia, existe uma aresta no conjunto de caminhos que representam  ${H_1}$ (similarmente em ${H_2}$) que tem uma intersecção de   3 caminhos representando $ C_{3}^{H_1}$ (e $ C_3^{H_2}$), caso contrário a representação não seria Helly, e existe  uma outra aresta distinta no mesmo  raio central ou intersecção de lado que é intersectada por três outros caminhos diferentes onde pelo menos um deles é diferentes dos caminhos correspondentes a $C_{3}^{H_1}$ (similarmente $C_3^{H_2}$). Assim, em uma representação de dobra simples de  $G'$, os caminhos que representam  $C_{3}^{H_1}$ (similarmente $C_3^{H_2})$ devem intersectar uma aresta de dobra ou uma aresta de extremidade de $P_x$, porque $P_x$ intersecta somente um dos conjuntos de caminhos que estão sobre o mesmo raio central ou intersecção de lado onde  $C_{3}^{H_1}$ (similarmente $C_3^{H_2})$ está. Como a dobra de   $P_x$ já está obstruída pelo restante da estrutura de $K_{2,4}$, então ${H_1}$ (similarmente ${H_2}$) deve estar posicionado na aresta de extremidade de  $P_x$. Isso implica que  $ P_x $ possui uma condição de \emph{extremidades obstruídas} e \emph{dobra obstruída}, ver Figura~\ref{fig:extremidadeDobraObstruida}(b).
-\input{./includes/include-img/extremidadeDobraObstruida.tex}
-\end{proof}
-
-
-
-
-\begin{definition}
-Dizemos que um segmento $s$ está \emph{internamente contido} em um caminho $P_x$ se $s$ está contido em $P_x$, e ele não intersecta uma aresta relevante de  $P_x$. 
-\end{definition}
-
-% \begin{fac}
-% In a single bend representation of a graph, if a path $p(y)$ has an obstructed bend and obstructed extremities, and some path $p(x)$ intersects $p(y)$, but does not intersect paths that obstruct the extremities and the bend edges of $p(y)$, then the intersection between $p(x)$ and $p(y)$ isinternamente contida into $p(y)$. 
-% \end{fac}
-
-
-\begin{lema}\label{lem:volta}
-Se um grafo $G_F$, construído de acordo com a definição  Definição~\ref{sec:reducao}, admite uma representação $B_1$-EPG-Helly, então a CNF-fórmula $F$ associada é uma instância-sim de {\sc Positive (1 in 3)-3sat}.
-\end{lema}
-
-% \setcounter{prove}{3}
-\begin{proof}
-Suponha que $G_F$ possui uma representação $B_1$-EPG-Helly, $R_{G_F}$. A partir de $R_{G_F}$ construiremos uma atribuição que satisfaz $F$. 
-
-Primeiro, note que em toda representação de dobra simples de um $K_{2,4}$, o caminho de cada vértice do maior conjunto estável, em particular $P_{T}$ (em $R_{G_F}$), possui dobras contidas em uma torta falsa (ver Fato~\ref{fact:k24facts}). 
-
-
-O vértice  $T$ é adjacente aos vértices de um triângulo de  $G_{B1}$ e $G_{B2}$. Como o $K_{2,4}$ está posicionado na dobra de  $P_{T}$, então em $R_{G_F}$ a representação de $G_{B1}$ e $G_{B2}$ devem ser posicionadas nas extremidades de $P_{T}$, ver Lema~\ref{lem:obstrucao}.   
-
-
-Sem perda de generalidade, considere que $P_{V} \cap P_{T}$ é um segmento horizontal em $R_{G_F}$.
-
-Podemos notar em $R_{G_F}$ que: o número de caminhos $P_{d}$ com segmento internamente contido em  $P_{V}$ é exatamente o número de cláusulas em $F$; a intersecção entre cada  $P_{a}, P_{e}, P_{h}$ no  dispositivo cláusula e cada caminho $P_{v_j}$ indica as variáveis que compõem a cláusula. Assim, podemos atribuir para cada variável $ x_{j}$ o valor \textit{True} se a aresta intersectante entre $P_{v_j}$ e $P_{T}$ é horizontal, e \textit{False} caso contrário. 
-
-
-No Lema~\ref{lem:2vertical2horizontal} foi mostrado que qualquer representação minimal $B_1$-EPG de um dispositivo cláusula possui dois caminhos em $\{P_{a}, P_{d}, P_{e}, P_{h}\}$ com direção vertical e outros dois caminhos possuem direção horizonal. Além disso $P_{d}$ intersecta $P_{V}$, segue-se que em uma representação de dobra simples de  $G_F$ devemos conectar dois desses caminhos de forma a representar uma atribuição $False$, e exatamente um representará uma atribuição $True$. Assim, mostramos que a partir de $R_{G_F}$ podemos obter uma atribuição para $F$ tal que toda cláusula possui exatamente uma variável com valor $True$.
- \end{proof}
-
-
-Note que uma representação $B_1$-EPG é  Helly se e somente se cada clique é representada por uma  clique-aresta (e não por uma  clique-garra). Mais detalhes sobre clique-aresta e clique-garra podem ser encontrados em~\cite{golumbic2009}. Assim, uma maneira alternativa para checar que uma representação é Helly seria notar que todas as cliques estão representadas como cliques-aresta.
-
-\smallskip
-
-Alguns vértices de  $G_F$ tem representação $B_1$-EPG altamente restritiva. O vértice $T$ possui sua dobra e ambas extremidades obstruídas por seus vizinhos, subgrafos $G_{B1}$, $G_{B2}$ e o restante do grafo $K_{2,4}$. O vértice $V$ e cada  vértice-variável $v_i$ deve ter um de seus segmentos internamente contigo em  $T$, e também suas extremidades e dobra obstruídos.  Portanto, o vértice $V$ e cada 
-vértice-variável possui somente um segmento cada que pode ser utilizado em uma representação EPG para fazer a adjacência deles ao dispositivo cláusula. A direção desse segmento, começando pela horizontal ou vertical, pode ser utilizado para representar uma valoração $True$ ou $False$ para as variáveis. O  dispositivo cláusula, por outro lado, é tal que exatamente duas de suas adjacências aos vértices-variável e a $V$ pode ser efetuada com uma intersecção horizontal enquanto as outras duas  devem ser realizadas com intersecção vertical. Se considerarmos a direção utilizada por  $V$ como uma atribuição verdadeira, podemos notar que exatamente uma das variáveis em cada cláusula será $True$ em qualquer possível representação de  $G_F$. Por outro lado, é razoavelmente simples obter uma representação $B_1$-EPG para $G_F$ dada uma atribuição verdadeira para a fórmula $F$.
-
+To obtain the formula $F$ associated with the  representation $R$ of $G_F$, a few steps are necessary: 1 - identify the  clauses gadgets, so you can know how many clauses make up the formula; 2 - identify the variable gadgets, that way you can know which are the variables that make up each clause; 3 - check which variables and clauses gadgets have intersecting paths, so it is possible to identify which variables are in each clause; 4 - check the direction of the intersections among each variable gadget with the base gadget, this makes it possible to identify the value (True/False) of each variable.  This takes us to the next theorem.
 
 \begin{theorem}
-{\sc Reconhecimento de grafos $B_{1}$-EPG-Helly } é NP-completo.
+{\sc Helly-$B_1$ EPG recognition} is NP-complete.
 \end{theorem}
-\begin{proof}
-Pelo Teorema~\ref{teo:nppertinencia} e Lemas~\ref{lem:ida} e~\ref{lem:volta}.
- \end{proof} %$\square$
+\begin{proof} %\textbf{Proof}.
+By Theorem~\ref{teo:nppertinencia}, Lemma~\ref{lem:ida}, Lemma~\ref{lem:volta}.
+ \end{proof}
 
-Dizemos que um grafo $k$-apex é um grafo que pode ser feito planar pela remoção de $k$ vértices. Além do mais, um grafo $d$-degenerado é um grafo em que todo subgrafo possui um vértice de grau no máximo $d$. Lembrando que  {\sc Positive (1 in 3)-3SAT} permanece $NP$-completo quando o grafo de incidência da fórmula de entrada é planar~\cite{mulzer2008minimum}. Assim, o seguinte corolário é válido.
 
-\begin{corollary}
- \label{coro:2apexAnd3degenerate}
-{\sc Reconhecimento de grafos $B_{1}$-EPG-Helly} é NP-completo sobre grafos $2$-apex e $3$-degenerado.
+
+We say that a $k$-apex graph is a graph that can be made planar by the removal of $k$ vertices. A $d$-degenerate graph is a graph in which every subgraph has a vertex of degree at most $d$. Recall that {\sc Positive (1 in 3)-3SAT} remains NP-complete when the incidence graph of the input formula is planar, see~\cite{mulzer2008minimum}. Thus, the following corollary holds.
+
+\begin{corollary}\label{coro:2apexAnd3degenerate}
+{\sc Helly-$B_1$ EPG recognition} is NP-complete on $2$-apex and $3$-degenerate graphs.
 \end{corollary}
 
-\begin{proof}
-É fácil ver que os grafos construídos de acordo com a Definição~\ref{sec:reducao} são $3$-degenerados.
-Como {\sc Positive (1in3)-3SAT} permanece $NP$-completo quando o grafo de incidência da fórmula  $F$ é planar~\cite{mulzer2008minimum},  de uma instância $F$ de {\sc Planar Positive (1in3)-3SAT}, então usando uma representação planar do grafo de incidência de $F$, podemos observar que pela remoção de $V$ e $T$ de $G_F$ obtemos um grafo planar. Logo, $G_F$ é 2-apex. 
-\end{proof}
+To prove that $G_F$ is 3-degenerate, we apply the $d$-degenerate graphs recognition algorithm. Now, to prove that $G_F$ is $2$-appex when the incidence graph of the input formula is planar, we need to recall that {\sc Positive (1 in 3)-3SAT} remains NP-complete when the incidence graph of $F$ is planar, see~\cite{mulzer2008minimum}. Therefore, is enough to demonstrate that there is a planar arrangement between the intersections of the variable gadgets and clause gadgets, then from that one can construct a graph $G_F$ such that the removal of $V$ and $T$ results into a planar graph. The complete proof is in paper in the last section of this chapter.
 
 
-Para provar que $G_F$ é 3-degenerado basta aplicar o algoritmo de reconhecimento de grafos $d$-degenerados, que consiste em repetidamente remover os vértices de grau mínimo do grafo. Note que o vértice a ser removido a cada iteração do algoritmo sempre possui grau no máximo três, e portanto $G_F$ é 3-degenerado.
+\section{Concluding Remarks}
 
-%Para elucidar o Corolário~\ref{coro:2apexAnd3degenerate}, que pode não ser trivial, sugerimos o seguinte raciocínio para provar que $G_F$ é 3-degenerado: aplicar o algoritmo de reconhecimento de grafos $d$-degenerados. 
-A título de exemplo apresentamos a seguir uma construção para esclarecer a segunda parte do corolário. Tomemos a fórmula $F=(x_1+x_2+x_3)\wedge(x_1+x_3+x_4)\wedge(x_1+x_2+x_4)$, que  é uma instância de {\sc Planar Positive (1in3)-3SAT} e vamos mostrar que o dispositivo específico $G_F$ gerado a partir dessa instância é um grafo 2-apex.
+In this chapter, we show that every graph admits a Helly-EPG representation, and $\frac{\mu}{2n}-1\leq b_H(G)\leq \mu -1$. Besides, we relate Helly-$B_1$-EPG graphs with L-shaped graphs, a natural family of subclasses of $B_1$-EPG. Also, we prove that recognizing (Helly-)$B_k$-EPG graphs is in NP, for every fixed $k$. Finally, we show that recognizing Helly-$B_1$-EPG graphs is NP-complete, and it remains NP-complete even when restricted to 2-apex and 3-degenerate graphs.
 
-Primeiro, monte o grafo de incidência de $F$, chamemos ele de $I_F$. O grafo de incidência é um grafo bipartido onde uma das partições está relacionada com as cláusulas de $F$ e a outra partição está relacionada com as suas variáveis. Cada cláusula $C_i$ de $F$ é representada por um vértice $v_{c_i}$ e cada variável $x_j$ das cláusulas é representada por um vértice $v_{x_j}$. Uma aresta  $(v_{c_i}, v_{x_j})$ existe em $I_F$ se e somente se a variável $x_j$ ocorre na cláusula $C_i$. A Figura~\ref{fig:grafoIncidencia2apex} retrata uma construção do grafo de incidência $I_F$.
+Now, let $r$ be a positive integer and let $K_{2r}^-$ be the cocktail-party graph, i.e., a complete graph on $2r$ vertices with a perfect matching removed. Since $K_{2r}^-$ has $2^r$ maximal cliques, by Theorem~\ref{teo:lowerboundCliques} follows that $\frac{2^r}{4r}-1\leq b_H(K_{2r}^-)$. This implies that, for each $k$, the graph $K_{2(k+5)}^-$ is not a Helly-$B_k$-EPG graph. Therefore, as \cite{martin2017} showed that every cocktail-party graph is in $B_2$-EPG, we conclude the following.
 
-\input{./includes/include-img/grafoIncidencia2apex.tex}
+\begin{lemma}
+Helly-$B_k$-EPG $\subsetneq B_k$-EPG for each $k>0$.
+\end{lemma}
 
-Como a fórmula $F$ que originou o grafo $I_F$ é uma instância de {\sc Planar Positive (1in3)-3SAT}, sabemos que o grafo de incidência da fórmula  $F$ é também planar~\cite{mulzer2008minimum}. A Figura~\ref{fig:grafoIncidencia2apexPlanar} retrata uma representação planar de $I_F$.
-
-
-\input{./includes/include-img/grafoIncidencia2apexPlanar.tex}
-
-Finalmente, podemos substituir os vértices que representavam as variáveis e cláusulas em $I_F$ pelos dispositivos variáveis e cláusulas correspondentes. Os vértices $V$ e $T$ são removidos. Como cada dispositivo variável, dispositivo cláusula e dispositivo base individualmente era planar, então algo não planar pode ter surgido somente da intersecção que foi feita entre eles. Como $I_F$ garante que existe um arranjo planar entre as intersecções dos dispositivos variável e dispositivos cláusula, então quando removemos $V$ e $T$, tudo o que sobra do grafo é planar, ver Figura~\ref{fig:grafoIncidenciaCompleto}. Logo $G_F$ é 2-apex.
-
-
-\input{./includes/include-img/grafoIncidenciaCompleto.tex}
+The previous lemma suggests asking about the complexity of recognizing Helly-$B_k$-EPG graphs for each $k>1$. Also, it seems interesting to present characterizations for Helly-$B_k$-EPG representations similar to Lemma~\ref{caracterization} (especially for $k=2$) as well as considering the $h$-Helly-$B_k$ EPG graphs. Regarding L-shaped graphs, it also seems interesting to analyse the classes Helly-$[\llcorner, \ulcorner]$ and Helly-$[\llcorner, \ulcorner, \urcorner]$ (recall Thereom~\ref{theo:HellyLShaped}).
 
 
 
 
-
-\section{Article accepted for publication in the journal  Discrete Mathematics \& Theoretical Computer Science} 
+\section{Article accepted for publication in the journal  Discrete Mathematics \& Theoretical Computer Science (DMTCS)} 
 \includepdf[pages=-]{./includes/include-pdf-files/dmtcsTanilson.pdf}
