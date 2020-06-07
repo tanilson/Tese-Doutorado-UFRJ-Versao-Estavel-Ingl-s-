@@ -12,21 +12,84 @@ Isaac Newton
 \end{flushright}
 
 
+In chapter~\ref{cap:capiii}, we show that every graph admits a Helly-EPG representation, in particular is possible modify the demonstration to proof that every graph admits a monotonic Helly-EPG representation, and $\frac{\mu}{2n}-1\leq b_H(G)\leq \mu -1$. Besides, we relate Helly-$B_1$-EPG graphs with L-shaped graphs, a natural family of subclasses of $B_1$-EPG. Also, we prove that recognizing (Helly-)$B_k$-EPG graphs is in $\mathcal{NP}$, for every fixed $k$. Finally, we show that recognizing Helly-$B_1$-EPG graphs is $NP$-complete, and it remains $NP$-complete even when restricted to 2-apex and 3-degenerate graphs. In addition, in at the end of chapter we proof that
+Helly-$B_k$-EPG $\subsetneq B_k$-EPG for each $k>0$.
 
-No decorrer desse trabalho estudamos grafos de aresta-interseção de caminhos em uma grade tal que os caminhos possuíssem no máximo uma dobra e a representação respeitasse à propriedade Helly para as arestas dos caminhos. Mais especificamente, abordamos o problema de reconhecimento de grafos $B_1$-EPG-Helly. Provamos a $NP$-Completude do problema e mostramos que o problema também se mantém $NP$-completo mesmo para as classes de grafos $2$-apex e $3$-degenerado.
+In this way we suggest asking about the complexity of recognizing Helly-$B_k$-EPG graphs for each $k>1$. Also, it seems interesting to present characterizations for Helly-$B_k$-EPG representations similar to Lemma~\ref{caracterization} (especially for $k=2$) as well as considering the $h$-Helly-$B_k$ EPG graphs. Regarding L-shaped graphs, it also seems interesting to analyse the classes Helly-$[\llcorner, \ulcorner]$ and Helly-$[\llcorner, \ulcorner, \urcorner]$ (recall Thereom~\ref{theo:HellyLShaped}).
 
-O problema de reconhecer se um grafo possui uma representação $B_{k}$-EPG é um problema em aberto para $k\geq 3$, i.e. dado um grafo $G$, qual é o menor $k$ tal que $G$ possui uma representação $B_{k}$-EPG? Ainda, o problema de reconhecer se um grafo possui uma representação $B_{k}$-EPG-Helly ainda é um problema em aberto para $k\geq 2$.
+In chapter~\ref{cap:iv}, we have determined the Helly number and strong Helly number of $B_k$-EPG graphs and $B_k$-VPG graphs, for $k \geq 0$. 
 
-As evidências observadas na literatura de grafos EPG e os resultados obtidos nesse trabalho nos faz conjecturar que o problema de reconhecimento tanto de $B_{k}$-EPG quanto de $B_{k}$-EPG-Helly são ambos problemas $NP$-completos, porém essa demonstração ainda é desconhecida.
+Table \ref{tab:Helly-Strong-Helly2} summarizes the results obtained.
+ 
+\Large 
 
-O estudo dos parâmetros número de Helly e número de Helly forte para grafos de intersecção em grade foi citado somente em~\cite{golumbic2009, golumbic2013}, que estudaram somente o parâmetro número de Helly forte.
-É fácil perceber que o estudo de tais parâmetros surge quase que naturalmente quando se estuda a propriedade de os conjuntos intersectantes apresentarem a propriedade de serem $k$-Helly, assim, outra pesquisa proposta como objetivo deste trabalho foi o estudo de limites superiores e inferiores para os parâmetros número de Helly e número de Helly forte, tanto para grafos EPG e EPG-Helly quanto para grafos VPG e VPG-Helly, esperamos enriquecer este escrito em breve com esses resultados. Essa pesquisa ainda se encontra em desenvolvimento, por isso os frutos preliminares não foram agregados a este escrito. Deixamos esses resultados para serem apresentados em trabalhos futuros.
+\begin{table}[htb]
+    \centering
+    \caption{Helly and Strong Helly Numbers for $B_k$-EPG and $B_k$-VPG Graphs}
+    \label{tab:Helly-Strong-Helly2}
+    \begin{tabular}{c|c|c}
+     \multicolumn{3}{c}{}\\
+    \cline{1-3} $k$  & $B_k$-EPG & $B_k$-VPG \\
+    \cline{1-3} 0 & 2 & 2 \\
+    \cline{1-3} 1 & 3 & 4 \\
+    \cline{1-3} 2 & 4 & 6 \\
+    \cline{1-3} 3 & 8 & 12 \\
+    \cline{1-3} $\geq 4$ & unbounded & unbounded \\
+    \cline{1-3} 
+    \end{tabular}
+\end{table}
 
-É interessante perceber que a mudança de perspectiva de estudos para grafos EPG pode produzir resultados diferentes com relação a algum parâmetro. Ao compararmos nossos resultados com os de~\cite{golumbic2013} temos a impressão de que, por exemplo, apenas a mudança na definição de caminho (uma visão considera o caminho como um conjunto de vértices e outra visão considera o caminho como um conjunto de arestas) pode gerar resultados diferentes para os parâmetros número de Helly e número de Helly forte. É intenção de nossas pesquisas futuras investigar o comportamento desses parâmetros tanto em grafos EPG quanto em grafos VPG.
+\normalsize
 
-No trabalho de~\citeauthor{cohen2014}~\cite{cohen2014}, citado no Capítulo~\ref{cap:capiii}, são caracterizados os cografos que são $B_1$-EPG por uma família minimal de subgrafos proibidos. Mas uma pergunta que surge naturalmente, quando pensada em conjunto com o contexto deste trabalho é a seguinte: com relação a essa caracterização, quais são os cografos $B_1$-EPG-Helly? Seu reconhecimento também é polinomial e pode ser feito utilizando sua co-árvore? Existe diferença entre as famílias de cografos $B_1$-EPG e $B_1$-EPG-Helly? 
-Além dos resultados conhecidos para cografos, também são temas potenciais de pesquisas os problemas de reconhecimento ou prova de dificuldade para classes específicas de grafos $B_1$-EPG e $B_1$-EPG-Helly
+We leave two questions to be investigated concerning the presented results.
+
+\begin{enumerate}
+\item Given a {\it specific}  EPG or VPG graph, the question is to formulate an algorithm to determine its Helly and strong Helly numbers. See \cite{dourado2008improved}, for instance, for such algorithms, applied to general graphs. 
+
+\item The values of the Helly and strong Helly numbers, which were determined in chapter, coincided in all cases. Clearly, in general, this is not the case. We leave as an open question, to find the conditions for such equality to occur. \end{enumerate}
+
+
+In chapter~\ref{cap:v},  we have considered graphs of intersection of paths, in particular Chordal $B_1$-EPG, VPT and EPT graphs. We show that graphs $\{S_3, S_{3'},S_{3''},C_4\}$-free and others non-trivial subclasses of  $B_1$-EPG graphs have the Helly property, namely by instance Bipartite, Block, Cactus and Line of Bipartite graphs. 
+  
+  In addition, combining the results of~\cite{alcon2014recognizing,Asinowski2009, golumbic2009} and some proves  presented in chapter, we demonstrate by  Theorems~\ref{teo:chordalB1inVPT} and~\ref{teo:b1epgept} that Chordal $B_1$-EPG graphs are simultaneously contained in the classes of VPT and EPT graphs.  
+ 
+ 
+%If on the one hand some few graph classes are known to be properly contained in $B_1$-EPG, for instance the $L$-shaped paths graphs see~\cite{cameron2016edge},  and the recognition time for $B_1$-EPG graphs in general is $NP$-complete. On the other hand, in the course of this section we also present some subclasses of Helly-$B_1$ EPG for which the recognition problem is polynomial.
+
+Asinowski and Ries present in~\cite{ries2009} some characterization for special cases of Split $B_1$-EPG graphs, when the stable set has size three or when the clique has size three. Observe that the graphs $F_2, F_{11}, F_{13}, F_{14}, F_{15}$, given in Figure~\ref{fig:16proibidos}, are Split but we used another strategy to prove that they are not $B_1$-EPG graphs. So one question is pertinent: Can we characterize Split graphs in general based in results of this chapter? 
+
+We would like to know the relationship of another graph subclasses of $B_1$-EPG with EPT and VPT graphs. If given an input graph $G$ that is an instance of Weakly Chordal $B_1$-EPG,  Distance-hereditary $B_1$-EPG or any specific subclass, what is the relationship of $G$ with the class of paths in trees? For those same classes of graphs, what happens when we demand that the representations be Helly-$B_1$ EPG?
+
+In the course of this research, we studied edge-intersection graphs of paths in a grid such that the paths had at most one bend and the representation has the Helly property for the edges of the paths.
+
+The problem of recognizing whether a graph has a  $B_{k}$-EPG representation is an open problem for $k\geq 3$, i.e. given a graph $ G$, which is the smallest $k$ such that $ G $ has a $ B_{k}$-EPG representation? Also, the problem of recognizing whether a graph has a  Helly-$B_{k}$-EPG representation remains an open problem for $ k\geq 2$.
+
+The evidence observed in the EPG graph literature and the results obtained in this work makes us conjecture that the problem of recognizing both $B_{k}$-EPG and Helly-$B_{k}$-EPG  are both $NP$-complete problems, but this demonstration is unknown.
+
+The study of the parameters Helly number and Helly strong number for edge-intersection graphs on a grid was mentioned only in~\cite{golumbic2009, golumbic2013}, which studied only the number Helly strong parameter. It is easy to see that the study of such parameters arise naturally when studying the property of the intersecting sets having the property of being $k$-Helly, thus, another research proposed as the objective of this work was the study of upper and lower bounds for the parameters Helly number and Helly strong number, both for specific classes of EPG and Helly-EPG graphs and also for VPG and Helly-VPG graphs.
+
+In the work of~\citet{cohen2014}, mentioned in Chapter~\ref{cap:capiii}, the Cographs that are $B_1$-EPG are characterized by a minimal family of forbidden subgraphs. Moreover, when considered in context of this work, we can ask: in relation to characterization, what are the Cographs Helly-$B_1$  EPG? Is its recognition also polynomial and can it be done using your co-tree? Is there a difference among these $B_1$-EPG and Helly-$B_1$  EPG families? In addition to the known results for Cographs, we propose potential research topics as problems of recognition or hardness proof  for specific classes of graphs $B_1$-EPG and Helly-$B_1$ EPG.
+
+
+Last but not least, the author of this thesis (Tanilson) conducted a research as a sandwich doctorate at the National University of La Plata - UNLP, Argentina, for a period of 1 year (March/2019 until March/2020). The welcome, insertion in the research and work group developed during this period must to be gratefully acknowledged. Conducting this research at UNLP brought benefits to this doctoral thesis and to maturity as a researcher, since from this period two articles emerged submitted to the SBPO and to ?????. To continue these works, we hope to work on the characterization of Helly-EPG subfamilies.
+
+% Por último mas não menos importante, o autor dessa tese (Tanilson) realizou uma pesquisa a título de doutorado sanduíche na Universidade Nacional de La Plata - UNLP, Argentina, pelo período de 1 ano (Março/2019 até Março/2020). A acolhida, inserção no grupo de pesquisa e trabalho desenvolvido nesse período não poderiam deixar de ser reconhecidos com gratidão. Conduzir essa pesquisa na UNLP trouxe benefícios para esta tese de doutorado e para o amadurecimento como pesquisador, pois desse período emergiram dois artigos submetidos para o SBPO e para ?????. Para continuidade desses trabalhos esperamos trabalhar em caracterização de subfamílias Helly-EPG.
+
+
+%No decorrer desse trabalho estudamos grafos de aresta-interseção de caminhos em uma grade tal que os caminhos possuíssem no máximo uma dobra e a representação respeitasse à propriedade Helly para as arestas dos caminhos. Mais especificamente, abordamos o problema de reconhecimento de grafos $B_1$-EPG-Helly. Provamos a $NP$-Completude do problema e mostramos que o problema também se mantém $NP$-completo mesmo para as classes de grafos $2$-apex e $3$-degenerado.
+
+%O problema de reconhecer se um grafo possui uma representação $B_{k}$-EPG é um problema em aberto para $k\geq 3$, i.e. dado um grafo $G$, qual é o menor $k$ tal que $G$ possui uma representação $B_{k}$-EPG? Ainda, o problema de reconhecer se um grafo possui uma representação $B_{k}$-EPG-Helly ainda é um problema em aberto para $k\geq 2$.
+
+%As evidências observadas na literatura de grafos EPG e os resultados obtidos nesse trabalho nos faz conjecturar que o problema de reconhecimento tanto de $B_{k}$-EPG quanto de $B_{k}$-EPG-Helly são ambos problemas $NP$-completos, porém essa demonstração ainda é desconhecida.
+
+%O estudo dos parâmetros número de Helly e número de Helly forte para grafos de intersecção em grade foi citado somente em~\cite{golumbic2009, golumbic2013}, que estudaram somente o parâmetro número de Helly forte.
+%É fácil perceber que o estudo de tais parâmetros surge quase que naturalmente quando se estuda a propriedade de os conjuntos intersectantes apresentarem a propriedade de serem $k$-Helly, assim, outra pesquisa proposta como objetivo deste trabalho foi o estudo de limites superiores e inferiores para os parâmetros número de Helly e número de Helly forte, tanto para grafos EPG e EPG-Helly quanto para grafos VPG e VPG-Helly, esperamos enriquecer este escrito em breve com esses resultados. Essa pesquisa ainda se encontra em desenvolvimento, por isso os frutos preliminares não foram agregados a este escrito. Deixamos esses resultados para serem apresentados em trabalhos futuros.
+
+%É interessante perceber que a mudança de perspectiva de estudos para grafos EPG pode produzir resultados diferentes com relação a algum parâmetro. Ao compararmos nossos resultados com os de~\cite{golumbic2013} temos a impressão de que, por exemplo, apenas a mudança na definição de caminho (uma visão considera o caminho como um conjunto de vértices e outra visão considera o caminho como um conjunto de arestas) pode gerar resultados diferentes para os parâmetros número de Helly e número de Helly forte. É intenção de nossas pesquisas futuras investigar o comportamento desses parâmetros tanto em grafos EPG quanto em grafos VPG.
+
+% No trabalho de~\citeauthor{cohen2014}~\cite{cohen2014}, citado no Capítulo~\ref{cap:capiii}, são caracterizados os cografos que são $B_1$-EPG por uma família minimal de subgrafos proibidos. Mas uma pergunta que surge naturalmente, quando pensada em conjunto com o contexto deste trabalho é a seguinte: com relação a essa caracterização, quais são os cografos $B_1$-EPG-Helly? Seu reconhecimento também é polinomial e pode ser feito utilizando sua co-árvore? Existe diferença entre as famílias de cografos $B_1$-EPG e $B_1$-EPG-Helly? 
+% Além dos resultados conhecidos para cografos, também são temas potenciais de pesquisas os problemas de reconhecimento ou prova de dificuldade para classes específicas de grafos $B_1$-EPG e $B_1$-EPG-Helly.
  
 
-Ainda há previsão para uma pesquisa a título de doutorado sanduíche na Universidade Nacional de La Plata - UNLP, Argentina, pelo período de 1 ano. Com essa oportunidade esperamos ter contato com o grupo de pesquisa de Teoria dos Grafos da Faculdade de Ciências Exatas da UNLP, os quais alguns membros já possuem trabalhos relacionados com a propriedade Helly e em grafos arco-circular, EPR, EPT, clique-Helly, VPT, VPG. Acreditamos que conduzir essa pesquisa na UNLP pode trazer benefícios tanto para a UFRJ quanto para o aluno. Uma vez que Tanilson pode contribuir como mão-de-obra intelectual na UNPL, além de essa ser uma boa oportunidade de amadurecimento como pesquisador do ponto de vista de experiência acadêmica e também no mérito de compartilhar conhecimentos sobre a pesquisa desenvolvida em ambas instituições. 
+
 
