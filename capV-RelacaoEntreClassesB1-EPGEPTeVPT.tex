@@ -13,7 +13,7 @@ Albert Einstein
 \end{flushright}
 
 This chapter presents as a main result that every Chordal $B_1$-EPG graph is simultaneously in the VPT and EPT graph classes. In particular, we describe structures that are always present in graphs that do not support a Helly-$B_1$-EPG representation and thus we define some sets of subgraphs that delimit Helly subfamilies. 
- In addition, this chapter also features characterizations for some non-trivial graph families that are properly contained in Helly-$B_1$ EPG, namely these families are composed of the Bipartite, Blocks, Cactus and Line of Bipartite  graphs.
+ In addition, this chapter also presents features of some non-trivial graph families that are properly contained in Helly-$B_1$ EPG, namely these families are composed of the Bipartite, Blocks, Cactus and Line of Bipartite  graphs.
 
 
 
@@ -21,7 +21,7 @@ This chapter presents as a main result that every Chordal $B_1$-EPG graph is sim
 
 Models based on paths intersection  may consider  intersections by vertices or   intersections by edges.  Cases where the paths are hosted on a tree  appear first in the literature, see for instance \cite{gavril1978recognition, golumbic1985edge, golumbic1985}.  Representations using paths on a grid were considered later, see  \cite{golumbic2009,golumbic2013, golumbic2013intersection}. %More details on each intersection model will be given in the following text.
 
- Let $P$ be a family of paths on a host tree $T$ . Two types of intersection graphs from the pair $<P,T>$ are defined, namely VPT and EPT graphs.
+ Let $P$ be a family of paths on a host tree $T$. Two types of intersection graphs from the pair $<P,T>$ are defined, namely VPT and EPT graphs.
 The \textit{edge intersection graph} of $P$, EPT(P), has vertices which correspond to the members of $P$, and two vertices are adjacent in EPT(P) if and only if the corresponding paths in $P$ share at least one edge in T. Similarly, the \textit{vertex intersection graph} of $P$, VPT(P), has vertices which correspond to the members of $P$, and two vertices are adjacent in VPT(P) if and only if the corresponding paths in $P$ share at least one vertex in $T$.
 %
 VPT and EPT graphs are incomparable families of graphs. However, when the maximum degree of the host tree is restricted to three the family of
@@ -31,8 +31,8 @@ VPT graphs coincides with the family of EPT graphs \cite{golumbic1985edge% \cite
 
 Edge intersection graphs of paths on a grid are called \textit{EPG graphs}. 
 
-In \cite{golumbic2009}, the authors proved that every graph is EPG, and started the study of the subclasses
-defined by bounding the number of times any path used in the representation can bend.  Graphs admitting a representation
+In \citeauthor{golumbic2009} \cite{golumbic2009}, the authors proved that every graph is EPG, and started the study of the subclasses
+defined bounding the number of times any path used in the representation can to bend.  Graphs admitting a representation
 where  paths  have at most $k$ changes of direction  (bends) were called $B_k$-EPG. 
  In particular, when the paths have at most one bend we have the \textit{ $B_1$-EPG graphs} or a \textit{single bend EPG graphs}.
 
@@ -42,7 +42,7 @@ where  paths  have at most $k$ changes of direction  (bends) were called $B_k$-E
 In the present chapter we will explore $B_1$-EPG graphs, in particular diamond-free graphs and Chordal graphs. We will work on the question about the containment relation between  VPT, EPT and $B_1$-EPG graph classes.
 
 
- A collection  of sets satisfies the \textit{Helly property} when every pair-wise intersecting sub-collection  has at least one common element. When this property
+ A collection  of sets satisfies the \textit{Helly property} when every pairwise intersecting sub-collection  has at least one common element. When this property
  is satisfied by the set of vertices (edges) of the paths used in a representation, we get a Helly representation.  Helly-$B_1$-EPG graphs were studied
  in \cite{bornstein2019, dmtcs:6506}.                                     
 It is known that not every $B_1$-EPG graph admits a Helly-$B_1$-EPG representation. We are interested in determining the subgraphs that make
@@ -52,8 +52,8 @@ Moreover,  we  describe new  Helly-$B_1$ EPG  subclasses % that have Helly prope
 and we give some sets of subgraphs that delimit Helly subfamilies.   
 \section{Definitions and Technical Results}
 
-The \textit{vertex set} and the \textit{edge set} of a graph $G$ are denoted by $V(G)$ and $E(G)$, respectively.  Given a vertex $v\in V(G)$,  $N(v)$ and $N[v]$ represent the open and the close
- \textit{neighborhood} of $v$ in $G$, respectively. 
+The \textit{vertex set} and the \textit{edge set} of a graph $G$ are denoted by $V(G)$ and $E(G)$, respectively.  Given a vertex $v\in V(G)$,  $N(v)$ represents the \textit{open 
+ neighborhood} of $v$ in $G$, respectively. 
 For a subset $S \subseteq V(G)$,  $G[S]$ is the subgraph of $G$ induced by $S$.
  If $\mathcal{F}$ is any family of graphs, we say that  $G$ is  \textit{$\mathcal{F}$-free} if $G$ has no induced subgraph isomorphic to a member of $\mathcal{F}$.
  A \textit{cycle},  denoted by $C_n$,  is a sequence of distinct
@@ -147,7 +147,6 @@ Assume, in order to derive a contradiction, that the three cliques are claw-cliq
   must contain  the three grid points $q_1$, $q_2$ and $q_3$. To prove that this is not possible, we will consider, without loss of generality, two cases.
   First,  $q_1$ is between $q_2$ and $q_3$ in $P_{v_1}$. Then, $P_{v_3}$ cannot turn at $q_3$ and contain $q_1$ and $q_2$.   And second,
   $q_2$ is between $q_1$ and $q_3$ in $P_{v_1}$. In this case, $P_{v_2}$ cannot turn at $q_2$ and contain $q_1$ and $q_3$; thus the proof is completed.
- 
 \end{proof}
 
 Three vertices $u, v, w$ of a graph $G$ form an \textit{asteroidal triple} (AT) of $G$ if for every pair of them there exists a path connecting the two vertices and such that the path avoids the neighborhood of the remaining vertex~\cite{Asinowski2009}. A graph without an asteroidal triple is called \textit{AT-free}. 
@@ -214,7 +213,6 @@ the grid segment $[x_0, x_2]\times\{y_0\}$ is covered only by vertices of $K$. %
  
  Finally,   since $K$ is claw-clique,  there is a path $P_u \in \mathcal{P}_K$ covering the base of the claw. Depending on the 
  possibles adjacencies between  $u$ and $t'$ or  $t''$, one of the graphs  $S_{3}$, $S_{3'}$ or $S_{3''}$ is obtained.
-
 \end{proof}
 
 \input{includes/include-img/clawGrid.tex}
@@ -259,9 +257,9 @@ A graph $G$ is said to be \textit{Bipartite} if its set of vertices can be parti
 If $G$ is a Bipartite $B_1$-EPG graph then $G$ is a Helly-$B_1$-EPG graph.
 \end{corollary}
 
-\begin{proof}
-The Bipartite graphs are diamond-free, thus by Theorem~\ref{lem:b1DiamondFree} these graphs are Helly-$B_1$-EPG graphs.
-\end{proof}
+% \begin{proof}
+% The Bipartite graphs are diamond-free, thus by Theorem~\ref{lem:b1DiamondFree} these graphs are Helly-$B_1$-EPG graphs.
+% \end{proof}
 
 A \textit{Block graph} or \textit{Clique Tree} is a type of graph in which every biconnected component (block) is a clique.
 
@@ -269,27 +267,27 @@ A \textit{Block graph} or \textit{Clique Tree} is a type of graph in which every
  Block graphs are Helly-$B_1$ EPG.
 \end{corollary}
 
-\begin{proof}
-Block graphs are known to be exactly the chordal diamond-free graphs, so by   Theorem 19 of \cite{ries2009}, all Block graphs are  $B_1$-EPG. If follows from Theorem~\ref{lem:b1DiamondFree} that all Block graphs are Helly-$B_1$ EPG. 
- \end{proof} 
+% \begin{proof}
+% Block graphs are known to be exactly the chordal diamond-free graphs, so by   Theorem 19 of \cite{ries2009}, all Block graphs are  $B_1$-EPG. If follows from Theorem~\ref{lem:b1DiamondFree} that all Block graphs are Helly-$B_1$ EPG. 
+%  \end{proof} 
 
-A \textit{Cactus} (sometimes called a cactus tree)  graph is a connected graph in which any two  cycles have at most one vertex in common. Equivalently, it is a connected graph in which every edge belongs to at most one  cycle, or (for nontrivial cactus) in which every block (maximal subgraph without a cut-vertex) is an edge or a cycle. The family of graphs in which each component is a cactus is closed under graph minor operations. This graph family may be characterized by a single forbidden minor, the diamond graph.
+A \textit{Cactus} (sometimes called a Cactus Tree)  graph is a connected graph in which any two  cycles have at most one vertex in common. Equivalently, it is a connected graph in which every edge belongs to at most one  cycle, or (for nontrivial Cactus) in which every block (maximal subgraph without a cut-vertex) is an edge or a cycle. The family of graphs in which each component is a Cactus is closed under graph minor operations. This graph family may be characterized by a single forbidden minor, the diamond graph.
  
 \begin{corollary}
 Cactus graphs are  Helly-$B_1$ EPG.
 \end{corollary}
-\begin{proof}
-In~\cite{cela2019monotonic}, it is proved that every Cactus graph is a monotonic $B_1$-EPG graph 
-(there is a $B_1$-EPG representation where all paths are ascending in rows and columns). 
-Thus, Cactus graphs are $B_1$-EPG graphs. 
+% \begin{proof}
+% In~\cite{cela2019monotonic}, it is proved that every Cactus graph is a monotonic $B_1$-EPG graph 
+% (there is a $B_1$-EPG representation where all paths are ascending in rows and columns). 
+% Thus, Cactus graphs are $B_1$-EPG graphs. 
 
-Since Cactus are diamond-free, by Theorem ~\ref{lem:b1DiamondFree}, the proof follows.
-\end{proof}
+% Since Cactus are diamond-free, by Theorem ~\ref{lem:b1DiamondFree}, the proof follows.
+% \end{proof}
 
 Given a graph $G$, its \textit{Line graph} $L(G)$ is a graph such that each vertex of $L(G)$ represents an edge of $G$ and
   two vertices of $L(G)$ are adjacent if and only if their corresponding edges share a common endpoint (i.e. ``are incident'') in $G$.  
 A graph $G$ is a \textit{Line graph of a Bipartite graph} (or simply \textit{Line of Bipartite}) if and only if it
-contains no claw, no odd cycle, and no diamond as induced subgraph, \cite{harary1974line}.
+contains no claw, no odd cycle  (with more than three vertices), and no diamond as induced subgraph, \cite{harary1974line}.
 
 In~\cite{daniel2014b} was proved that every Line graph has a representation with at most 2 bends. We proved in the follow corollary that when restricted to the Line of Bipartite we can obtain a representation Helly and one-bended.
 
@@ -297,10 +295,9 @@ In~\cite{daniel2014b} was proved that every Line graph has a representation with
  Line of Bipartite graphs are Helly-$B_1$ EPG. 
 \end{corollary}
 
-\begin{proof}
-Line of Bipartite graphs were proved to be $B_1$-EPG in~\cite{golumbic2018edge}. Since they are diamond-free, the proof follows from Theorem~\ref{lem:b1DiamondFree}.
-
-\end{proof}
+% \begin{proof}
+% Line of Bipartite graphs were proved to be $B_1$-EPG in~\cite{golumbic2018edge}. Since they are diamond-free, the proof follows from Theorem~\ref{lem:b1DiamondFree}.
+% \end{proof}
 
 The diagram of Figure~\ref{fig:diagram}
 illustrates the containment relationship between the graph classes  studied so far in this work. 
@@ -308,35 +305,60 @@ We list in Figure~\ref{fig:exemplosDiagram} examples of graphs in each numbered 
 
 %This numbers correspond with the respective number item and in some cases we make a brief explanation.
 
-\begin{enumerate}[label=(\arabic*)]
-    \item $B_1$-EPG  - Helly-$B_1$-EPG graphs, depicted in Figure~\ref{fig:exemplosDiagram}(a), graph $E_1$;%1
+% \begin{enumerate}[label=(\arabic*)]
+%     \item $B_1$-EPG  - Helly-$B_1$-EPG graphs, depicted in Figure~\ref{fig:exemplosDiagram}(a), graph $E_1$;%1
     
-    \item Line of Bipartite graphs  - Cactus - Block - Bipartite graphs, depicted in Figure~\ref{fig:exemplosDiagram}(b), graph $E_2$;%2
-    \item Helly-$B_1$ EPG - Line of Bipartite - Block - Cactus - Bipartite graphs, depicted in Figure~\ref{fig:exemplosDiagram}(c), graph $E_3$;%3
-    \item Block $\cap$ Line of Bipartite - Cactus - Bipartite, depicted in Figure~\ref{fig:exemplosDiagram}(d), graph $E_4$;%4
-    \item Block $\cap$ Line of Bipartite $\cap$  Cactus - Bipartite, depicted in Figure~\ref{fig:exemplosDiagram}(e), graph $E_5$;%5
-    \item Cactus $\cap$ Line of Bipartite - Block - Bipartite. This intersection is empty. Let $G$ be a graph that is Cactus and Line of Bipartite then $G$ is $\{$claw, odd cycle, diamond$\}$-free. But $G$ is not a Bipartite graph, then $G$ has odd cycle, %. Thus $G$ has at least one triangle or at least one odd cycle $C_n, n\geq 4$, and $G$ is a connected graph. But given a cycle $C_n, n\geq 4$, if add one vertex any adjacent to this cycle then this induce a claw, 
-     absurd with the hypothesis of $G$ is Line of Bipartite;%6
-    \item Bipartite $\cap$ Line of Bipartite  - Cactus - Block graphs, depicted in Figure~\ref{fig:exemplosDiagram}(f), graph $E_7$;%7
-    \item Bipartite $\cap$ Line of Bipartite $\cap$  Cactus - Block graphs, depicted in Figure~\ref{fig:exemplosDiagram}(g), graph $E_8$;%8
-    \item Bipartite $\cap$ Line of Bipartite $\cap$  Cactus $\cap$ Block graphs, depicted in Figure~\ref{fig:exemplosDiagram}(h), graph $E_9$;%9
-  \item Bipartite $\cap$  Cactus $\cap$ Block - Line of Bipartite graphs, depicted in Figure~\ref{fig:exemplosDiagram}(i), graph $E_{10}$;%10
-    \item Bipartite  $\cap$  Cactus - Block -  Line of Bipartite graphs, depicted in Figure~\ref{fig:exemplosDiagram}(j), graph $E_{11}$;%11
-     \item Bipartite $\cap$ Helly-$B_1$ EPG - Cactus - Block -  Line of Bipartite graphs, depicted in Figure~\ref{fig:exemplosDiagram}(k), graph $E_{12}$;%12
-      \item Bipartite - $B_1$-EPG graphs, depicted in Figure~\ref{fig:exemplosDiagram}(l), graph $E_{13}$;%13
-      \item Block - Bipartite - Line of Bipartite  - Cactus graphs, depicted in Figure~\ref{fig:exemplosDiagram}(m), graph $E_{14}$;%14
+%     \item Line of Bipartite graphs  - Cactus - Block - Bipartite graphs, depicted in Figure~\ref{fig:exemplosDiagram}(b), graph $E_2$;%2
+%     \item Helly-$B_1$ EPG - Line of Bipartite - Block - Cactus - Bipartite graphs, depicted in Figure~\ref{fig:exemplosDiagram}(c), graph $E_3$;%3
+%     \item Block $\cap$ Line of Bipartite - Cactus - Bipartite, depicted in Figure~\ref{fig:exemplosDiagram}(d), graph $E_4$;%4
+%     \item Block $\cap$ Line of Bipartite $\cap$  Cactus - Bipartite, depicted in Figure~\ref{fig:exemplosDiagram}(e), graph $E_5$;%5
+%     \item Cactus $\cap$ Line of Bipartite - Block - Bipartite. This intersection is empty. Let $G$ be a graph that is Cactus and Line of Bipartite then $G$ is $\{$claw, odd cycle, diamond$\}$-free. But $G$ is not a Bipartite graph, then $G$ has odd cycle, %. Thus $G$ has at least one triangle or at least one odd cycle $C_n, n\geq 4$, and $G$ is a connected graph. But given a cycle $C_n, n\geq 4$, if add one vertex any adjacent to this cycle then this induce a claw, 
+%      absurd with the hypothesis of $G$ is Line of Bipartite;%6
+%     \item Bipartite $\cap$ Line of Bipartite  - Cactus - Block graphs, depicted in Figure~\ref{fig:exemplosDiagram}(f), graph $E_7$;%7
+%     \item Bipartite $\cap$ Line of Bipartite $\cap$  Cactus - Block graphs, depicted in Figure~\ref{fig:exemplosDiagram}(g), graph $E_8$;%8
+%     \item Bipartite $\cap$ Line of Bipartite $\cap$  Cactus $\cap$ Block graphs, depicted in Figure~\ref{fig:exemplosDiagram}(h), graph $E_9$;%9
+%   \item Bipartite $\cap$  Cactus $\cap$ Block - Line of Bipartite graphs, depicted in Figure~\ref{fig:exemplosDiagram}(i), graph $E_{10}$;%10
+%     \item Bipartite  $\cap$  Cactus - Block -  Line of Bipartite graphs, depicted in Figure~\ref{fig:exemplosDiagram}(j), graph $E_{11}$;%11
+%      \item Bipartite $\cap$ Helly-$B_1$ EPG - Cactus - Block -  Line of Bipartite graphs, depicted in Figure~\ref{fig:exemplosDiagram}(k), graph $E_{12}$;%12
+%       \item Bipartite - $B_1$-EPG graphs, depicted in Figure~\ref{fig:exemplosDiagram}(l), graph $E_{13}$;%13
+%       \item Block - Bipartite - Line of Bipartite  - Cactus graphs, depicted in Figure~\ref{fig:exemplosDiagram}(m), graph $E_{14}$;%14
  
-      \item Block $\cap$  Cactus -  Line of Bipartite - Bipartite graphs, depicted in Figure~\ref{fig:exemplosDiagram}(n), graph $E_{15}$;%15
-      \item Cactus - Block -  Line of Bipartite - Bipartite graphs, depicted in Figure~\ref{fig:exemplosDiagram}(o), graph $E_{16}$, the odd cycles $C_{2n+1},n\geq 2$;%16
-      \item Helly EPG - $B_1$-EPG  - Bipartite graphs, depicted in Figure~\ref{fig:exemplosDiagram}(p), graph  $E_{17}$;%17
-\end{enumerate}
+%       \item Block $\cap$  Cactus -  Line of Bipartite - Bipartite graphs, depicted in Figure~\ref{fig:exemplosDiagram}(n), graph $E_{15}$;%15
+%       \item Cactus - Block -  Line of Bipartite - Bipartite graphs, depicted in Figure~\ref{fig:exemplosDiagram}(o), graph $E_{16}$, the odd cycles $C_{2n+1},n\geq 2$;%16
+%       \item Helly EPG - $B_1$-EPG  - Bipartite graphs, depicted in Figure~\ref{fig:exemplosDiagram}(p), graph  $E_{17}$;%17
+% \end{enumerate}
 
+\begin{enumerate}[label=(\arabic*)]
+    \item ($B_1$-EPG)  - (Helly-$B_1$-EPG) graphs, depicted in Figure~\ref{fig:exemplosDiagram}(a), graph $E_1$. In~\cite{bornstein2019,dmtcs:6506} was proved that the octahedral graph does not belong to Helly-$B_1$ EPG despite belonging to $B_1$-EPG;%1
+    
+    \item (Line of Bipartite)  - (Cactus) - (Block) - (Bipartite) graphs, depicted in Figure~\ref{fig:exemplosDiagram}(b), graph $E_2$. The graph $E_2$ contains no claw, no odd cycle, and no diamond as induced subgraph, therefore it is Line of Bipartite. But $E_2$ has two cycles sharing two vertices, thus it is not a Cactus graph. There is  in $E_2$ a biconnected component that is not a clique, then the graph $E_2$ is not a Block graph. Finally, $E_2$ also  has three vertices pairwise intersecting, thus it is not a Bipartite graph;%2
+    \item (Helly-$B_1$ EPG) - (Line of Bipartite) - (Block) - (Cactus) - (Bipartite) graphs, depicted in Figure~\ref{fig:exemplosDiagram}(c), graph $E_3$. It is easy to see that the graph $E_3$ is in Helly-$B_1$ EPG, but $E_3$ is a  diamond graph, therefore it is not Line of Bipartite, Block, Cactus nor Bipartite;%3
+    \item (Block) $\cap$ (Line of Bipartite) - (Cactus) - (Bipartite), depicted in Figure~\ref{fig:exemplosDiagram}(d), graph $E_4$. The graph $E_4$ is a complete graph with four vertices, therefore is in (Block) $\cap$ (Line of Bipartite), but it is not in Cactus or Bipartite class;%4
+    \item (Block) $\cap$ (Line of Bipartite) $\cap$  (Cactus) - (Bipartite), depicted in Figure~\ref{fig:exemplosDiagram}(e), graph $E_5$. The graph $E_5$ is both, a complete graph and a cycle of size 3, then it is in (Block) $\cap$ (Line of Bipartite) $\cap$  (Cactus) but it is not a Bipartite graph; %5
+    \item (Cactus) $\cap$ (Line of Bipartite) - (Block) - (Bipartite). This intersection is empty. Let $G$ be a graph that is Cactus and Line of Bipartite then $G$ is $\{$claw, odd cycle, diamond$\}$-free. But $G$ is not a Bipartite graph, then $G$ has odd cycle, %. Thus $G$ has at least one triangle or at least one odd cycle $C_n, n\geq 4$, and $G$ is a connected graph. But given a cycle $C_n, n\geq 4$, if add one vertex any adjacent to this cycle then this induce a claw, 
+     absurd with the hypothesis of $G$ is Line of Bipartite;%6
+    \item (Bipartite) $\cap$ (Line of Bipartite)  - (Cactus) - (Block) graphs, depicted in Figure~\ref{fig:exemplosDiagram}(f), graph $E_7$. The graph $E_7$ is composite by two cycles of size 4, so it is in (Bipartite) $\cap$ (Line of Bipartite), but on the other hand how $E_7$ is not a connected graph then it is not Cactus or Block graph;%7
+    \item (Bipartite) $\cap$ (Line of Bipartite) $\cap$  (Cactus) - (Block) graphs, depicted in Figure~\ref{fig:exemplosDiagram}(g), graph $E_8$. The graph $E_8$ is a cycle of size 4, so it is in (Bipartite) $\cap$ (Line of Bipartite) $\cap$  (Cactus), but on the other hand it is not a Block graph because there is a biconnected component that is not a clique;%8
+    \item (Bipartite) $\cap$ (Line of Bipartite) $\cap$  (Cactus) $\cap$ (Block) graphs, depicted in Figure~\ref{fig:exemplosDiagram}(h), graph $E_9$;%9
+  \item (Bipartite) $\cap$  (Cactus) $\cap$ (Block) - (Line of Bipartite) graphs, depicted in Figure~\ref{fig:exemplosDiagram}(i), graph $E_{10}$. The graph $E_{10}$ is a claw, therefore is in (Bipartite) $\cap$  (Cactus) $\cap$ (Block) but it is not in Line of Bipartite;%10
+    \item (Bipartite)  $\cap$  (Cactus) - (Block) -  (Line of Bipartite) graphs, depicted in Figure~\ref{fig:exemplosDiagram}(j), graph $E_{11}$. The graph $E_{11}$ has no odd cycle and each biconnected component is a cycle then it is in (Bipartite)  $\cap$  (Cactus) and it is not a Block graph. Moreover, the graph $E_{11}$ has claw as induced subgraph, thus it is not Line of Bipartite graph;%11
+     \item (Bipartite) $\cap$ (Helly-$B_1$ EPG) - (Cactus) - (Block) -  (Line of Bipartite) graphs, depicted in Figure~\ref{fig:exemplosDiagram}(k), graph $E_{12}$. It is easy to see that the graph $E_{12}$ is in (Bipartite) $\cap$ (Helly-$B_1$ EPG). There are two cycles sharing two vertices in $E_{12}$, thus it is not a Cactus graph. Moreover, the graph $E_{12}$ has a biconnected component that is not a clique then it is not a Block graph. Finally, the graph $E_{12}$ has a claw as induced subgraph, thus it is not a Line of Bipartite graph;%12
+      \item (Bipartite) - ($B_1$-EPG) graphs, depicted in Figure~\ref{fig:exemplosDiagram}(l), graph $E_{13}$. In \citeauthor{cohen2014} \cite{cohen2014} was proved that the graph $K_{2,5}$ is not a $B_1$-EPG graph. The graph $E_{13}$ corresponds exactly to the $K_{2,5}$ graph, thus it is Bipartite graph that does not belong to $B_1$-EPG;%13
+      \item (Block) - (Bipartite) - (Line of Bipartite)  - (Cactus) graphs, depicted in Figure~\ref{fig:exemplosDiagram}(m), graph $E_{14}$. It is easy to see that the graph $E_{14}$ is a Block graph. Since there is a biconnected component that is a complete graph with four vertices then $E_{14}$ is not a Bipartite graph nor a Cactus graph. Moreover $E_{14}$ has a claw as induced subgraph, thus it is not a Line of Bipartite graph;%14
+ 
+      \item (Block) $\cap$  (Cactus) -  (Line of Bipartite) - (Bipartite) graphs, depicted in Figure~\ref{fig:exemplosDiagram}(n), graph $E_{15}$. It is easy to see that the graph $E_{15}$ is both Block and Cactus graph, but it has a cycle of size three and a claw as induced subgraph, thus this graph is not Line of Bipartite nor Bipartite;%15
+      \item (Cactus) - (Block) -  (Line of Bipartite) - (Bipartite) graphs, depicted in Figure~\ref{fig:exemplosDiagram}(o), graph $E_{16}$, the odd cycles $C_{2n+1},n\geq 2$. Odd cycles are Cactus. The graph $E_{16}$ is a odd cycle then it is a Cactus graph but it is not a Block, Line of Bipartite or Bipartite graph;%16
+      \item (Helly EPG) - ($B_1$-EPG)  - (Bipartite) graphs, depicted in Figure~\ref{fig:exemplosDiagram}(p), graph  $E_{17}$. In \citeauthor{golumbic2009} \cite{golumbic2009} has been proved that the graph $k$-sun for $k\geq 4$ is not a $B_1$-EPG graph. The graph $E_{17}$ is isomorphic to $4$-sun, thus it is not a  $B_1$-EPG but it is Helly-EPG because all graphs are Helly-EPG for some $k$ in a Helly-$B_k$-EPG representation, see
+     ~\cite{dmtcs:6506};%17
+\end{enumerate}
 
 
 \input{./includes/include-img/diagram1.tex}
 
 
 \input{includes/include-img/exemplosDiagram}
+
+In next section we explore the Chordal $B_1$-EPG graphs through of a subset of forbidden graphs and we will proof that this class is in the strict intersection of VPT and EPT graphs.
 
 \section{Containment relationship among Chordal $B_1$-EPG, VPT and EPT graphs }
 
@@ -352,7 +374,7 @@ be reorganized into an EPT representation?  In this section,
  we answer that question for Chordal $B_1$-EPG graphs, in fact we prove that every Chordal $B_1$-EPG graph is EPT. We
  made several unsuccessful attempts to prove this result by considering for a graph $G$, a $B_1$-EPG representation whose paths cover all the edges
  of some polygon on the grid, and trying  to show  that if none of the paths could be modified in order to avoid an edge of the polygon,
- then $G$ had some chordless  cycle (i.e. $G$ is not chordal). The surprise was that the only way we found to demonstrate our main Theorem \ref{teo:b1epgept} was through $VPT$ graphs.
+ then $G$ had some chordless  cycle (i.e. $G$ is not Chordal). The surprise was that the only way we found to demonstrate our main Theorem \ref{teo:b1epgept} was through $VPT$ graphs.
  We will prove the following theorem.
 
 \begin{theorem}\label{teo:chordalB1inVPT}
@@ -419,111 +441,86 @@ $e$ belongs to $P_b$ or to $P_x$ or to $P_z$.
 \begin{lema}\label{lem:F_6}
 The graph $F_6$ on Figure~\ref{fig:16proibidos}(f) is not   $B_1$-EPG.
 \end{lema}
-\begin{proof} Let $K=\{1,2\}$ and $I=\{3,4,5\}$. If there exists a $B_1$-EPG representation of $F_6$,  by Lemma \ref{l:abclique},  because of the existence of the vertices $6$, $7$ and $8$, none of the vertices $3$, $4$ and $5$
-may intersect $1$ between the remaining two, thus such a representation does not exist.
- \end{proof} 
+% \begin{proof} Let $K=\{1,2\}$ and $I=\{3,4,5\}$. If there exists a $B_1$-EPG representation of $F_6$,  by Lemma \ref{l:abclique},  because of the existence of the vertices $6$, $7$ and $8$, none of the vertices $3$, $4$ and $5$
+% may intersect $1$ between the remaining two, thus such a representation does not exist.
+%  \end{proof} 
 
 
 \begin{lema}\label{lem:F_7}
 The graph $F_7$ on Figure~\ref{fig:16proibidos}(g) is not   $B_1$-EPG.
 \end{lema}
-\begin{proof} Let $K=\{1,2\}$ and $I=\{4,5,6\}$. If there exists a $B_1$-EPG representation of $F_7$,  by Lemma \ref{l:abclique},  because of the existence of the vertices  $7$ and $8$, the vertex $6$ must intersect  vertex $1$ between $3$ and $4$. But considering $K'=\{1,3\}$, because of the existence of the vertices $5$ and $6$,  vertex $4$ must intersect vertex $1$ between $5$ and $6$. This contradiction implies that such a representation does not exist.
- \end{proof} 
+% \begin{proof} Let $K=\{1,2\}$ and $I=\{4,5,6\}$. If there exists a $B_1$-EPG representation of $F_7$,  by Lemma \ref{l:abclique},  because of the existence of the vertices  $7$ and $8$, the vertex $6$ must intersect  vertex $1$ between $3$ and $4$. But considering $K'=\{1,3\}$, because of the existence of the vertices $5$ and $6$,  vertex $4$ must intersect vertex $1$ between $5$ and $6$. This contradiction implies that such a representation does not exist.
+%  \end{proof} 
  
  \begin{lema}\label{lem:F_8_9_10(8)}
 The graphs $F_8$, $F_9$ and $F_{10}(8)$ on Figures~\ref{fig:16proibidos}(h), (i) and (j), respectively, are not   $B_1$-EPG.
 \end{lema}
-\begin{proof} Let $K=\{2,3\}$ and $I=\{1,5,7\}$. If there exists a $B_1$-EPG representation of any one of those graphs,  by Lemma \ref{l:abclique},  because of the existence of the vertices  $4$ and $8$, the vertex $1$ must intersect  vertex $2$ between $5$ and $7$. In addition, since $\{2,5,6\}$ is a clique, $6$ intersects $2$ in an edge of $P_5\cap P_2$ (edge-clique) or in an edge incident to $P_5\cap P_2$ (claw-clique). Analogously, because of the clique $\{2,7,6\}$,  $6$ intersects $2$ in an edge of $P_7\cap P_2$ (edge-clique) or in an edge incident to $P_7\cap P_2$ (claw-clique). In any case, it implies that $6$ intersects $2$ on two different edges, each one in a different side of $P_2 \cap P_1$, thus, by Fact \ref{f:two points}, $P_6$ contains the interval  $P_2 \cap P_1$, in contradiction with the fact that $1$ and $6$ are not adjacent.
-  \end{proof} 
+% \begin{proof} Let $K=\{2,3\}$ and $I=\{1,5,7\}$. If there exists a $B_1$-EPG representation of any one of those graphs,  by Lemma \ref{l:abclique},  because of the existence of the vertices  $4$ and $8$, the vertex $1$ must intersect  vertex $2$ between $5$ and $7$. In addition, since $\{2,5,6\}$ is a clique, $6$ intersects $2$ in an edge of $P_5\cap P_2$ (edge-clique) or in an edge incident to $P_5\cap P_2$ (claw-clique). Analogously, because of the clique $\{2,7,6\}$,  $6$ intersects $2$ in an edge of $P_7\cap P_2$ (edge-clique) or in an edge incident to $P_7\cap P_2$ (claw-clique). In any case, it implies that $6$ intersects $2$ on two different edges, each one in a different side of $P_2 \cap P_1$, thus, by Fact \ref{f:two points}, $P_6$ contains the interval  $P_2 \cap P_1$, in contradiction with the fact that $1$ and $6$ are not adjacent.
+%   \end{proof} 
 
 
 
 \input{includes/include-img/16proibidos.tex}
 
-\input{includes/include-img/f10-8opc.tex}
+%\input{includes/include-img/f10-8opc.tex}
 
 
 \begin{lema}\label{lem:f10}
 The graph $F_{10}(n)$ is not a $B_1$-EPG graph. 
 \end{lema}
-
-\begin{proof}
-The graph $F_{10}(n)$ presented in~\cite{alcon2015characterizing} (see Figure~\ref{fig:16proibidos}(j)) is a graph that has $n$ vertices and whose set $K$ is highlighted. This graph has $k=n-5$ vertices, where $k\geq 3, n\geq 8$. Note that each clique $F_{10}(n)[a, b, i]$, where $i \in K$ and  $2\leq i \leq k-1$, have the same  characteristic of the clique $F_{10}(8)[2, 3, 6]$  presented in Figure~\ref{fig:ktent}, that is in any single bend EPG representation these set of vertices are represented by edge-clique (see Lemma~\ref{lem:cliquesMaximais}).
-
-We will prove that there exists a single bend  EPG representation for $F_{10}(n)$ if only if there exists a single bend  EPG representation for $F_{10}(n-1)$. Our induction  is on the set of vertices of $K$ and the paths that they represent.
-
-%\input{includes/include-img/f10n.tex}
-
-Given the graph $F_{10}(n)$, suppose there is a $B_1$-EPG representation $R$ for $F_{10}(n)$. By Lemma~\ref{lem:cliquesMaximais}, each clique $F_{10}(n)[a, b, i]$, where $i \in K$ and  $2\leq i \leq k-1$ is an edge-clique, then we need analyze two cases:
-
-\begin{itemize}
-    \item Case 1: Paths $\displaystyle P_{{k-1}}$ and $\displaystyle P_{{k}}$ are on same row/column.
-    
-    The interval between row/column where $ P_{{1}}$ intersects $ P_{{2}}$ through row/column that $ P_{{k-1}}$ intersects $ P_{{k}}$  necessarily has only paths of set $P_i \cup \{P_a,P_b\}$. No path $P_i$, $2 \leq i \leq k-1$, needs bend, except if $P_a$ or $P_b$ bend.
-     As $R$ is a single bend EPG representation for $F_{10}(n)$ then when we remove the path $\displaystyle P_{{k}}$, we can preserve the intersection of $P_{{k}}$ in $P_{{k-1}}$ and now we have a representation $R'$ that is also a  single bend EPG representation for $F_{10}(n-1)$.
-    
-      \item Case 2: Paths $\displaystyle P_{{k-1}}$ and $\displaystyle P_{{k}}$ are on distinct rows/columns.
-      
-      Path $\displaystyle P_{{k}}$ is intersecting to $P_a, P_b, P_c$ and $\displaystyle P_{{k-1}}$. Path $P_c$ intersects $P_b$ and $\displaystyle P_{{k}}$. If $\displaystyle P_{b}$ bends then $P_b \cap P_c$ has that occur on this row/column. Or $\displaystyle P_{{k}}$ or $\displaystyle P_{{k-1}}$ has bend, and when we remove $\displaystyle P_{{k}}$ then $\displaystyle P_{{k-1}}$ has bend and now there exists $P_b \cap  P_c \cap $ $\displaystyle P_{{k-1}}$. If before removal $\displaystyle P_{{k}}$ the representation $R$ was a single bend EPG representation for $F_{10}(n)$ then now $R'$ remains a single bend EPG representation, but for $F_{10}(n-1)$.    
-\end{itemize}
-
-Yet by induction we know that there is a single bend EPG representation for $F_{10}(9)$ if only if there is a single bend EPG representation for $F_{10}(8)$, but by Corollary~\ref{coro:F108IsNotB1EPG} the graph $F_{10}(8)$ is not $B_1$-EPG, therefore we can conclude that $F_{10}(n)$ is not $B_1$-EPG.
-%Thus $F_{10}$ is not a interval graph, so some path in an EPG representation of $F_{10}$ has at least one bend.
- \end{proof} 
+% \begin{pf} The case $n=8$ was considered  in the previous Lemma \ref{lem:F_8_9_10(8)}, so assume $n\geq 9$.   Let $K=\{2,3\}$ and $I=\{1,6,7\}$. If there exists a $B_1$-EPG representation of any one of those graphs,  by Lemma \ref{l:abclique},  because of the existence of the vertices  $4$ and $5$, the vertex $1$ must intersect  vertex $2$ between $6$ and $7$. In addition, since $\{2,6,8\}$ is a clique, $8$ intersects $2$ in an edge of $P_6\cap P_2$ (edge-clique) or in an edge incident to $P_6\cap P_2$ (claw-clique). Analogously, because of the clique $\{2,7,n\}$,  $n$ intersects $2$ in an edge of $P_7\cap P_2$ (edge-clique) or in an edge incident to $P_7\cap P_2$ (claw-clique). In any case, it implies that $8$  and $n$ intersect $2$ on two different edges, each one in a different side of $P_2 \cap P_1$. Therefore, there exist two consecutive vertices of the path $8, 9, \ldots, n$, say the vertices $j$ and $j+1$, such that each one intersects $P_2$ on a different side of $P_2 \cap P_1$. Thus, by Fact \ref{f:between}, $P_j$ or $P_{j+1}$ must contain the interval  $P_2 \cap P_1$, in contradiction with the fact that neither $j$ nor $j+1$ is adjacent to $1$.
+%  \hfill $\square$\end{pf} 
 
 
+% We have proved that every minimal forbidden induced subgraph for VPT is also a minimal forbidden induced subgraph for $B_1$-EPG. So we can say that the class of Chordal $B_1$-EPG graphs is contained in the class of VPT graphs. Furthermore, there are graphs in VPT that do not belong to $B_1$-EPG, for instance the graph $4$-sun $S_4$ is not in $B_1$-EPG, see~\cite{golumbic2009}, but it has a VPT representation, see Figures~\ref{fig:exemplos}(a) and~\ref{fig:exemplos}(b). Thus, VPT graphs contain properly Chordal $B_1$-EPG graphs. This conclude the proof of Theorem~\ref{teo:chordalB1inVPT}.
+%  %\end{proof} 
 
 
-
-
-%INSERIR DEFINICOES TRIPLA ASTEROIDAL, BRANCH GRAPH, Neighboor, numero cromatico
-%The following definitions will be useful for complete our proof and to help us in the next demonstrations.
-
-%The follow we compile results to conclude the proof.
-
-%In the graphs $F_{1}, F_{2}, F_{3}, F_{4}$ and $F_{5}$ ( Figures~\ref{fig:16proibidos}(a), (b), (c), (d), (e), respectively), the neighborhood of the universal vertex contains an asteroidal triple, %thus these graphs are not $B_1$-EPG graphs.
-
-
-%By Lemmas~\ref{lem:f6}, \ref{lem:f7},  Corollaries~\ref{coro:f8}, \ref{coro:f9}, \ref{coro:F108IsNotB1EPG} and Lemma~\ref{lem:f10}  from this paper, we know that the
-%graphs $F_{6}, F_{7}, F_{8}, F_{9}$ and $F_{10}(n)$ ( Figures~\ref{fig:16proibidos}(f), (g), (h), (i), (j), respectively) are also not $B_1$-EPG graphs.
-
-
-%In addition, by characterization of branch graph we state that none of the graphs $F_{11}(4k), F_{12}(4k), F_{13}(4k+1), F_{14}(4k+1)$, $F_{15}(4k+2)$ and $F_{16}(4k+3)$  %(Figures~\ref{fig:16proibidos}(k), (l), (m), (n), (o), (p), respectively) is a $B_1$-EPG graph.
-
-
-We have proved that every minimal forbidden induced subgraph for VPT is also a minimal forbidden induced subgraph for $B_1$-EPG. So we can say that the class of Chordal $B_1$-EPG graphs is contained in the class of VPT graphs. Furthermore, there are graphs in VPT that do not belong to $B_1$-EPG, for instance the graph $4$-sun $S_4$ is not in $B_1$-EPG, see~\cite{golumbic2009}, but it has a VPT representation, see Figures~\ref{fig:exemplos}(a) and~\ref{fig:exemplos}(b). Thus, VPT graphs contain properly Chordal $B_1$-EPG graphs. This conclude the proof of Theorem~\ref{teo:chordalB1inVPT}.
- %\end{proof} 
+We have proved that every minimal forbidden induced subgraph for VPT is also a  forbidden induced subgraph for Chordal $B_1$-EPG. Moreover, there are graphs in VPT that do not belong to $B_1$-EPG, for instance the graph $4$-sun $S_4$ is not in $B_1$-EPG, see~\cite{golumbic2009}, but it has a VPT representation, see Figures~\ref{fig:exemplos}(a) and~\ref{fig:exemplos}(b). Thus, VPT graphs  properly contain Chordal $B_1$-EPG graphs. This ends the proof of Theorem~\ref{teo:chordalB1inVPT}.  
+  
+  \begin{corollary}\label{c:prohib}
+  Each one of the graphs depicted on Figure \ref{fig:16proibidos} is a forbidden induced subgraph for the class $B_1$-EPG.
+  \end{corollary}
 
 \input{./includes/include-img/exemplos.tex}
 
-\begin{theorem}
-(\cite{alcon2014recognizing}) Let $G$ be a VPT graph and $h\geq 4$. The graph $G$ belongs to $[h,2,1]-[h-1,2,1]$ if and only if max$_{C\in\mathcal{C}(G)}(\chi (B(G|C)))=h$. The reciprocal implication is also true for $h=3$.
-\end{theorem}
+% \begin{theorem}
+% (\cite{alcon2014recognizing}) Let $G$ be a VPT graph and $h\geq 4$. The graph $G$ belongs to $[h,2,1]-[h-1,2,1]$ if and only if max$_{C\in\mathcal{C}(G)}(\chi (B(G|C)))=h$. The reciprocal implication is also true for $h=3$.
+% \end{theorem}
 
 
 %Grafo C_4 eh EPT mas nao eh Chordal
+% \begin{theorem}\label{teo:b1epgept}
+% Chordal $B_1$-EPG $\subsetneq$ EPT. 
+% \end{theorem}
+
+% \begin{proof}
+% Given $G$ be a  Chordal $B_1$-EPG graph and let  $\mathcal{C}$  be the set of cliques of $G$. By Theorem~\ref{teo:chordalB1inVPT}, we know that $G$ is VPT. By \cite{golumbic2009}, we know that if $G$ is $B_1$-EPG then $\chi (B(G|C))\leq 3$,  for all $C \in \mathcal{C}$. By a result given in ~\cite{alcon2014recognizing}, we can say that $G \in [3,2,1]$, and $[3,2,1] = VPT \cap EPT$, and $[3,2,1] = [3,2,2] = EPT$ $\cap$ Chordal~\cite{golumbic1985} then $G$ is a Chordal EPT graph. Therefore, Chordal $B_1$-EPG is contained in EPT. Moreover, the inclusion is proper because for example the graph $4$-sun $S_4$ is an EPT graph (see Figure~\ref{fig:exemplos}(b)) but it is not a $B_1$-EPG graph (see ~\cite{golumbic2009}).
+%  \end{proof} 
+
 \begin{theorem}\label{teo:b1epgept}
 Chordal $B_1$-EPG $\subsetneq$ EPT. 
 \end{theorem}
 
 \begin{proof}
-Given $G$ be a  Chordal $B_1$-EPG graph and let  $\mathcal{C}$  be the set of cliques of $G$. By Theorem~\ref{teo:chordalB1inVPT}, we know that $G$ is VPT. By \cite{golumbic2009}, we know that if $G$ is $B_1$-EPG then $\chi (B(G|C))\leq 3$,  for all $C \in \mathcal{C}$. By a result given in ~\cite{alcon2014recognizing}, we can say that $G \in [3,2,1]$, and $[3,2,1] = VPT \cap EPT$, and $[3,2,1] = [3,2,2] = EPT$ $\cap$ Chordal~\cite{golumbic1985} then $G$ is a Chordal EPT graph. Therefore, Chordal $B_1$-EPG is contained in EPT. Moreover, the inclusion is proper because for example the graph $4$-sun $S_4$ is an EPT graph (see Figure~\ref{fig:exemplos}(b)) but it is not a $B_1$-EPG graph (see ~\cite{golumbic2009}).
- \end{proof} 
+Let $G$ be a  Chordal $B_1$-EPG graph. By the previous Theorem \ref{teo:chordalB1inVPT}, $G$ is VPT. And,  by Lemma \ref{l:branch}, $\chi(B(G/C))\leq 3$ for every maximal clique $C$ of $G$.   In \cite{alcon2014recognizing} (see Theorem 10), it was proved that if the chromatic number of the branch graph of a VPT graph is at most $h$ for every maximal clique, then the graph admits a VPT representation on a host tree with maximum degree $h$.  Therefore, $G$ admits a VPT representation on a host tree with maximum degree 3.  Finally, in \cite{ golumbic1985edge} (see Theorem 2), it was prove that any VPT graph that  admits a representation on a host tree with maximum degree 3 is also an EPT graph. Consequently,  $G$ is EPT.
 
+The same graph   $S_4$ used in the proof of the previous theorem (see Figure~\ref{fig:exemplos}(b)) shows that there are EPT graphs that are not $B_1$-EPG. \end{proof} 
 
 
 \section{Conclusion and Open Questions}
 
-In this paper, we considered graphs of intersection of paths, in particular $B_1$-EPG, VPT and EPT graphs. We show that graphs $\{S_3, S_{3'},S_{3''},C_4\}$-free and others non-trivial subclasses of  $B_1$-EPG graphs have the Helly property, namely by instance Bipartite, Block, Cactus and Line of bipartite graphs. 
+In this paper, we have considered three different path-intersection graph classes: $B_1$-EPG, VPT and EPT graphs. We showed that  $\{S_3, S_{3'},S_{3''},C_4\}$-free graphs and others non-trivial subclasses of  $B_1$-EPG graphs have are Helly-$B_1$-EPG, namely by instance Bipartite, Block, Cactus and Line of Bipartite graphs. 
   
-  In addition, combining the results of~\cite{alcon2014recognizing,Asinowski2009, golumbic2009} and some proves  presented in this chapter, we demonstrate by  Theorems~\ref{teo:chordalB1inVPT} and~\ref{teo:b1epgept} that Chordal $B_1$-EPG graphs are simultaneously contained in the classes of VPT and EPT graphs.  
+ We presented an infinite family of forbidden induced subgraphs for the class  $B_1$-EPG and in particular we proved  that Chordal $B_1$-EPG $\subset$ VPT $\cap$ EPT.  
  
  
 %If on the one hand some few graph classes are known to be properly contained in $B_1$-EPG, for instance the $L$-shaped paths graphs see~\cite{cameron2016edge},  and the recognition time for $B_1$-EPG graphs in general is $NP$-complete. On the other hand, in the course of this section we also present some subclasses of Helly-$B_1$ EPG for which the recognition problem is polynomial.
 
-Asinowski and Ries present in~\cite{ries2009} some characterization for special cases of Split $B_1$-EPG graphs, when the stable set has size three or when the clique has size three. Observe that the graphs $F_2, F_{11}, F_{13}, F_{14}, F_{15}$, given in Figure~\ref{fig:16proibidos}, are Split but we used another strategy to prove that they are not $B_1$-EPG graphs. So one question is pertinent: Can we characterize Split graphs in general based in results of this chapter? 
+In~\cite{ries2009}, Asinowski and Ries described the   Split graphs that are $B_1$-EPG graphs in case the the stable set  or the  central  size have size three. 
+The graphs $F_2, F_{11}, F_{13}, F_{14}$ and $F_{15}$, given in Figure~\ref{fig:16proibidos} are Split, we have  used a different approach  to prove that they are not $B_1$-EPG graphs. So one question is pertinent: Can we characterize Split graphs in general based in results of this paper?
 
-We would like to know the relationship of another graph subclasses of $B_1$-EPG with EPT and VPT graphs. If given an  input graph $G$ that is an instance of $B_1$-EPG  Weakly Chordal,  Distance-hereditary or any specific subclass, what is the relationship of $G$ with the class of paths in trees? For those same classes of graphs, what happens when we demand that the representations be Helly-$B_1$ EPG?
+Finally, another interesting research would be to explore subsets of Helly-EPG graphs more deeply. We would like to understand the behavior of other graph classes inside $B_1$-EPG graph class, i.e. if given an  input graph $G$ that is an instance of (for example) Weakly Chordal $B_1$-EPG. What is the relationship of $G$ with the EPT/VPT graph class? What happens when we demand that the representations be Helly-$B_1$ EPG? Does  recognizing problem remains hard for each one of these classes?
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
