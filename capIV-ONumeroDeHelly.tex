@@ -1,11 +1,13 @@
 \chapter{The Helly and Strong Helly numbers for  $B_k$-EPG and $B_k$-VPG graphs}
 \label{cap:iv}
 
+\vspace{0.5cm}
 \begin{flushright}
 \begin{minipage}[t][0cm][b]{0.47\textwidth}
 \emph{
 %A Matemática é o alfabeto com o qual Deus escreveu o Universo.
-Falta algo para completar esta demonstração, mas não tenho tempo.}
+%Falta algo para completar esta demonstração, mas não tenho tempo.
+Il y a quelque chose à completer dans cette démonstration. Je n’ai pas le tems.}
 \end{minipage}
 
 \rule[0cm]{7cm}{0.03cm}%{largura}{espessura}
@@ -13,9 +15,9 @@ Falta algo para completar esta demonstração, mas não tenho tempo.}
 Évariste Galois
 \end{flushright}
 
-
-EPG graphs were introduced by \citet{golumbic2009} and consist of the intersection graphs of sets of paths on the orthogonal grid, whose intersections are taken considering the edges of the paths. If the intersections of the paths consider the vertices and not the edges, the resulting graph class is called VPG graphs. This last class was introduced in 2011 by \citet{asinowski2011string} e \citet{asinowski2012}.  In this chapter we investigate two parameters in both graph classes, EPG and VPG. The parameters that will be studied are namely the Helly number and the strong Helly number. The parameter strong Helly number  generalizes the parameter Helly number. Thus, by definition the Helly number is a natural lower bound for the strong Helly number in any family of sets studied. In this chapter, we solve the problem of determining both the Helly and strong Helly numbers, for $B_k$-EPG, and $B_k$-VPG graphs, for each value $k$. In last section of this chapter the reader can find a complete version of the paper submitted to  the journal DMGT that contains the set of proofs that have been omitted from the text.
-
+\begin{quotation}
+EPG graphs were introduced by \citet{golumbic2009} and consist of the intersection graphs of sets of paths on the orthogonal grid, whose intersections are taken considering the edges of the paths. If the intersections of the paths consider the vertices and not the edges, the resulting graph class is called VPG graphs. This last class was introduced in 2011 by \citet{asinowski2011string} e \citet{asinowski2012}.  In this chapter, we investigate two parameters in both graph classes, EPG and VPG. The parameters that will be studied are namely the Helly number and the strong Helly number. The parameter strong Helly number  generalizes the parameter Helly number. Thus, by definition, the Helly number is a natural lower bound for the strong Helly number in any family of sets studied. In this chapter, we solve the problem of determining both the Helly and strong Helly numbers, for $B_k$-EPG, and $B_k$-VPG graphs, for each value $k$. In the last section of this chapter, the reader can find a complete version of the paper submitted to  the journal DMGT that contains the set of proofs that have been omitted from the text.
+\end{quotation}
 
 
 
@@ -98,8 +100,8 @@ $$P_j \in {\cal F'} \setminus P_i.$$
 \end{theorem}
  
 
-Proof: 
-Let ${\cal C}$ be a class of families ${\cal F}$ of subsets $P$, each subset formed by elements $u \in U$, such that the Helly number $H({\cal C})$ equals $h$. Then each family ${\cal F} \in {\cal C}$ satisfies $H({\cal F}) \leq h$. Consider a family ${\cal F'} \in {\cal C}$  whose Helly number is exactly $h$, and containing exactly $h$ subsets. Such a family must exist since ${\cal C}$ is hereditary. Since $H({\cal F'}) = h$, $\cal F'$ is $h$-intersecting, and therefore $(h-1)$-intersecting. Furthermore, ${\cal F'}$ is not $(h-1)$-Helly. Applying  Theorem \ref{thm:BD}, we conclude that there are $h$ elements $U' = \{u_1, \ldots, u_h\} \subset U$, such that each set of ${\cal F'}$ contains at least $h-1$ elements of $U'$. Since $H({\cal F'}) > h-1$, $core({\cal F'}) = \emptyset$ and therefore there is no common element among the sets of $\cal F'$. In particular, since each set $P_i \in {\cal F'}$ contains at least $h-1$ elements of $U'$, and $core(\cal F') = \emptyset$, we can choose $h$ subsets $P_i$, in which each of them misses a distinct element $u_i \in U'$. Then for each subset $P_i \in \cal F$, there exists some element $u_i \not \in P_i$, but $u_i \in P_j$, for all $P_j \in \cal F'$, $j \neq i$. \qed
+% Proof: 
+% Let ${\cal C}$ be a class of families ${\cal F}$ of subsets $P$, each subset formed by elements $u \in U$, such that the Helly number $H({\cal C})$ equals $h$. Then each family ${\cal F} \in {\cal C}$ satisfies $H({\cal F}) \leq h$. Consider a family ${\cal F'} \in {\cal C}$  whose Helly number is exactly $h$, and containing exactly $h$ subsets. Such a family must exist since ${\cal C}$ is hereditary. Since $H({\cal F'}) = h$, $\cal F'$ is $h$-intersecting, and therefore $(h-1)$-intersecting. Furthermore, ${\cal F'}$ is not $(h-1)$-Helly. Applying  Theorem \ref{thm:BD}, we conclude that there are $h$ elements $U' = \{u_1, \ldots, u_h\} \subset U$, such that each set of ${\cal F'}$ contains at least $h-1$ elements of $U'$. Since $H({\cal F'}) > h-1$, $core({\cal F'}) = \emptyset$ and therefore there is no common element among the sets of $\cal F'$. In particular, since each set $P_i \in {\cal F'}$ contains at least $h-1$ elements of $U'$, and $core(\cal F') = \emptyset$, we can choose $h$ subsets $P_i$, in which each of them misses a distinct element $u_i \in U'$. Then for each subset $P_i \in \cal F$, there exists some element $u_i \not \in P_i$, but $u_i \in P_j$, for all $P_j \in \cal F'$, $j \neq i$. \qed
 
 Let $\cal{ F'}$ be as in the previous theorem. It is simple to conclude that the removal of any subset from $\cal {F'}$ makes it an $(h-1)$-Helly family. Therefore we  call $\cal {F'}$ a {\it minimal non}-$(h-1)$-{\it Helly family}. Moreover, the element $u_i \not \in P_i$, contained in all subsets $P_j \in {\cal{F'}} \setminus P_i$, except $P_i$, is the {\it $h$-non-representative} of $P_i$.  
 
@@ -190,30 +192,30 @@ The following are tight upper bounds for the Helly numbers of $B_k$-EPG paths, f
 $H(B_1$-$EPG) \leq 3.$
 \end{claim}
  
-\proof
-Assume by contradiction that the Helly number of $B_1$-EPG paths is $h > 3$. In this case, consider a minimal non-$(h-1)$-Helly family of $\cal F$ of $B_1$-EPG paths. Then $\cal F$ contains at least $h$ paths.  
-Any path $P_1 \in \cal{F}$ must contain $h-1$ non-representative edges  corresponding to the $h-1$ distinct paths of $\cal F$ other than $P_1$. Since $h-1 \geq 3$, $P_1$ contains at least three distinct non-representative edges $u_2, u_3, u_4 \in P_i$, with $u_3$ lying  between $u_2$ and $u_4$ in the path.   
+% \proof
+% Assume by contradiction that the Helly number of $B_1$-EPG paths is $h > 3$. In this case, consider a minimal non-$(h-1)$-Helly family of $\cal F$ of $B_1$-EPG paths. Then $\cal F$ contains at least $h$ paths.  
+% Any path $P_1 \in \cal{F}$ must contain $h-1$ non-representative edges  corresponding to the $h-1$ distinct paths of $\cal F$ other than $P_1$. Since $h-1 \geq 3$, $P_1$ contains at least three distinct non-representative edges $u_2, u_3, u_4 \in P_i$, with $u_3$ lying  between $u_2$ and $u_4$ in the path.   
 
-If $u_2$, $u_3$ and $u_4$ are co-linear then by Lemma~\ref{lemma:3colin} $P_3 \in \cal{F}$ must contain at least four bends. Otherwise, the edges must lie on $P_1$ which has a single bend. Thus, it follows from Lemma~\ref{lemma:Lwit} that $P_3$ has three bends. In any situation, a contradiction arises, implying that $H({\cal F}) \leq 3$.
-\qed
+% If $u_2$, $u_3$ and $u_4$ are co-linear then by Lemma~\ref{lemma:3colin} $P_3 \in \cal{F}$ must contain at least four bends. Otherwise, the edges must lie on $P_1$ which has a single bend. Thus, it follows from Lemma~\ref{lemma:Lwit} that $P_3$ has three bends. In any situation, a contradiction arises, implying that $H({\cal F}) \leq 3$.
+% \qed
 
 \begin{claim}\label{claim:upper-B2}
 $H(B_2$-EPG$) \leq 4.$
 \end{claim}
 
-\proof
-Assume by contradiction that the Helly number of  $B_2$-EPG families of paths is $h > 4$. Consider a minimal non-$(h-1)$-Helly family $\cal F$ of $B_2$-EPG paths. The family  $\cal F$ must contain at least $h \geq 5$ distinct paths, each of them corresponding to a distinct non-representative edge. Choose arbitrarily 5 of these non-representative edges.
+% \proof
+% Assume by contradiction that the Helly number of  $B_2$-EPG families of paths is $h > 4$. Consider a minimal non-$(h-1)$-Helly family $\cal F$ of $B_2$-EPG paths. The family  $\cal F$ must contain at least $h \geq 5$ distinct paths, each of them corresponding to a distinct non-representative edge. Choose arbitrarily 5 of these non-representative edges.
 
-By Lemmas ~\ref{lemma:3colin} and ~\ref{lemma:3par} any three of these chosen edges can  neither be co-linear nor parallel. Therefore, at least one of the five chosen non-representative edges must be in a different direction from the majority of the chosen edges. Call the direction of this edge vertical and the direction of the majority of the chosen edges horizontal. Consider a path $P_1$ from the family $\cal F$ that goes through this vertical edge. 
-The path $P_1$ contains at least four of the chosen non-representative edges, at least one of which is vertical. Since $P_1$ has at most two bends, then it must have at most three segments. Since we have three segments and four non-representative edges which $P_1$ must contain, by the pigeon hole principle, one of these segments must have two non-representative edges. If this pair of edges are in a horizontal segment of $P_1$, then such pair of edges, along with the vertical edge are in two consecutive path segments, forming a $B_1$-subpath in $\cal F$. Then Lemma~\ref{lemma:Lwit} implies that some path of $\cal F$ must have at least three bends.   Otherwise, the two edges are vertical. But the others must be horizontal, and again we have at least three edges in a pair of consecutive segments forming a subpath in $\cal F$ having one bend. Again,  Lemma ~\ref{lemma:Lwit} implies that some path has at least three bends.
-\qed
+% By Lemmas ~\ref{lemma:3colin} and ~\ref{lemma:3par} any three of these chosen edges can  neither be co-linear nor parallel. Therefore, at least one of the five chosen non-representative edges must be in a different direction from the majority of the chosen edges. Call the direction of this edge vertical and the direction of the majority of the chosen edges horizontal. Consider a path $P_1$ from the family $\cal F$ that goes through this vertical edge. 
+% The path $P_1$ contains at least four of the chosen non-representative edges, at least one of which is vertical. Since $P_1$ has at most two bends, then it must have at most three segments. Since we have three segments and four non-representative edges which $P_1$ must contain, by the pigeon hole principle, one of these segments must have two non-representative edges. If this pair of edges are in a horizontal segment of $P_1$, then such pair of edges, along with the vertical edge are in two consecutive path segments, forming a $B_1$-subpath in $\cal F$. Then Lemma~\ref{lemma:Lwit} implies that some path of $\cal F$ must have at least three bends.   Otherwise, the two edges are vertical. But the others must be horizontal, and again we have at least three edges in a pair of consecutive segments forming a subpath in $\cal F$ having one bend. Again,  Lemma ~\ref{lemma:Lwit} implies that some path has at least three bends.
+% \qed
 
 \begin{claim}\label{claim:upper-B3}
 $H(B_3$-EPG$) \leq 8.$
 \end{claim}
 
-\proof
-Assume by contradiction that the Helly number of  $B_3$-EPG paths is $h > 8$. In this case, consider a minimal non-$(h-1)$-Helly family $\cal F$ of $B_3$-EPG paths. Then $\cal F$ contains at least $h$  distinct non-representative edges,  corresponding to $h$ distinct paths.  By Lemma~\ref{lemma:3par}, since we can have at most three bends in any path, then these $h$  non-representative edges must lie in at most two vertical and two horizontal lines of the grid. Therefore one of these four possible lines must contain at least three distinct non-representative edges. By Lemma~\ref{lemma:3colin},  that would imply the existence of a path with four bends.\qed
+% \proof
+% Assume by contradiction that the Helly number of  $B_3$-EPG paths is $h > 8$. In this case, consider a minimal non-$(h-1)$-Helly family $\cal F$ of $B_3$-EPG paths. Then $\cal F$ contains at least $h$  distinct non-representative edges,  corresponding to $h$ distinct paths.  By Lemma~\ref{lemma:3par}, since we can have at most three bends in any path, then these $h$  non-representative edges must lie in at most two vertical and two horizontal lines of the grid. Therefore one of these four possible lines must contain at least three distinct non-representative edges. By Lemma~\ref{lemma:3colin},  that would imply the existence of a path with four bends.\qed
 
 This completes the proof of Theorem \ref{thm:Helly-EPG}. 
 
@@ -357,8 +359,8 @@ but $u_i$ is contained in all  subsets
 $$P_j \in {\cal F'} \setminus P_i.$$
 \end{theorem}
 
-Proof: The strong Helly number of ${\cal C}$ is $h$ and not $h - 1$, so that  there must exist some family ${\cal F} \in {\cal C}$ whose strong Helly number is exactly $h$, i.e., $\cal F$  contains $h$ subsets $P_i$ whose intersection equals  core($\cal F'$) but is such that no  $h-1$ of its subsets have the same intersection. In particular, let $\cal F'$ be the family containing exactly the $h$ subsets $P_i$ described above. Such a family must exist, since $\cal C$ is hereditary. Then each $P_i$ does not contain at least one element $u_i$ in the intersection of the remaining $h-1$ subsets $P_j$, $j \ne i$, 
-since the intersection of these $h-1$ subsets must not be equal to the core($\cal F'$).  \qed
+% Proof: The strong Helly number of ${\cal C}$ is $h$ and not $h - 1$, so that  there must exist some family ${\cal F} \in {\cal C}$ whose strong Helly number is exactly $h$, i.e., $\cal F$  contains $h$ subsets $P_i$ whose intersection equals  core($\cal F'$) but is such that no  $h-1$ of its subsets have the same intersection. In particular, let $\cal F'$ be the family containing exactly the $h$ subsets $P_i$ described above. Such a family must exist, since $\cal C$ is hereditary. Then each $P_i$ does not contain at least one element $u_i$ in the intersection of the remaining $h-1$ subsets $P_j$, $j \ne i$, 
+% since the intersection of these $h-1$ subsets must not be equal to the core($\cal F'$).  \qed
 
 Again, if we consider the family $\cal F'$ described in the theorem above it is simple to conclude that the removal of any subset from $\cal {F'}$ turns it $(h-1)$-strong Helly.  Then call $\cal {F'}$ a {\it minimal} non-$(h-1)$-strong Helly family. Moreover, the element $u_i \not \in P_i$, contained in all subsets $P_j \in {\cal{F'}} \setminus P_i$, except $P_i$, is the {\it $h$ non-representative} of $P_i$.  
 

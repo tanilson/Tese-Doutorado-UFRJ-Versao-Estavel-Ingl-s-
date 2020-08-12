@@ -4,17 +4,20 @@
 \begin{flushright}
 \begin{minipage}[t][0cm][b]{0.47\textwidth}
 \emph{
-A Matemática não mente. Mente quem faz mau uso dela.}
+%A Matemática não mente. Mente quem faz mau uso dela.
+What we know is a drop, what we don't know is an ocean.}
 \end{minipage}
 
 \rule[0cm]{7cm}{0.03cm}%{largura}{espessura}
 
-Albert Einstein
+%Albert Einstein
+Sir Isaac Newton
 \end{flushright}
 
-This chapter presents as a main result that every Chordal $B_1$-EPG graph is simultaneously in the VPT and EPT graph classes. In particular, we describe structures that are always present in graphs that do not support a Helly-$B_1$-EPG representation and thus we define some sets of subgraphs that delimit Helly subfamilies. 
- In addition, this chapter also presents features of some non-trivial graph families that are properly contained in Helly-$B_1$ EPG, namely these families are composed of the Bipartite, Blocks, Cactus and Line of Bipartite  graphs.
-
+\begin{quotation}
+This chapter presents as the main result that every Chordal $B_1$-EPG graph is simultaneously in the VPT and EPT graph classes. In particular, we describe structures that belong to $B_1$-EPG but  do not support a Helly-$B_1$-EPG representation and thus we define some sets of subgraphs that delimit Helly subfamilies. 
+ In addition, this chapter also presents features of some non-trivial graph families that are properly contained in Helly-$B_1$ EPG, namely these families are composed of the Bipartite, Blocks, Cactus, and Line of Bipartite  graphs. Finally, at the end of this chapter, the reader can find a section with a complete version of the paper submitted to the journal DMGT that contains the set of proofs that have been omitted from the text.
+\end{quotation}
 
 
 \section{Introduction}
@@ -106,13 +109,11 @@ We have obtained the following similar result for diamond-free graphs. A \textit
 Let $G$ be a $B_1$-EPG graph. If $G$ is diamond-free, then in any $B_1$-EPG representation of $G$,  every maximal claw-clique $K$ is represented on a claw of the grid whose edges are covered only by vertices of $K$.
 \end{lema}
 
-\begin{proof}Let $K$ be a maximal clique which is a claw-clique in a given $B_1$-EPG representation of $G$. Then there exist three vertices of $K$ which induce a claw-clique $K'$ on
-the same claw of the grid than $K$. Assume, in order to derive a contradiction, that a vertex $v\notin K$ covers some edge of the claw. Clearly, $v$ must  cover
-only one of such edges. Therefore $v$ and the vertices of $K'$ induce a diamond, a contradiction. 
-\end{proof}
+% \begin{proof}Let $K$ be a maximal clique which is a claw-clique in a given $B_1$-EPG representation of $G$. Then there exist three vertices of $K$ which induce a claw-clique $K'$ on
+% the same claw of the grid than $K$. Assume, in order to derive a contradiction, that a vertex $v\notin K$ covers some edge of the claw. Clearly, $v$ must  cover
+% only one of such edges. Therefore $v$ and the vertices of $K'$ induce a diamond, a contradiction. 
+% \end{proof}
 
-
-% \begin{defi} \label{defi:tortasFrame}
 
 Let $ Q $ be a grid and let $ (a_1, b),$ $(a_2, b),$ $(a_3, b),$ $(a_4, b)$ be a $4$-star centered at $b$ as depicted in Figure~\ref{fig:piesInGrid}(a). Let $ \mathcal{P} = \{P_1, \dots , P_4\}$ be a collection of four paths each containing a different pair of edges of the $4$-star.
 %exactly two edges of the $4$-star:
@@ -141,13 +142,13 @@ Let $G$ be a graph whose vertex set  can be
 partitioned into a non trivial clique $K$ and an independent set $I=\{w_1,w_2,w_3\}$, such that each vertex of $K$ is adjacent to each vertex of $I$. Then, in any $B_1$-EPG representation of $G$, at least one of the cliques  $K_i = K \cup \{w_i\}$, with $1 \leq i \leq 3$,  is an edge-clique. 
 \end{lema}
 
-\begin{proof}
-Assume, in order to derive a contradiction, that the three cliques are claw-cliques. By Lemma~\ref{lem:twoClawNotSameCenterInChordal}, they have different centers, say the points $q_1, q_2, q_3$ of the grid, respectively. Since at least two paths have a bend at the center of a claw, for each $i\in\{1,2,3\}$,   there must exist a vertex
-  $v_i$ of $K$ such that the corresponding path $P_{v_i}$ turns at the point $q_i$ of the grid.  Notice that each one of the three paths $P_{v_i}$
-  must contain  the three grid points $q_1$, $q_2$ and $q_3$. To prove that this is not possible, we will consider, without loss of generality, two cases.
-  First,  $q_1$ is between $q_2$ and $q_3$ in $P_{v_1}$. Then, $P_{v_3}$ cannot turn at $q_3$ and contain $q_1$ and $q_2$.   And second,
-  $q_2$ is between $q_1$ and $q_3$ in $P_{v_1}$. In this case, $P_{v_2}$ cannot turn at $q_2$ and contain $q_1$ and $q_3$; thus the proof is completed.
-\end{proof}
+% \begin{proof}
+% Assume, in order to derive a contradiction, that the three cliques are claw-cliques. By Lemma~\ref{lem:twoClawNotSameCenterInChordal}, they have different centers, say the points $q_1, q_2, q_3$ of the grid, respectively. Since at least two paths have a bend at the center of a claw, for each $i\in\{1,2,3\}$,   there must exist a vertex
+%   $v_i$ of $K$ such that the corresponding path $P_{v_i}$ turns at the point $q_i$ of the grid.  Notice that each one of the three paths $P_{v_i}$
+%   must contain  the three grid points $q_1$, $q_2$ and $q_3$. To prove that this is not possible, we will consider, without loss of generality, two cases.
+%   First,  $q_1$ is between $q_2$ and $q_3$ in $P_{v_1}$. Then, $P_{v_3}$ cannot turn at $q_3$ and contain $q_1$ and $q_2$.   And second,
+%   $q_2$ is between $q_1$ and $q_3$ in $P_{v_1}$. In this case, $P_{v_2}$ cannot turn at $q_2$ and contain $q_1$ and $q_3$; thus the proof is completed.
+% \end{proof}
 
 Three vertices $u, v, w$ of a graph $G$ form an \textit{asteroidal triple} (AT) of $G$ if for every pair of them there exists a path connecting the two vertices and such that the path avoids the neighborhood of the remaining vertex~\cite{Asinowski2009}. A graph without an asteroidal triple is called \textit{AT-free}. 
 
@@ -193,27 +194,26 @@ Let $S_{3}, S_{3'}, S_{3''}$ and $ C_{4}$ be the graphs depicted in Figure \ref{
 Let $G$ be a $B_1$-EPG graph. If $G$ is  $\{S_{3}, S_{3'}, S_{3''}, C_{4}\}$-free then $G$  is a Helly-$B_1$-EPG graph.
 \end{theorem}
 
-\begin{proof}
-If $G$ is not a Helly-$B_1$-EPG graph, then in each $B_1$-EPG representation of $G$, there is at least one clique that is represented as claw-clique and no as edge-clique. Consider any $B_1$-EPG  representation of $G$  and let $K$ be a maximal clique  which is represented as a claw-clique. Assume, w.l.o.g,  $K$ is on a claw of the grid with base $[x_0, x_2]\times\{y_0\}$ and center $C = (x_1, y_0)$. Denote by  $\mathcal{P}_K$ the set of paths corresponding to the vertices of $K$.  By Lemma~\ref{lem:lemaBRies2009},  %(see~\cite{ries2009})
-%no path $P_w$ for $w\notin K$ covers 
-the grid segment $[x_0, x_2]\times\{y_0\}$ is covered only by vertices of $K$. % because $G$ is $C_4$-free
+% \begin{proof}
+% If $G$ is not a Helly-$B_1$-EPG graph, then in each $B_1$-EPG representation of $G$, there is at least one clique that is represented as claw-clique and no as edge-clique. Consider any $B_1$-EPG  representation of $G$  and let $K$ be a maximal clique  which is represented as a claw-clique. Assume, w.l.o.g,  $K$ is on a claw of the grid with base $[x_0, x_2]\times\{y_0\}$ and center $C = (x_1, y_0)$. Denote by  $\mathcal{P}_K$ the set of paths corresponding to the vertices of $K$.  By Lemma~\ref{lem:lemaBRies2009},   
+% the grid segment $[x_0, x_2]\times\{y_0\}$ is covered only by vertices of $K$. 
 
 
- For every ${\displaystyle \lrcorner}$-path %$P_v \in \mathcal{P}_K$ 
- (resp. ${\displaystyle \llcorner}$-path 
-% $P_{v'} \in \mathcal{P}_K$
- ) belonging to $\mathcal{P}_K$, we do the following: if %$P_v$ (resp. $P_{v'}$)
- the path does not intersect any path $P_t \notin\mathcal{P}_K$ on column $x_1$, then we delete its vertical segment and add the grid segment $[x_1, x_2]\times\{y_0\}$ (resp. $[x_0, x_1]\times\{y_0\}$). If after this transformation there is no more ${\displaystyle \lrcorner}$-paths (resp. ${\displaystyle \llcorner}$-paths) in $\mathcal{P}_K$, then we are done since we have obtained an edge-clique. So we may assume that
- every ${\displaystyle \lrcorner}$-path   and every ${\displaystyle \llcorner}$-path  in $ \mathcal{P}_K$ intersects some path $P_t \notin \mathcal{P}_K$   on column $x_1$ (notice that we can assume is the same path $P_t$ for all the vertices). 
+%  For every ${\displaystyle \lrcorner}$-path   
+%  (resp. ${\displaystyle \llcorner}$-path) belonging to $\mathcal{P}_K$, we do the following: if 
+%  the path does not intersect any path $P_t \notin\mathcal{P}_K$ on column $x_1$, then we delete its vertical segment and add the grid segment $[x_1, x_2]\times\{y_0\}$ (resp. $[x_0, x_1]\times\{y_0\}$). If after this transformation there is no more ${\displaystyle \lrcorner}$-paths (resp. ${\displaystyle \llcorner}$-paths) in $\mathcal{P}_K$, then we are done since we have obtained an edge-clique. So we may assume that
+%  every ${\displaystyle \lrcorner}$-path   and every ${\displaystyle \llcorner}$-path  in $ \mathcal{P}_K$ intersects some path $P_t \notin \mathcal{P}_K$   on column $x_1$ (notice that we can assume is the same path $P_t$ for all the vertices). 
  
- Now, if none of the ${\displaystyle \lrcorner}$-paths belonging to $\mathcal{P}_K$ intersects  a path non in  $ \mathcal{P}_K$ on the line $y_0$, then we can replace the horizontal part of those paths by the segment $[x_1,x_2]\times \{y_0\}$, getting an edge representation of the clique $K$. Thus, we can assume there exists
- at least one ${\displaystyle \lrcorner}$-path $P_{v} \in \mathcal{P}_K$ intersecting some path  $P_{t'} \notin \mathcal{P}_K$ on line $y_0$. Analogously, there exists
- at least one ${\displaystyle \llcorner}$-path $P_{v'} \in \mathcal{P}_K$ intersecting some path  $P_{t''} \notin K$ on line $y_0$, as depicted in Figure~\ref{fig:clawGrid}. Notice that vertex $t'$ cannot be adjacent to any of the vertices $t$, $v'$ or $t''$; and, in addition, vertex $t''$ cannot
- be adjacent to   $t$,  or $v$.
+%  Now, if none of the ${\displaystyle \lrcorner}$-paths belonging to $\mathcal{P}_K$ intersects  a path non in  $ \mathcal{P}_K$ on the line $y_0$, then we can replace the horizontal part of those paths by the segment $[x_1,x_2]\times \{y_0\}$, getting an edge representation of the clique $K$. Thus, we can assume there exists
+%  at least one ${\displaystyle \lrcorner}$-path $P_{v} \in \mathcal{P}_K$ intersecting some path  $P_{t'} \notin \mathcal{P}_K$ on line $y_0$. Analogously, there exists
+%  at least one ${\displaystyle \llcorner}$-path $P_{v'} \in \mathcal{P}_K$ intersecting some path  $P_{t''} \notin K$ on line $y_0$, as depicted in Figure~\ref{fig:clawGrid}. Notice that vertex $t'$ cannot be adjacent to any of the vertices $t$, $v'$ or $t''$; and, in addition, vertex $t''$ cannot
+%  be adjacent to   $t$,  or $v$.
  
- Finally,   since $K$ is claw-clique,  there is a path $P_u \in \mathcal{P}_K$ covering the base of the claw. Depending on the 
- possibles adjacencies between  $u$ and $t'$ or  $t''$, one of the graphs  $S_{3}$, $S_{3'}$ or $S_{3''}$ is obtained.
-\end{proof}
+%  Finally,   since $K$ is claw-clique,  there is a path $P_u \in \mathcal{P}_K$ covering the base of the claw. Depending on the 
+%  possibles adjacencies between  $u$ and $t'$ or  $t''$, one of the graphs  $S_{3}$, $S_{3'}$ or $S_{3''}$ is obtained.
+% \end{proof}
+
+The proof of previously theorem is based on the idea of that the set of graphs mentioned form claw-cliques that can not be transformed into edge-cliques. 
 
 \input{includes/include-img/clawGrid.tex}
 
@@ -233,18 +233,15 @@ Next theorem has as consequence the identification of several graph classes wher
  If $G$ is a $B_1$-EPG and diamond-free graph then $G$ is a Helly-$B_1$-EPG graph.
  \end{theorem}
 
-\begin{proof}
-If $G$ is not a Helly-$B_1$-EPG graph, then in each $B_1$-EPG representation of $G$, there is at least one clique that is represented as claw-clique and no as edge-clique.  Consider any $B_1$-EPG  representation of $G$  and let $K$ be a maximal clique  which is represented as a claw-clique. Assume, w.l.o.g,  $K$ is on a claw of the grid with base $[x_0, x_2]\times\{y_0\}$ and center $C = (x_1, y_0)$. Denote by  $\mathcal{P}_K$ the set of paths corresponding to the vertices of $K$. 
- By Lemma~\ref{lem:b1epgDiamondFree},  %(see~\cite{ries2009})
-%no path $P_w$ for $w\notin K$ covers 
-the grid segment $[x_0, x_2]\times\{y_0\}$ is covered only by vertices of $K$. % because $G$ is $C_4$-free
- For every ${\displaystyle \lrcorner}$-path %$P_v \in \mathcal{P}_K$ 
- (resp. ${\displaystyle \llcorner}$-path 
-% $P_{v'} \in \mathcal{P}_K$
- ) belonging to $\mathcal{P}_K$, we do the following: if %$P_v$ (resp. $P_{v'}$)
- the path does not intersect any path $P_t \notin\mathcal{P}_K$ on column $x_1$, then we delete its vertical segment and add the grid segment $[x_1, x_2]\times\{y_0\}$ (resp. $[x_0, x_1]\times\{y_0\}$). If after this transformation there is no more ${\displaystyle \lrcorner}$-paths (resp. ${\displaystyle \llcorner}$-paths) in $\mathcal{P}_K$, then we are done since we have obtained an edge-clique. So we may assume that
- every ${\displaystyle \lrcorner}$-path   and every ${\displaystyle \llcorner}$-path  in $ \mathcal{P}_K$ intersects some path $P_t \notin \mathcal{P}_K$   on column $x_1$ (notice that we can assume is the same path $P_t$ for all the vertices). Since  $K$ is claw-clique,  there is a path $P_u \in \mathcal{P}_K$ covering the base of the claw. Thus, $G[v, v', u, t]$ induces a diamond,  a contradiction. 
-\end{proof}  
+% \begin{proof}
+% If $G$ is not a Helly-$B_1$-EPG graph, then in each $B_1$-EPG representation of $G$, there is at least one clique that is represented as claw-clique and no as edge-clique.  Consider any $B_1$-EPG  representation of $G$  and let $K$ be a maximal clique  which is represented as a claw-clique. Assume, w.l.o.g,  $K$ is on a claw of the grid with base $[x_0, x_2]\times\{y_0\}$ and center $C = (x_1, y_0)$. Denote by  $\mathcal{P}_K$ the set of paths corresponding to the vertices of $K$. 
+%  By Lemma~\ref{lem:b1epgDiamondFree},   
+% the grid segment $[x_0, x_2]\times\{y_0\}$ is covered only by vertices of $K$.  
+%  For every ${\displaystyle \lrcorner}$-path  
+%  (resp. ${\displaystyle \llcorner}$-path) belonging to $\mathcal{P}_K$, we do the following: if  
+%  the path does not intersect any path $P_t \notin\mathcal{P}_K$ on column $x_1$, then we delete its vertical segment and add the grid segment $[x_1, x_2]\times\{y_0\}$ (resp. $[x_0, x_1]\times\{y_0\}$). If after this transformation there is no more ${\displaystyle \lrcorner}$-paths (resp. ${\displaystyle \llcorner}$-paths) in $\mathcal{P}_K$, then we are done since we have obtained an edge-clique. So we may assume that
+%  every ${\displaystyle \lrcorner}$-path   and every ${\displaystyle \llcorner}$-path  in $ \mathcal{P}_K$ intersects some path $P_t \notin \mathcal{P}_K$   on column $x_1$ (notice that we can assume is the same path $P_t$ for all the vertices). Since  $K$ is claw-clique,  there is a path $P_u \in \mathcal{P}_K$ covering the base of the claw. Thus, $G[v, v', u, t]$ induces a diamond,  a contradiction. 
+% \end{proof}  
 
 An \textit{independent set} of vertices is a set of vertices no two of which are adjacent.
 A graph $G$ is said to be \textit{Bipartite} if its set of vertices can be partitioned into two distinct independent sets.
@@ -420,23 +417,23 @@ If in a given $B_1$-EPG representation of $G$, $P_a\cap P_y$ is between $P_a\cap
 $P_a\cap P_y \subset P_b$. Even more, any vertex adjacent to $a$ and $y$, but not to $b$ (or to $b$ and $y$, but not to $a$) has to be adjacent to $x$ or to $z$.
 \end{lema}
 
-\begin{proof}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-Assume in order to obtain a contradiction that $\{a,b,y\}$ is not an edge-clique. Then, by Lemma
-\ref{lem:3cliquesNotClaw}, we can assume, w.l.o.g., that $\{a,b,x\}$ is an edge-clique.
-It implies that there is an edge $e_{\ell}$ of $P_a \cap P_x$ covered by $P_b$. Since every  edge
-of $P_a\cap P_z$ is covered  by $P_z$, $z$ and $b$ are adjacent, and $z$ and $y$ are non adjacent, we have by Fact \ref{f:between},
-that every edge of $P_a\cap P_y$ is covered by $P_b$, which implies  that $\{a,b,y\}$ is an edge-clique, contrary to the assumption.
+% \begin{proof}
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Assume in order to obtain a contradiction that $\{a,b,y\}$ is not an edge-clique. Then, by Lemma
+% \ref{lem:3cliquesNotClaw}, we can assume, w.l.o.g., that $\{a,b,x\}$ is an edge-clique.
+% It implies that there is an edge $e_{\ell}$ of $P_a \cap P_x$ covered by $P_b$. Since every  edge
+% of $P_a\cap P_z$ is covered  by $P_z$, $z$ and $b$ are adjacent, and $z$ and $y$ are non adjacent, we have by Fact \ref{f:between},
+% that every edge of $P_a\cap P_y$ is covered by $P_b$, which implies  that $\{a,b,y\}$ is an edge-clique, contrary to the assumption.
 
-Thus, $\{a,b,y\}$ is an edge-clique. By Fact \ref{f:two points}, we have that the whole interval of $P_a$ between 
- $P_a \cap P_x$ and   $P_a \cap P_z$ is contained in $P_b$, and so, in particular, $P_a\cap P_y \subset P_b$. Observe that this
- implies that if $q$ is an end vertex of the interval $P_a \cap P_y$, and $e$ is the edge of $P_a$ incident on $q$ that do not belong to $P_y$, then 
-$e$ belongs to $P_b$ or to $P_x$ or to $P_z$.
+% Thus, $\{a,b,y\}$ is an edge-clique. By Fact \ref{f:two points}, we have that the whole interval of $P_a$ between 
+%  $P_a \cap P_x$ and   $P_a \cap P_z$ is contained in $P_b$, and so, in particular, $P_a\cap P_y \subset P_b$. Observe that this
+%  implies that if $q$ is an end vertex of the interval $P_a \cap P_y$, and $e$ is the edge of $P_a$ incident on $q$ that do not belong to $P_y$, then 
+% $e$ belongs to $P_b$ or to $P_x$ or to $P_z$.
  
- Now, assume there exists a vertex $v$ adjacent to both $a$ and $y$ but not to $b$. Then, the clique $\{a,y,v\}$ has to be a claw-clique. Let $q$ be the center of the claw, notice that $q$ has to be an end vertex of the interval $P_a \cap P_y$.
- Since $v$ is not adjacent to $b$, it follows from the observation at the end of the paragraph above, that
- $v$ has to be adjacent to $x$ or to $z$.
-\end{proof}
+%  Now, assume there exists a vertex $v$ adjacent to both $a$ and $y$ but not to $b$. Then, the clique $\{a,y,v\}$ has to be a claw-clique. Let $q$ be the center of the claw, notice that $q$ has to be an end vertex of the interval $P_a \cap P_y$.
+%  Since $v$ is not adjacent to $b$, it follows from the observation at the end of the paragraph above, that
+%  $v$ has to be adjacent to $x$ or to $z$.
+% \end{proof}
 
 \begin{lema}\label{lem:F_6}
 The graph $F_6$ on Figure~\ref{fig:16proibidos}(f) is not   $B_1$-EPG.
@@ -496,14 +493,16 @@ We have proved that every minimal forbidden induced subgraph for VPT is also a  
 % Given $G$ be a  Chordal $B_1$-EPG graph and let  $\mathcal{C}$  be the set of cliques of $G$. By Theorem~\ref{teo:chordalB1inVPT}, we know that $G$ is VPT. By \cite{golumbic2009}, we know that if $G$ is $B_1$-EPG then $\chi (B(G|C))\leq 3$,  for all $C \in \mathcal{C}$. By a result given in ~\cite{alcon2014recognizing}, we can say that $G \in [3,2,1]$, and $[3,2,1] = VPT \cap EPT$, and $[3,2,1] = [3,2,2] = EPT$ $\cap$ Chordal~\cite{golumbic1985} then $G$ is a Chordal EPT graph. Therefore, Chordal $B_1$-EPG is contained in EPT. Moreover, the inclusion is proper because for example the graph $4$-sun $S_4$ is an EPT graph (see Figure~\ref{fig:exemplos}(b)) but it is not a $B_1$-EPG graph (see ~\cite{golumbic2009}).
 %  \end{proof} 
 
+By the result of Theorem~\ref{teo:chordalB1inVPT} we know that Chordal $B_1$-EPG is in VPT, thus it is easy to demonstrate the next theorem.
+
 \begin{theorem}\label{teo:b1epgept}
 Chordal $B_1$-EPG $\subsetneq$ EPT. 
 \end{theorem}
 
-\begin{proof}
-Let $G$ be a  Chordal $B_1$-EPG graph. By the previous Theorem \ref{teo:chordalB1inVPT}, $G$ is VPT. And,  by Lemma \ref{l:branch}, $\chi(B(G/C))\leq 3$ for every maximal clique $C$ of $G$.   In \cite{alcon2014recognizing} (see Theorem 10), it was proved that if the chromatic number of the branch graph of a VPT graph is at most $h$ for every maximal clique, then the graph admits a VPT representation on a host tree with maximum degree $h$.  Therefore, $G$ admits a VPT representation on a host tree with maximum degree 3.  Finally, in \cite{ golumbic1985edge} (see Theorem 2), it was prove that any VPT graph that  admits a representation on a host tree with maximum degree 3 is also an EPT graph. Consequently,  $G$ is EPT.
+% \begin{proof}
+% Let $G$ be a  Chordal $B_1$-EPG graph. By the previous Theorem \ref{teo:chordalB1inVPT}, $G$ is VPT. And,  by Lemma \ref{l:branch}, $\chi(B(G/C))\leq 3$ for every maximal clique $C$ of $G$.   In \cite{alcon2014recognizing} (see Theorem 10), it was proved that if the chromatic number of the branch graph of a VPT graph is at most $h$ for every maximal clique, then the graph admits a VPT representation on a host tree with maximum degree $h$.  Therefore, $G$ admits a VPT representation on a host tree with maximum degree 3.  Finally, in \cite{ golumbic1985edge} (see Theorem 2), it was prove that any VPT graph that  admits a representation on a host tree with maximum degree 3 is also an EPT graph. Consequently,  $G$ is EPT.
 
-The same graph   $S_4$ used in the proof of the previous theorem (see Figure~\ref{fig:exemplos}(b)) shows that there are EPT graphs that are not $B_1$-EPG. \end{proof} 
+% The same graph   $S_4$ used in the proof of the previous theorem (see Figure~\ref{fig:exemplos}(b)) shows that there are EPT graphs that are not $B_1$-EPG. \end{proof} 
 
 
 \section{Conclusion and Open Questions}

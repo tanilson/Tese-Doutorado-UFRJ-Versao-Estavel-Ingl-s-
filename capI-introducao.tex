@@ -2,36 +2,40 @@
 
 \begin{flushright}
 \begin{minipage}[t][0cm][b]{0.47\textwidth}
-\emph{Se não podes entender, crê para que entendas. A fé precede, o intelecto segue.}
+\emph{%Se não podes entender, crê para que entendas. A fé precede, o intelecto segue.
+%If you can't understand, believe so you understand. Faith precedes, intellect follows. 
+Believe and you will understand; \\ faith precedes, follows intelligence.}
 \end{minipage}
 
 \rule[0cm]{7cm}{0.03cm}%{largura}{espessura}
 
-Santo Agostinho
+Saint Augustine 
 \end{flushright}
 
-The Graph Theory is a branch of the math that is used by the Computer Science to describe and model several real and theoretical problems.  This doctoral thesis is dedicated to solving some problems of Graph Theory. In particular, in this chapter you will find a brief description of the related problems, the motivation of the study and a resume on the organization of the text.
+\begin{quotation}
+Graph Theory is a branch of Mathematics that is used by the Computer Science to describe and model several real and theoretical problems.  This doctoral thesis is dedicated to solving some problems of Graph Theory. In particular, in this chapter, you will find a brief description of the related problems, the motivation of the study and, a summary of the organization of the text.
+\end{quotation}
 
-\section{Motivation, Goals and Thesis Structure}
+%\section{Motivation, Goals and Thesis Structure}
 
 
 \emph{Graph Theory} is based on relations of points that we called vertices interconnected (by elements denoted as edges) in a network. In this context we define a graph $G=(V,E)$, where $V(G)$ denote the vertex set of $G$ and $E(G)$ its edge set. The graph is the object that we use to model the relationship among  elements of a set.
 
 An \emph{intersection graph} is a graph that represents the pattern of intersections of a family of sets. A graph $G$ can be represented as an intersection graph when for each vertex $v_i, v_j$ of $G$ there are corresponding sets $S_i, S_j$ such that $S_i \cap S_j \neq \emptyset $ if and only if $(v_i, v_j) \in E(G)$. In this doctoral thesis, we are interested in the study of intersection graphs. Issues related to intersection graphs have been attracting the attention of researchers since the 1960, e.g. \cite{erdos1966representation}, and to the present day, see~\cite{petito2002grafos,jose2018}.
 
- First, we know that every graph is an intersection graph, i.e. any graph can be represented by some intersection model, \cite{szpilrajn1945translation, erdos1966representation}. \citet{scheinerman1985characterizing} presents a research that is exclusively dedicated to characterization of classes of intersection graphs, also providing necessary and sufficient conditions for the existence of intersection representations for some specific graph class.
+ First, we know that every graph is an intersection graph, i.e. any graph can be represented by some intersection model, \cite{szpilrajn1945translation, erdos1966representation}. \citet{scheinerman1985characterizing} presents  research that is exclusively dedicated to the characterization of classes of intersection graphs, also providing necessary and sufficient conditions for the existence of intersection representations for some specific graph class.
 
 
-Many important graph families can be described as intersection graphs, we can cite among them interval, circular-arc, permutation, trapezoid, chordal,
-disk, circle graphs are more important or at leas the most studied in the literature in general. 
+Many important graph families can be described as intersection graphs. We can cite Interval, Circular-arc, Permutation, Trapezoid, Chordal,
+Disk, Circle graphs which are among the most important or at least the most studied classes in the literature in general. 
 
-For us, in this study some among these classes are interesting. The class of Interval graphs, i.e. the intersection graph of set of segments on a line, and the class of Chordal graphs, that are graphs where each cycle $C_n, n\geq 3$ has a chord. Interval graphs have been extensively studied by~\cite{lekkeikerker1962representation}. About Chordal graphs, \citet{gavril1974intersection} show that this class corresponds exactly to the intersection graph of subtrees on a tree. In this thesis, we will study intersection graphs of paths on a grid and on trees.
+Interval graphs are the intersection graph class of a collection of segments on a line, and the class of Chordal graphs are the graphs where each cycle $C_n, n\geq 3$ has a chord. Interval graphs have been extensively studied by~\cite{lekkeikerker1962representation}. About Chordal graphs, \citet{gavril1974intersection} show that this class corresponds exactly to the intersection graph of subtrees on a tree. In this thesis, we will study intersection graphs of paths on a grid and on trees.
 
-\citet{golumbic2009} defined the edge intersection graphs of paths on a grid (EPG graphs). Similarly, \cite{asinowski2011string, asinowski2012} defined the vertex intersection graphs of paths on a grid (VPG graphs).  Both intersection models have some practical importance, since they can be used to generalize naturally the context of
+\citet{golumbic2009} defined the edge intersection graphs of paths on a grid (EPG graphs). Similarly, \cite{asinowski2011string, asinowski2012} defined the vertex intersection graphs of paths on a grid (VPG graphs).  Both intersection models have some practical importance since they can be used to generalize naturally the context of
 circuit layout problems and layout optimization~\cite{sinden1966topology} where a layout is modeled
-as paths (wires) on a grid. Thus, they are problems that arise directly from this modeling: reducing the number of times that each path can to bend in order to minimize the cost or difficulty of production of a microchip or electronic board~\cite{bandy1990,molitor1991}; or  other times layouts may consist of several layers where the paths on each layer are not allowed to intersect, this can be understood as a colouring problem. These are the main applications that instigate research on the EPG and VPG representations of some graph families. Other applications and details on circuit layout problems can be found in~\cite{bandy1990, molitor1991, sinden1966topology}.
+as paths (wires) on a grid. Thus, they are problems that arise directly from this modeling: reducing the number of times that each path can bend in order to minimize the cost or difficulty of production of a microchip or electronic board~\cite{bandy1990,molitor1991}; or  other times layouts may consist of several layers where the paths on each layer are not allowed to intersect, this can be understood as a coloring problem. These are the main applications that instigate research on the EPG and VPG representations of some graph families. Other applications and details on circuit layout problems can be found in~\cite{bandy1990, molitor1991, sinden1966topology}.
 
-Some particular questions related to intersection graphs aroused our research interest. Among these, we can quote: What is the complexity of recognizing a class of path intersection graphs on a grid if we restrict the number of bends in each path individually and considering the fact of each set of intersections have a common element? Will it be possible to solve the problem of calculating some parameter in the class of paths intersection graphs on a grid  even when the entire paths bend $k$ times? Is there any relationship among the classes of intersection graphs when we change the tree host to a grid host? The answers to these and other questions are diluted in the next chapters of this thesis.
+Some particular questions related to intersection graphs aroused our research interest. Among these, we can quote: What is the complexity of recognizing a class of path intersection graphs on a grid if we restrict the number of bends in each path individually and considering the fact of each set of intersections have a common element? Will it be possible to solve the problem of calculating some parameters in the class of paths intersection graphs on a grid  even when the entire paths bend $k$ times? Is there any relationship among the classes of intersection graphs when we change the tree host to a grid host? The answers to these and other questions are diluted in the next chapters of this thesis.
 
 
 The text of this thesis is distributed over the next 5 chapters as follows.
@@ -39,7 +43,37 @@ The text of this thesis is distributed over the next 5 chapters as follows.
 
 Chapter~\ref{Notions} contains the definitions and concepts needed to fully understand this work.  In addition, we provide a short overview of the problems studied and a brief literature review on the main subjects covered in the text.
 
-Chapter~\ref{cap:capiii} will be dedicated to the study of the Helly property and EPG graphs. In particular, the chapter presents an analysis of some basic EPG representations, a comparison of $L$-shaped paths and $B_1$-EPG graph classes, as well as a proof of the $NP$-completeness of the Helly-$B_1$ EPG  graph recognition problem~\cite{dmtcs:6506}. The following writings are publications resulting from this research:
+Chapter~\ref{cap:capiii} will be dedicated to the study of the Helly property and EPG graphs. In particular, the chapter presents an analysis of some basic EPG representations, a comparison of $L$-shaped paths and $B_1$-EPG graph classes, as well as a proof of the $NP$-completeness of the Helly-$B_1$-EPG  graph recognition problem~\cite{dmtcs:6506}. 
+
+The last section of Chapter~\ref{cap:capiii} contains  the paper of~\citet{dmtcs:6506}, which was published by the journal Discrete Mathematics \& Theoretical Computer Science (DMTCS), and which contains a full version of the demonstrations that were omitted in chapter.
+
+
+In Chapter~\ref{cap:iv}, the parameters Helly number and strong Helly number will be studied for  $ B_k$-EPG and $ B_k$-VPG graphs. We used the strategy of determining tight lower and upper bounds to show the value of the Helly and strong Helly number parameters in each class and for each value of $k$. 
+
+The last section of Chapter~\ref{cap:iv} contains the paper that has been submitted to the  journal Discussiones Mathematicae Graph Theory (DMGT) on May 16, 2020, and which contains a full version of the demonstrations that were omitted in chapter.
+
+
+Chapter~\ref{cap:v} presents relationship among Chordal $B_1$-EPG, VPT and EPT graphs. The reader will find a set of induced subgraphs that appear in any graph that does not belong to Helly-$B_1$ EPG but belongs to $B_1$-EPG and non-trivial graph classes that are included by Helly-$B_1$ EPG, namely Bipartite, Blocks, Cactus, and Line of Bipartite. The main result of this chapter is proof that every Chordal $B_1$-EPG graph is simultaneously in the VPT and EPT classes.  The manuscript of this chapter and corresponding research was done while the author of this doctoral thesis (Tanilson) was a doctoral research (sandwich doctorate by 1 year) fellow at the National University of La Plata - UNLP, Math Department. 
+ 
+The last section of Chapter~\ref{cap:v} contains the paper that has been submitted to the  journal Discussiones Mathematicae Graph Theory (DMGT) on June 22, 2020, and which contains a full version of the demonstrations that were omitted in chapter.
+
+
+Chapter~\ref{conclusao} is dedicated to discussing the results of this research and it includes the concluding remarks of this thesis with suggestions for future work and prospects for continuing this work.
+
+%\textbf{SEPARAR AS PUBLICAÇÕES EM 2 NIVEIS, JOURNAL E DEPOIS CONFERENCIAS.}
+%The following papers are by-products of this thesis:
+
+The following are  published/submitted papers to international journals  as results of this research:
+ 
+\begin{enumerate}
+    
+     \item BORNSTEIN, C. F.; GOLUMBIC, M.C.; SANTOS, T. D.; SOUZA, U. S.; SZWARCFITER, J. L.  The Complexity of Helly-B1-EPG graph Recognition. In: Discrete Mathematics \& Theoretical Computer Science (DMTCS), Source: oai:arXiv.org:1906.11185, June 4, 2020,  vol. 22 no. 1. 
+     
+     \item BORNSTEIN, C. F.; MORGENSTERN, G.; SANTOS, T. D.; SOUZA, U. S.; SZWARCFITER, J. L.  Helly and Strong Helly Numbers of $B_k$-EPG and $B_k$-VPG Graphs. Submitted to journal Discussiones Mathematicae Graph Theory (DMGT) on  May 16, 2020. 
+     \item ALCON, L.; MAZZOLENI, M. P.;  SANTOS, T. D. On $B_1$-EPG  and EPT graphs. Submitted to journal Discussiones Mathematicae Graph Theory (DMGT) on June 22, 2020.
+\end{enumerate}
+
+The following are  published/submitted papers in Conferences, Symposia and Congresses: 
 
 \begin{enumerate}
     \item BORNSTEIN, C. F.; SANTOS, T. D.; SOUZA, U. S.; SZWARCFITER, J. L. A Complexidade do Reconhecimento de Grafos B1-EPG-Helly. In: 50º SBPO - Simpósio Brasileiro de Pesquisa Operacional, 2018, Rio de Janeiro. Cidades Inteligentes: Planejamento Urbano, Fontes Renováveis e Distribuição de Recursos, 2018.
@@ -48,43 +82,18 @@ Chapter~\ref{cap:capiii} will be dedicated to the study of the Helly property an
 
      
      \item BORNSTEIN, C. F.; SANTOS, T. D.; SOUZA, U. S.; SZWARCFITER, J. L. The complexity of B1-EPG-Helly graph recognition. In: VIII Latin American Workshop On Cliques in Graphs (LAWCG), ICM 2018 Satellite Event, 2018, Rio de Janeiro. Program and Abstracts, 2018. p. 69.
-
+    
+    \item ALCON, L.; MAZZOLENI, M. P.;  SANTOS, T. D. Identifying Subclasses of Helly-$B_1$-EPG Graphs. Submitted to: 52nd  Brazilian Operational Research Symposium (SBPO), 2020.
      
-     \item BORNSTEIN, C. F.; GOLUMBIC, M.C.; SANTOS, T. D.; SOUZA, U. S.; SZWARCFITER, J. L.  The Complexity of Helly-B1-EPG graph Recognition . In: Discrete Mathematics \& Theoretical Computer Science (DMTCS), Source: oai:arXiv.org:1906.11185, June 4, 2020,  vol. 22 no. 1. 
-\end{enumerate}
-
-The last section of the Chapter~\ref{cap:capiii} contains a full copy of the paper of~\citet{dmtcs:6506}, which was published by the journal Discrete Mathematics \& Theoretical Computer Science (DMTCS), and which contains a full version of the demonstrations that were omitted in the chapter.
-
-
-In Chapter~\ref{cap:iv}, the parameters Helly number and strong Helly number will be studied for  $ B_k$-EPG and $ B_k$-VPG graphs. We used the strategy of determining tight lower and upper bounds to show the value of the Helly and strong Helly number parameters in each class and for each value of $k$. The following writing is a paper resulting from the research carried out in the Chapter~\ref{cap:iv} and which can be found in a full copy in the last section of chapter.
-
-\begin{enumerate}
-    \item BORNSTEIN, C. F.; MORGENSTERN, G.; SANTOS, T. D.; SOUZA, U. S.; SZWARCFITER, J. L.  Helly and Strong Helly Numbers of $B_k$-EPG and $B_k$-VPG Graphs. Submitted to journal Discussiones Mathematicae Graph Theory (DMGT) in  May 16, 2020. 
+    \item ALCON, L.; MAZZOLENI, M. P.;  SANTOS, T. D. On Subclasses of Helly-$B_1$-EPG Graphs. Submitted to: 
+    Reunión Anual de la Unión Matemática Argentina (virtUMA), 2020.
+    
 \end{enumerate}
 
 
 
-The Chapter~\ref{cap:v} presents relationship among Chordal $B_1$-EPG, VPT and EPT graphs. The reader will find a set of induced subgraphs that appear in any graph that does not belong to Helly-$B_1$ EPG but belongs to $B_1$-EPG and non-trivial graph classes that are included by Helly-$B_1$ EPG, namely Bipartite, Blocks, Cactus and Line of Bipartite. The main result of this chapter is the prove that every Chordal $B_1$-EPG graph is simultaneously in the VPT and EPT classes.  The writing of this chapter and corresponding research was done while the author of this doctoral thesis (Tanilson) was a doctoral research (sandwich doctorate by 1 year) fellow at National University of La Plata - UNLP, Math Department. 
- The following are  papers resulting from the research:
- 
- 
- 
-\begin{enumerate}
+The results obtained in our research can be found in the set of manuscripts previously cited and in this doctoral thesis. For each one of the
+Chapters~\ref{cap:capiii},~\ref{cap:iv} and \ref{cap:v} there is in their last section a related paper with the set of the demonstrations used in respective chapter. In the
+text of this thesis, we have chosen to hide some proofs for simplicity, thus the reader will find in each chapter only  some statements and proofs that we think to be more relevant. %  in structure of this thesis. %but the complete proofs are in each paper at the end corresponding chapter. 
 
-     \item ALCON, L.; MAZZOLENI, M. P.;  SANTOS, T. D. Identifying Subclasses of Helly-$B_1$-EPG Graphs. Submited to: 52nd  Brazilian Operational Research Symposium (SBPO), 2020.
-     
-     \item ALCON, L.; MAZZOLENI, M. P.;  SANTOS, T. D. On $B_1$-EPG  and EPT graphs. Submitted to journal Discussiones Mathematicae Graph Theory (DMGT) in June 22, 2020.
-
-\end{enumerate}
-
-The last section of the Chapter~\ref{cap:v} contains a full copy of the paper that has been submitted to the  journal Discussiones Mathematicae Graph Theory (DMGT) in June 22, 2020, and which contains a full version of the demonstrations that were omitted in the chapter.
-
-
-Chapter~\ref{conclusao} is dedicated to discuss the results of this research and it includes the concluding remarks of this thesis with suggestions for future work and prospects for continuing this work.
-
-
-The results obtained in this thesis can be found at the final of each
-chapter in its last section, as well as all set of the complete proofs. In the
-text we have chosen to hide some proofs for simplicity, thus the reader will find in each chapter only  proofs that we think to be more relevant. %  in structure of this thesis. %but the complete proofs are in each paper at the end corresponding chapter. 
-
-Next, we present the basic concepts. Good reading.
+Next, we present the basic concepts. %Good reading.

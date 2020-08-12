@@ -3,7 +3,9 @@
 \begin{flushright}
 \begin{minipage}[t][0cm][b]{0.47\textwidth}
 \emph{
-Talento é 1\% inspiração e 99\% transpiração. }
+%Talento é 1\% inspiração e 99\% transpiração. 
+Genius is one percent inspiration, ninety nine percent perspiration.
+}
 \end{minipage}
 
 \rule[0cm]{7cm}{0.03cm}%{largura}{espessura}
@@ -13,8 +15,9 @@ Thomas Edison
 
 % Neste capítulo examinaremos as relações hierárquicas entre algumas classes EPG e EPG-Helly. Ademais, abordaremos representações $B_1$-EPG de alguns grafos que serão utilizados posteriormente. Primeiro, vamos observar como as classes $B_0$-EPG, $B_0$-EPG-Helly, $B_1$-EPG e $B_1$-EPG-Helly se relacionam, em seguida consideramos as representações $B_1$-EPG de $C_4$'s e do grafo octaedro. Por último, apresentaremos a prova de $NP$-completude do problema de reconhecimento de grafos $B_1$-EPG-Helly.
 
-In this chapter we will examine the hierarchical relationships among some EPG and Helly-EPG classes. In addition, we will approach $ B_1$-EPG representations of some graphs that will be used later. First, let is focus our attention to understand how the classes $B_0$-EPG, $B_1$-EPG,  Helly-$B_1$ EPG and  $L$-shaped paths are related, then we consider the $ B_1$-EPG representations of graphs $C_4 $ and the Octahedral graph. Next, we will present the proof of $NP$-completeness to Helly-$B_1$-EPG graph recognition problem. Finally, at the end of this chapter the reader can find a section with a complete version of the paper published in the journal DMTCS that contains the set of proofs that have been omitted from the text.
-
+\begin{quotation}
+In this chapter, we will examine the hierarchical relationships among some EPG and Helly-EPG classes. In addition, we will approach $ B_1$-EPG representations of some graphs that will be used later. First, let us focus our attention to understand how the classes $B_0$-EPG, $B_1$-EPG,  Helly-$B_1$ EPG, and  $L$-shaped paths are related, then we consider the $ B_1$-EPG representations of graphs $C_4 $ and the Octahedral graph. Next, we will present the proof of $NP$-completeness to Helly-$B_1$-EPG graph recognition problem. Finally, at the end of this chapter, the reader can find a section with a complete version of the paper published in the journal DMTCS that contains the set of proofs that have been omitted from the text.
+\end{quotation}
 
 \section{Introduction}
 An EPG graph $G$ is a graph that admits a representation in which its vertices are represented by paths of a grid $Q$, such that two vertices of $G$ are adjacent if and only if the corresponding paths have at least one common edge.
@@ -40,7 +43,7 @@ The Helly property can also be applied to the $B_k$-EPG representation problem, 
 
 The Helly property related to EPG representations of graphs has been studied in~\cite{golumbic2009} and~\cite{golumbic2013}. 
 
-Let $\cal {F}$ be a family of subsets of some universal set $U$, and $h\geq 2$ be an integer.  Say that $\cal{F}$ is $h$-{\it intersecting} when every group of $h$ sets of $\cal {F}$ intersect. The {\it core} of $\cal {F}$, denoted by $core(\cal F)$, is the intersection of all sets of $\cal {F}$. The family $\cal{F}$ is $h$-{\it Helly} when every $h$-intersecting subfamily $\cal{F'}$ of $\cal{F}$ satisfies $core(\cal{F'}) \neq \emptyset$, see e.g. \cite{D76}. On the other hand, if for every subfamily $\cal{F'}$ of $\cal{F}$, there are $h$ subsets whose core equals the core of  $\cal {F'}$, then $\cal {F}$ is said to be {\it strong} $h$-{\it Helly}.
+Let $\cal {F}$ be a family of subsets of some universal set $U$, and $h\geq 2$ be an integer.  Say that $\cal{F}$ is $h$-{\it intersecting} when every group of $h$ sets of $\cal {F}$ intersect. The {\it core} of $\cal {F}$, denoted by $core(\cal F)$, is the intersection of all sets of $\cal {F}$. The family $\cal{F}$ is $h$-{\it Helly} when every $h$-intersecting subfamily $\cal{F'}$ of $\cal{F}$ satisfies $core(\cal{F'}) \neq \emptyset$, see e.g. \cite{duchet1978propriete}. On the other hand, if for every subfamily $\cal{F'}$ of $\cal{F}$, there are $h$ subsets whose core equals the core of  $\cal {F'}$, then $\cal {F}$ is said to be {\it strong} $h$-{\it Helly}.
 Note that the Helly property that we will consider in this paper is precisely the property of being 2-Helly. 
 
 The  {\it Helly number} of the family $\cal{F}$ is the least integer $h$, such that $\cal{F}$ is $h$-Helly. Similarly, the {\it strong Helly number} of $\cal{F}$ is the least $h$, for which  $\cal{F}$ is strong $h$-Helly. It also follows that the strong Helly number of $\cal{F}$ is at least equal to its Helly number. In~\cite{golumbic2009} and~\cite{golumbic2013}, they have determined the strong Helly number of $B_1$-EPG graphs. 
@@ -81,26 +84,26 @@ In an equivalent way, it is also possible to show that every graph has an EPG re
  Every graph is a Helly-EPG graph.
  \end{lemma}
 
-\begin{proof}
-Let $G$ be a graph with $n$ vertices $v_1, v_2, \dots, v_n$ and $\mu$ maximal cliques $C_1, C_2, \dots , C_{\mu }$. We construct a Helly-EPG representation of $G$ using a $\mu +1\times \mu +1$ grid $Q$. 
-%The rows and columns correspond to each maximal cliques and are numbered $1, 2, \dots , \mu$. 
-Each maximal clique $C_i$ of $G$ is mapped to an edge of $Q$ as follow: 
-\begin{itemize}
-    \item if $i$ is even then the maximal clique $C_i$ is mapped to the edge in column $i$ between rows $i$ and $i+1$;
-    \item if $i$ is odd then the maximal clique $C_i$ is mapped to the edge in row $i$ between columns $i$ and $i+1$.
-\end{itemize}
+% \begin{proof}
+% Let $G$ be a graph with $n$ vertices $v_1, v_2, \dots, v_n$ and $\mu$ maximal cliques $C_1, C_2, \dots , C_{\mu }$. We construct a Helly-EPG representation of $G$ using a $\mu +1\times \mu +1$ grid $Q$. 
+% %The rows and columns correspond to each maximal cliques and are numbered $1, 2, \dots , \mu$. 
+% Each maximal clique $C_i$ of $G$ is mapped to an edge of $Q$ as follow: 
+% \begin{itemize}
+%     \item if $i$ is even then the maximal clique $C_i$ is mapped to the edge in column $i$ between rows $i$ and $i+1$;
+%     \item if $i$ is odd then the maximal clique $C_i$ is mapped to the edge in row $i$ between columns $i$ and $i+1$.
+% \end{itemize}
 
-The following describes a descendant-stair-shaped construction for the paths.
+% The following describes a descendant-stair-shaped construction for the paths.
   
-Let $v_l \in V(G)$ and $C_i$ be the first maximal clique containing $v_l$ according to the increasing order of their indices. If $i$ is even (resp. odd) the path $P_l$ starts in column $i$ (resp. in row $i$), in the point $(i,i)$. Then $P_l$ extends to at least the point $(i+1, i)$ (resp. $(i, i+1)$) proceeding to the until the row (resp. column) corresponding to next maximal clique of the sequence containing $v_l$, we say $C_{j}$.
-At this point, we bend $P_l$, which goes to the point $(j,j)$ and repeat the process previously described. 
-%
-Figure~\ref{fig:gradeDemonstracao} shows the Helly-EPG representation of the octahedral graph $O_3$, according to the construction previously described.
+% Let $v_l \in V(G)$ and $C_i$ be the first maximal clique containing $v_l$ according to the increasing order of their indices. If $i$ is even (resp. odd) the path $P_l$ starts in column $i$ (resp. in row $i$), in the point $(i,i)$. Then $P_l$ extends to at least the point $(i+1, i)$ (resp. $(i, i+1)$) proceeding to the until the row (resp. column) corresponding to next maximal clique of the sequence containing $v_l$, we say $C_{j}$.
+% At this point, we bend $P_l$, which goes to the point $(j,j)$ and repeat the process previously described. 
+% %
+% Figure~\ref{fig:gradeDemonstracao} shows the Helly-EPG representation of the octahedral graph $O_3$, according to the construction previously described.
 
-By construction, each path travels only rows and columns corresponding with maximal cliques containing its respective vertex. And, every path crosses the edges of the grid to which your maximal cliques were mapped. Thus, the previously described construction results in an EPG representation of $G$, which is Helly since every set ${\mathcal P}$ of paths representing a maximal clique has at least one edge in its core.
-\end{proof}
+% By construction, each path travels only rows and columns corresponding with maximal cliques containing its respective vertex. And, every path crosses the edges of the grid to which your maximal cliques were mapped. Thus, the previously described construction results in an EPG representation of $G$, which is Helly since every set ${\mathcal P}$ of paths representing a maximal clique has at least one edge in its core.
+% \end{proof}
  
- \input{./includes/include-img/grade.tex}
+%  \input{./includes/include-img/grade.tex}
 
 
  The provided construction in Lemma~\ref{lem:todoGrafoEpgHelly} can be modified to represent an monotonic row-ascendant EPG representation how in~\cite{golumbic2009} and~\cite{golumbic2013}. To do this, it is enough to change the orientation of the y-axis such that it grows from bottom to up.
@@ -297,12 +300,11 @@ The following lemma states that condition~(i) holds.
 \begin{lemma}\label{lem:verify1}
 Each path $P_i$ can be uniquely determined in polynomial time by the sequence of its relevant edges.
 \end{lemma}
-\begin{proof}
-%It is easy to verify that~\ref{it:bullet1} is true, 
-Consider the sequence of relevant edges of some path $P_i\in \mathcal{P}$. Start from an extremity edge of $P_i$. Let $t$ be the row (column) containing the last considered relevant edge. The next relevant edge $e'$ in the sequence, must be also contained in row (column) $t$. If $e'$ is an extremity edge, the process is finished, and the path has been determined. It contains all edges between the considered relevant edges in the sequence. Otherwise, if $e'$ is a bend edge, the next relevant edge is the second bend edge $e''$ of this same bend, which is contained in some column (row) $t'$. The process continues until the second extremity edge of $P_i$ is located. 
+% \begin{proof}
+% Consider the sequence of relevant edges of some path $P_i\in \mathcal{P}$. Start from an extremity edge of $P_i$. Let $t$ be the row (column) containing the last considered relevant edge. The next relevant edge $e'$ in the sequence, must be also contained in row (column) $t$. If $e'$ is an extremity edge, the process is finished, and the path has been determined. It contains all edges between the considered relevant edges in the sequence. Otherwise, if $e'$ is a bend edge, the next relevant edge is the second bend edge $e''$ of this same bend, which is contained in some column (row) $t'$. The process continues until the second extremity edge of $P_i$ is located. 
 
-With the above procedure, we can determine in $\mathcal{O}(k\cdot |V(G)|)$ time, whether path $P_i$ contains any given edge of the grid $Q$. Therefore, the sequence of relevant edges of $P_i$ uniquely determines $P_i$.
- \end{proof}
+% With the above procedure, we can determine in $\mathcal{O}(k\cdot |V(G)|)$ time, whether path $P_i$ contains any given edge of the grid $Q$. Therefore, the sequence of relevant edges of $P_i$ uniquely determines $P_i$.
+%  \end{proof}
 
 Next, we assert property~(ii).
 
@@ -310,45 +312,38 @@ Next, we assert property~(ii).
 Let $\mathcal{P}$ be the set of paths in a $B_k$-EPG representation of $G$, and let $P_1, P_2\in \mathcal{P}$. Then $P_1$, $P_2$ are intersecting paths if and only if their intersection contains at least one relevant edge.
 \end{lemma}
 
-\begin{proof}
- %If $P_1, P_2$ contain a common relevant edge there is nothing to prove. Otherwise,
-Assume that $P_1, P_2$ are intersecting, and we show they contain a common relevant edge. Without loss of generality, suppose $P_1, P_2$ intersect at row \textit{i} of the grid, in the  $B_k$-EPG representation $R$. The following are the possible cases that may occur:
+% \begin{proof}
+%  Assume that $P_1, P_2$ are intersecting, and we show they contain a common relevant edge. Without loss of generality, suppose $P_1, P_2$ intersect at row \textit{i} of the grid, in the  $B_k$-EPG representation $R$. The following are the possible cases that may occur:
 
-\begin{itemize}
-\item \textbf{Case 1:} Neither $P_1$ nor $P_2$ contain bends in row \textit{i}. 
+% \begin{itemize}
+% \item \textbf{Case 1:} Neither $P_1$ nor $P_2$ contain bends in row \textit{i}. 
 
-Then $P_1$ and $ P_2$  are entirely contained in row \textit{i}. Since they intersect, either $P_1, P_2$  overlap, or one of the paths contains the other. In any of these situations, they intersect in a common extremity edge, which is a relevant edge.
+% Then $P_1$ and $ P_2$  are entirely contained in row \textit{i}. Since they intersect, either $P_1, P_2$  overlap, or one of the paths contains the other. In any of these situations, they intersect in a common extremity edge, which is a relevant edge.
 
-\item \textbf{Case 2:} $P_1$ does not contain bends in \textit{i}, but $ P_2$ does.
+% \item \textbf{Case 2:} $P_1$ does not contain bends in \textit{i}, but $ P_2$ does.
 
-If some bend edge of $P_2$ also belongs to $P_1$, then $P_1, P_2$  intersect in  a relevant edge. Otherwise, since $P_1, P_2$  intersect, the only possibility is that the intersection contains an extremity edge of $P_1$ or $ P_2$. Hence the paths intersect in a relevant edge.  
+% If some bend edge of $P_2$ also belongs to $P_1$, then $P_1, P_2$  intersect in  a relevant edge. Otherwise, since $P_1, P_2$  intersect, the only possibility is that the intersection contains an extremity edge of $P_1$ or $ P_2$. Hence the paths intersect in a relevant edge.  
 
-\item \textbf{Case 3:} Both $P_1$,  $P_2$ contain bends in \textit{i}
+% \item \textbf{Case 3:} Both $P_1$,  $P_2$ contain bends in \textit{i}
 
-Again, if the intersection occurs in some bend edge of $P_1$  or $P_2$, the lemma follows. Otherwise, the same situation as above must occur: $P_1, P_2$  must intersect in an extremity edge.
+% Again, if the intersection occurs in some bend edge of $P_1$  or $P_2$, the lemma follows. Otherwise, the same situation as above must occur: $P_1, P_2$  must intersect in an extremity edge.
  
-\end{itemize}
-In any of the cases, $P_1$ and $P_2$ intersect in some relevant edge.
- \end{proof}
+% \end{itemize}
+% In any of the cases, $P_1$ and $P_2$ intersect in some relevant edge.
+%  \end{proof}
  
  
 The two previous lemmas let us check that a certificate is an actual $B_k$-EPG representation of a given graph $G$.  The next lemma says we can also verify in polynomial time that the representation encoded in the certificate is a Helly representation. Fortunately, we do not need to check every subset of intersecting paths of the representation to make sure they have a common intersection. 
 
-% \begin{enumerate}[label=\roman*]
-% \setcounter{enumi}{2}
-% \item The set $\mathcal{P}$ of relevant edges satisfies the Helly property. The following lemma shows the above condition.
-% \end{enumerate}
 
 \begin{lemma}\label{lem:verify3}
-%Let $\mathcal{P}$ be the set of relevant edges of a $B_k$-EPG representation $R$ of a graph $G$. We can verify that $R$ is Helly representation in polynomial time.
 Let $\mathcal{P}$ be a collection of paths encoded as a sequence of relevant edges that constitute a  $B_k$-EPG representation of a graph $G$. We can verify in polynomial time if $\mathcal{P}$ has the Helly property.
 \end{lemma}
-%\setcounter{proof}{2}
 
-\begin{proof}
-%Let $\mathcal{T}$ be the set of relevant edges of $R$. We consider each triple $T_i$ of edges of $\mathcal{T}$. Let $\mathcal{P}_i$ be the set of paths of $R$ containing at least two the relevant edges of $T_i$. By Gilmore's Theorem~\cite{bergeDuchet1975} the paths of $\mathcal{P}_i$  contain a common edge if only if  $R$ is a Helly representation.  By Lemma~\ref{lem:relevantEdges} they contain a common relevant edge. Since there is a polynomial number of relevant edges, we can identify such a common edge, in polynomial time, and confirm that $R$ is in fact Helly. Since the number of triples is also polynomial, the lemma follows.
-Let $T$ be the set of relevant edges of $\mathcal{P}$. Consider each triple $T_i$ of edges of $T$ . Let $P_i$ be the set of paths of $\mathcal{P}$ containing at least two of the edges in the triple  $T_i$. By Gilmore's Theorem, see \cite{bergeDuchet1975}, $\mathcal{P}$ has the Helly property if an only if the subset of paths $P_i$  corresponding to each triple  $T_i$  has a non-empty intersection.  By Lemma~\ref{lem:relevantEdges}, it suffices to examine the intersections on relevant edges. Therefore a polynomial algorithm for checking if $\mathcal{P}$ has the Helly property could examine each of the subsets $P_i$, and for each relevant edge $e$ of a path in $P_i$, to compute the number of paths in $P_i$ that contain $e$. Then  $\mathcal{P}$ has the Helly property if and only if for every  $P_i$,  there exists some relevant edge that is present in all paths in $P_i$,  yielding a non-empty intersection.
- \end{proof}
+
+% \begin{proof}
+% Let $T$ be the set of relevant edges of $\mathcal{P}$. Consider each triple $T_i$ of edges of $T$ . Let $P_i$ be the set of paths of $\mathcal{P}$ containing at least two of the edges in the triple  $T_i$. By Gilmore's Theorem, see \cite{bergeDuchet1975}, $\mathcal{P}$ has the Helly property if an only if the subset of paths $P_i$  corresponding to each triple  $T_i$  has a non-empty intersection.  By Lemma~\ref{lem:relevantEdges}, it suffices to examine the intersections on relevant edges. Therefore a polynomial algorithm for checking if $\mathcal{P}$ has the Helly property could examine each of the subsets $P_i$, and for each relevant edge $e$ of a path in $P_i$, to compute the number of paths in $P_i$ that contain $e$. Then  $\mathcal{P}$ has the Helly property if and only if for every  $P_i$,  there exists some relevant edge that is present in all paths in $P_i$,  yielding a non-empty intersection.
+%  \end{proof}
 
 \begin{corollary}\label{cor:comumAtodos}
 Let ${\mathcal P'}$ be a set a pairwise intersecting paths in a Helly-$B_k$-EPG representation of a graph $G$. Then the intersection of all paths of  ${\mathcal P'}$ contains at least one relevant edge.
@@ -361,24 +356,24 @@ From Corollary~\ref{cor:comumAtodos}, the following theorem concerning the Helly
 \begin{theorem}\label{teo:lowerboundCliques}
 For every graph $G$ containing $n$ vertices and $\mu$ maximal cliques, it holds that $$\frac{\mu}{2n}-1\leq b_H(G)\leq \mu -1.$$ 
 \end{theorem}
-\begin{proof}
-The upper bound follows from Corollary~\ref{cor:maxCliques}.
-For the lower bound first notice that each path with at most $k$ bends can have up to $2(k + 1)$ relevant edges, and any $B_k$-EPG representation with a set of paths $\mathcal{P}$ contains at most $2|\mathcal{P}|(k + 1)$ distinct relevant edges. Now, let $G$ be a graph with $n$ vertices, $\mu$ maximal cliques, and $b_H(G)=k$. From Corollary~\ref{cor:comumAtodos}, it follows that in a Helly-$B_k$-EPG representation of $G$ every maximal clique of $G$ contains at least one relevant edge. By maximality, two distinct maximal cliques cannot share the same edge-clique. Thus, in a Helly-$B_k$-EPG representation of $G$ every maximal clique of $G$ contains at least one distinct relevant edge, which implies that $\mu\leq 2n(k+1)$, so $\frac{\mu}{2n}-1\leq b_H(G)$.
-\end{proof}
+% \begin{proof}
+% The upper bound follows from Corollary~\ref{cor:maxCliques}.
+% For the lower bound first notice that each path with at most $k$ bends can have up to $2(k + 1)$ relevant edges, and any $B_k$-EPG representation with a set of paths $\mathcal{P}$ contains at most $2|\mathcal{P}|(k + 1)$ distinct relevant edges. Now, let $G$ be a graph with $n$ vertices, $\mu$ maximal cliques, and $b_H(G)=k$. From Corollary~\ref{cor:comumAtodos}, it follows that in a Helly-$B_k$-EPG representation of $G$ every maximal clique of $G$ contains at least one relevant edge. By maximality, two distinct maximal cliques cannot share the same edge-clique. Thus, in a Helly-$B_k$-EPG representation of $G$ every maximal clique of $G$ contains at least one distinct relevant edge, which implies that $\mu\leq 2n(k+1)$, so $\frac{\mu}{2n}-1\leq b_H(G)$.
+% \end{proof}
 
 
 \begin{lemma}\label{lem:gridPolinomial}
 Let $G$ be a (Helly-)$B_k$-EPG graph. Then $G$ admits a (Helly-)$B_k$-EPG representation on a grid of size at most $4n(k+1) \times 4n(k+1)$.
 \end{lemma}
-\begin{proof}
-Let $R$ be a $B_k$-EPG representation of a graph $G$ on a grid $Q$ with the smallest possible size.
-Let $\mathcal{P}$ be the set of paths of $R$. Note that $|\mathcal{P}|=n$.
-A counting argument shows that there are at most $2|\mathcal{P}|(k+1)$ relevant edges in $R$. 
- If $Q$ has a pair of consecutive columns $c_i,c_{i+1}$ neither of which contains relevant edges of $R$, and such that there is no relevant edge crossing from $c_i$ to $c_{i+1}$, then we can contract each edge crossing from $c_i$ to $c_{i+1}$ into single vertices so as to obtain a new  $B_k$-EPG representation of $G$ on a smaller grid, which is a contradiction. An analogous argument can be applied to pairs of consecutive rows of the grid.
- Therefore the grid $Q$ is such that each pair of consecutive columns and consecutive rows of $Q$  has at least one relevant edge of $R$ or contains a relevant edge crossing it.  
-  Since $Q$ is the smallest possible grid for representing $G$, then the first row and the first column of $Q$ must contain at least one point belonging to some relevant edge of $R$. 
-Thus, if $G$ is $B_k$-EPG then it admits a $B_k$-EPG representation on a grid of size at most $4|\mathcal{P}|(k+1) \times 4|\mathcal{P}|(k+1)$.
-Besides, by Corollary~\ref{cor:comumAtodos}, it holds that the contraction operation previously described preserves the Helly property, if any. Hence, letting $R$ be a Helly-$B_k$-EPG representation of a graph $G$ on a grid $Q$ with the smallest possible size it holds that $Q$ has size at most $4|\mathcal{P}|(k+1) \times 4|\mathcal{P}|(k+1)$.\end{proof}
+% \begin{proof}
+% Let $R$ be a $B_k$-EPG representation of a graph $G$ on a grid $Q$ with the smallest possible size.
+% Let $\mathcal{P}$ be the set of paths of $R$. Note that $|\mathcal{P}|=n$.
+% A counting argument shows that there are at most $2|\mathcal{P}|(k+1)$ relevant edges in $R$. 
+%  If $Q$ has a pair of consecutive columns $c_i,c_{i+1}$ neither of which contains relevant edges of $R$, and such that there is no relevant edge crossing from $c_i$ to $c_{i+1}$, then we can contract each edge crossing from $c_i$ to $c_{i+1}$ into single vertices so as to obtain a new  $B_k$-EPG representation of $G$ on a smaller grid, which is a contradiction. An analogous argument can be applied to pairs of consecutive rows of the grid.
+%  Therefore the grid $Q$ is such that each pair of consecutive columns and consecutive rows of $Q$  has at least one relevant edge of $R$ or contains a relevant edge crossing it.  
+%   Since $Q$ is the smallest possible grid for representing $G$, then the first row and the first column of $Q$ must contain at least one point belonging to some relevant edge of $R$. 
+% Thus, if $G$ is $B_k$-EPG then it admits a $B_k$-EPG representation on a grid of size at most $4|\mathcal{P}|(k+1) \times 4|\mathcal{P}|(k+1)$.
+% Besides, by Corollary~\ref{cor:comumAtodos}, it holds that the contraction operation previously described preserves the Helly property, if any. Hence, letting $R$ be a Helly-$B_k$-EPG representation of a graph $G$ on a grid $Q$ with the smallest possible size it holds that $Q$ has size at most $4|\mathcal{P}|(k+1) \times 4|\mathcal{P}|(k+1)$.\end{proof}
 
 Given a graph $G$ with $n$ vertices and an EPG representation $R$, it is easy to check in polynomial time with respect to $n +|R|$ whether $R$ is a $B_k$-EPG representation of $G$. By Lemma~\ref{lem:gridPolinomial}, if $G$ is a $B_k$-EPG graph then there is a positive certificate (an EPG representation) $R$ of polynomial size  with respect to $k+n$ to the question ``$G\in B_k$-EPG?''. Therefore, Corollary~\ref{BkNP} holds.
 
@@ -393,11 +388,11 @@ At this point, we are ready to demonstrate the NP-membership of {\sc Helly-$B_k$
 \begin{theorem}\label{teo:nppertinencia}
 {\sc Helly-$B_k$ EPG recognition} is in NP.
 \end{theorem}
-\begin{proof}
-By Lemma~\ref{lem:gridPolinomial} and the fact that $k$ is bounded by a polynomial function of $|V(G)|$, it follows that the collection $\mathcal{P}$ can be encoded through its relevant edges with $n^{\mathcal{O}(1)}$ bits.
+% \begin{proof}
+% By Lemma~\ref{lem:gridPolinomial} and the fact that $k$ is bounded by a polynomial function of $|V(G)|$, it follows that the collection $\mathcal{P}$ can be encoded through its relevant edges with $n^{\mathcal{O}(1)}$ bits.
 
-Finally, by Lemmas~\ref{lem:verify1}, \ref{lem:relevantEdges} and \ref{lem:verify3}, it follows that one can verify in polynomial-time in the size of $G$ whether $\mathcal{P}$ is a family of paths encoded as a sequence of relevant edges that constitute a Helly-$B_k$-EPG representation of a graph $G$.
-\end{proof}
+% Finally, by Lemmas~\ref{lem:verify1}, \ref{lem:relevantEdges} and \ref{lem:verify3}, it follows that one can verify in polynomial-time in the size of $G$ whether $\mathcal{P}$ is a family of paths encoded as a sequence of relevant edges that constitute a Helly-$B_k$-EPG representation of a graph $G$.
+% \end{proof}
 
 \section{$NP$-Hardness}\label{sec:sectionDispositivoClausula}
 
